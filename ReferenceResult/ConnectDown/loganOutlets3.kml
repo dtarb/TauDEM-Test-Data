@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="loganOutlets3" id="loganOutlets3">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="id_down" type="int"></SimpleField>
+	<SimpleField name="ad8" type="float"></SimpleField>
+</Schema>
+<Folder><name>loganOutlets3</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#loganOutlets3">
+		<SimpleData name="id">10</SimpleData>
+		<SimpleData name="id_down">-2147483647</SimpleData>
+		<SimpleData name="ad8">620230</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.780998287106,41.7422822191343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#loganOutlets3">
+		<SimpleData name="id">20</SimpleData>
+		<SimpleData name="id_down">-2147483647</SimpleData>
+		<SimpleData name="ad8">36523</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.783832542519,41.767662535917</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#loganOutlets3">
+		<SimpleData name="id">30</SimpleData>
+		<SimpleData name="id_down">10</SimpleData>
+		<SimpleData name="ad8">8925</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.722988747784,41.7491469116679</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#loganOutlets3">
+		<SimpleData name="id">40</SimpleData>
+		<SimpleData name="id_down">20</SimpleData>
+		<SimpleData name="ad8">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.715354204477,41.7764857886923</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#loganOutlets3">
+		<SimpleData name="id">50</SimpleData>
+		<SimpleData name="id_down">20</SimpleData>
+		<SimpleData name="ad8">21830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.723453084784,41.7904858791313</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

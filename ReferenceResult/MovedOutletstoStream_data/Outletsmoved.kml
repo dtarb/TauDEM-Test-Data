@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Outletsmoved" id="Outletsmoved">
+	<SimpleField name="Id" type="int"></SimpleField>
+	<SimpleField name="Dist_moved" type="int"></SimpleField>
+</Schema>
+<Folder><name>Outletsmoved</name>
+  <Placemark>
+	<name>10</name>
+	<ExtendedData><SchemaData schemaUrl="#Outletsmoved">
+		<SimpleData name="Dist_moved">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.780998287106,41.7422822191343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>20</name>
+	<ExtendedData><SchemaData schemaUrl="#Outletsmoved">
+		<SimpleData name="Dist_moved">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.783653917585,41.7677767752933</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>30</name>
+	<ExtendedData><SchemaData schemaUrl="#Outletsmoved">
+		<SimpleData name="Dist_moved">3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.722988747784,41.7491469116679</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>40</name>
+	<ExtendedData><SchemaData schemaUrl="#Outletsmoved">
+		<SimpleData name="Dist_moved">-1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.715407944778,41.7765654436278</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>50</name>
+	<ExtendedData><SchemaData schemaUrl="#Outletsmoved">
+		<SimpleData name="Dist_moved">4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.723453084784,41.7904858791313</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
