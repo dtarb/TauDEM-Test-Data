@@ -381,5 +381,7 @@ rem Test EPSG functionality
 cd ../NoEPSG
 mpiexec -n 2 aread8 -p ma2_ep.tif -ad8 ma2_ead8.tif -o outlet.shp -nc
 
-
+cd ..
+cd MoveOutlets2
+test
 cd ..

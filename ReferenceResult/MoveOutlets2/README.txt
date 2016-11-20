@@ -1,0 +1,2 @@
+DGT 11/20/16
+This dataset fails on moveoutletstostreams when 8 processes are used.  It works for all other sizes I tried (1,2,4,7,9).  With 8 processes it enters an infinite loop.  This seemed to be due to incorrect logic in the transfer of outlets across partitions, but I could not resolve why it worked sometimes and not others, so I refactored and simplified the logic to a clearer pattern, and this appears to have fixed it.  
