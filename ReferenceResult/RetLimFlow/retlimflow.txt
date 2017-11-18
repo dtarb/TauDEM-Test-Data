@@ -1,0 +1,1 @@
+mpiexec -n 2 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif

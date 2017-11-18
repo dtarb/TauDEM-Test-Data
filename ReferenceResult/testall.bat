@@ -1,4 +1,5 @@
-Rem cd D:\Scratch\TestSuite\Input
+Rem cd C:\Users\dt\Desktop\Input
+Rem testall > testall.out 2>&1
 Rem The 'TDIR' needs to be reset to the directory where the TauDEM executables exist on your machine
 Set TDIR=D:\Dropbox\Projects\TauDEM\Taudemdev\Taudem5PCVS2015\x64\Release
 
@@ -400,4 +401,14 @@ cd ..
 cd catchoutlets
 rem  Run CatchOutlets single processor, no parallel version yet
 mpiexec -n 1 CatchOutlets -net net1.shp -p fdr.tif -o CatchOutlets.shp -mindist 20000 -minarea 50000000 -gwstartno 5
+cd ..
+
+cd FlowdirCond
+rem Run flow direction conditioning
+mpiexec -n 4 flowdircond -z wcdem.tif -p pm.tif -zfdc wcdemzfdc.tif
+cd ..
+
+cd RetLimFlow
+rem Run Retention Limited Flow Accumulation
+mpiexec -n 6 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif
 cd ..
