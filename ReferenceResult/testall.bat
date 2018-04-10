@@ -412,3 +412,8 @@ cd RetLimFlow
 rem Run Retention Limited Flow Accumulation
 mpiexec -n 6 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif
 cd ..
+
+cd CatchHydroGeoTest
+rem Run CatchHydroGeo
+mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt
+cd ..

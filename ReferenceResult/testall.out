@@ -28,11 +28,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.022980
-Data read time: 0.003764
-Compute time: 0.249748
-Write time: 0.086338
-Total time: 0.362830
+Header read time: 0.062790
+Data read time: 0.011947
+Compute time: 0.520808
+Write time: 0.135094
+Total time: 0.730639
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel4.tiff -4way 
 PitRemove version 5.3.9
@@ -45,11 +45,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.013925
-Data read time: 0.002727
-Compute time: 0.237841
-Write time: 0.035928
-Total time: 0.290421
+Header read time: 0.030546
+Data read time: 0.013308
+Compute time: 0.462106
+Write time: 0.039928
+Total time: 0.545889
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 3 PitRemove -z logan.tif -fel loganfeldm.tif -depmask logpitmask.tif 
 PitRemove version 5.3.9
@@ -65,11 +65,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.018994
-Data read time: 0.007424
-Compute time: 0.336375
-Write time: 0.118184
-Total time: 0.480978
+Header read time: 0.042196
+Data read time: 0.018396
+Compute time: 0.517443
+Write time: 0.115506
+Total time: 0.693541
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 3 PitRemove -z logan.tif -fel loganfeldm4.tif -depmask logpitmask.tif -4way 
 PitRemove version 5.3.9
@@ -85,11 +85,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.017219
-Data read time: 0.003858
-Compute time: 0.291443
-Write time: 0.086592
-Total time: 0.399112
+Header read time: 0.038745
+Data read time: 0.016947
+Compute time: 0.503378
+Write time: 0.111368
+Total time: 0.670437
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 D8Flowdir -p loganp.tif -sd8 logansd8.tif -fel loganfel.tif 
 D8FlowDir version 5.3.9
@@ -120,13 +120,13 @@ Draining flats away from higher adjacent terrain
 ..
 Setting directions
 Processors: 5
-Header read time: 0.018388
-Data read time: 0.023580
-Compute Slope time: 0.155568
-Write Slope time: 0.109639
-Resolve Flat time: 0.655085
-Write Flat time: 0.051635
-Total time: 1.013896
+Header read time: 0.037775
+Data read time: 0.054596
+Compute Slope time: 0.219928
+Write Slope time: 0.168191
+Resolve Flat time: 1.546464
+Write Flat time: 0.068925
+Total time: 2.095879
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 DinfFlowdir -ang loganang.tif -slp loganslp.tif -fel loganfel.tif 
 DinfFlowDir version 5.3.9
@@ -157,13 +157,13 @@ Draining flats away from higher adjacent terrain
 ..
 Setting directions
 Processors: 4
-Header read time: 0.018191
-Data read time: 0.020271
-Compute Slope time: 0.409643
-Write Slope time: 0.104701
-Resolve Flat time: 0.430328
-Write Flat time: 0.092963
-Total time: 1.076098
+Header read time: 0.028417
+Data read time: 0.059481
+Compute Slope time: 0.653510
+Write Slope time: 0.164010
+Resolve Flat time: 1.259390
+Write Flat time: 0.152419
+Total time: 2.317226
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 6 D8Flowdir -p loganpnf.tif -sd8 logansd8nf.tif -fel logan.tif 
 D8FlowDir version 5.3.9
@@ -188,13 +188,13 @@ Draining flats away from higher adjacent terrain
 ...
 Setting directions
 Processors: 6
-Header read time: 0.015172
-Data read time: 0.025453
-Compute Slope time: 0.122331
-Write Slope time: 0.107680
-Resolve Flat time: 0.227625
-Write Flat time: 0.059007
-Total time: 0.557267
+Header read time: 0.031504
+Data read time: 0.072270
+Compute Slope time: 0.174614
+Write Slope time: 0.144215
+Resolve Flat time: 0.447513
+Write Flat time: 0.069001
+Total time: 0.939117
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 DinfFlowdir -ang loganangnf.tif -slp loganslpnf.tif -fel logan.tif 
 DinfFlowDir version 5.3.9
@@ -219,13 +219,13 @@ Draining flats away from higher adjacent terrain
 ...
 Setting directions
 Processors: 3
-Header read time: 0.020084
-Data read time: 0.005303
-Compute Slope time: 0.495170
-Write Slope time: 0.098096
-Resolve Flat time: 0.112145
-Write Flat time: 0.104050
-Total time: 0.834849
+Header read time: 0.032888
+Data read time: 0.042881
+Compute Slope time: 0.712775
+Write Slope time: 0.111592
+Resolve Flat time: 0.247150
+Write Flat time: 0.119023
+Total time: 1.266308
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 4 AreaD8 logan.tif 
 This run may take on the order of 1 minutes to complete.
@@ -238,10 +238,10 @@ Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 4
-Read time: 0.029350
-Compute time: 0.207928
-Write time: 0.049022
-Total time: 0.286300
+Read time: 0.053839
+Compute time: 0.354458
+Write time: 0.048221
+Total time: 0.456517
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 12 AreaDinf logan.tif 
 This run may take on the order of 1 minutes to complete.
@@ -254,10 +254,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 12
-Read time: 0.031084
-Compute time: 1.038030
-Write time: 0.109215
-Total time: 1.178329
+Read time: 0.055759
+Compute time: 1.629335
+Write time: 0.152103
+Total time: 1.837197
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 4 AreaD8 -p loganpnf.tif -ad8 loganad8nf.tif 
 This run may take on the order of 1 minutes to complete.
@@ -270,10 +270,10 @@ Input file loganpnf.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 4
-Read time: 0.018429
-Compute time: 0.235980
-Write time: 0.049954
-Total time: 0.304364
+Read time: 0.048530
+Compute time: 0.336377
+Write time: 0.048101
+Total time: 0.433008
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 12 AreaDinf -ang loganangnf.tif -sca loganscanf.tif 
 This run may take on the order of 1 minutes to complete.
@@ -286,10 +286,10 @@ Input file loganangnf.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 12
-Read time: 0.025364
-Compute time: 1.001764
-Write time: 0.110444
-Total time: 1.137572
+Read time: 0.049181
+Compute time: 1.464107
+Write time: 0.158479
+Total time: 1.671767
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 7 aread8 -p loganp.tif -o outlet.shp -ad8 loganad8o.tif 
 This run may take on the order of 1 minutes to complete.
@@ -305,10 +305,10 @@ Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 7
-Read time: 0.042846
-Compute time: 0.187647
-Write time: 0.038479
-Total time: 0.268972
+Read time: 0.124713
+Compute time: 0.414522
+Write time: 0.062790
+Total time: 0.602024
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 1 areadinf -ang loganang.tif -o outlet.shp -sca loganscao.tif 
 This run may take on the order of 1 minutes to complete.
@@ -324,10 +324,10 @@ Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 1
-Read time: 0.085443
-Compute time: 0.889874
-Write time: 0.065977
-Total time: 1.041294
+Read time: 0.165225
+Compute time: 1.388542
+Write time: 0.128744
+Total time: 1.682511
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 Gridnet -p loganp.tif -plen loganplen.tif -tlen logantlen.tif -gord logangord.tif  
 This run may take on the order of 1 minutes to complete.
@@ -340,10 +340,10 @@ Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 5
-Read time: 0.022253
-Compute time: 0.239863
-Write time: 0.174543
-Total time: 0.436659
+Read time: 0.043975
+Compute time: 0.398513
+Write time: 0.288542
+Total time: 0.731029
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 Gridnet -p loganp.tif -plen loganplen1.tif -tlen logantlen1.tif -gord logangord1.tif -mask loganad8.tif -thresh 100  
 This run may take on the order of 1 minutes to complete.
@@ -359,10 +359,10 @@ Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
 Processors: 5
-Read time: 0.040911
-Compute time: 0.286236
-Write time: 0.130028
-Total time: 0.457176
+Read time: 0.089539
+Compute time: 0.343499
+Write time: 0.216349
+Total time: 0.649387
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 7 Gridnet -p loganp.tif -plen loganplen2.tif -tlen logantlen2.tif -gord logangord2.tif -o outlet.shp  
 This run may take on the order of 1 minutes to complete.
@@ -378,10 +378,10 @@ Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.042620
-Compute time: 0.276440
-Write time: 0.133497
-Total time: 0.452557
+Read time: 0.097955
+Compute time: 0.511708
+Write time: 0.248778
+Total time: 0.858441
 
 C:\Users\dt\Desktop\Input\Base>Rem stream network peuker douglas 
 
@@ -398,10 +398,10 @@ Nodata value recast to float used in partition raster: -300000000549775575777803
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 7
-Read time: 0.041735
-Compute time: 0.102142
-Write time: 0.040493
-Total time: 0.184371
+Read time: 0.074446
+Compute time: 0.152682
+Write time: 0.134195
+Total time: 0.361324
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 Aread8 -p loganp.tif -o outlet.shp -ad8 loganssa.tif -wg loganss.tif 
 This run may take on the order of 1 minutes to complete.
@@ -420,10 +420,10 @@ Input file loganss.tif has projected coordinate system.
 Nodata value input to create partition from file: -2.000000
 Nodata value recast to float used in partition raster: -2.000000
 Number of Processes: 4
-Read time: 0.043479
-Compute time: 0.160969
-Write time: 0.039025
-Total time: 0.243473
+Read time: 0.121133
+Compute time: 0.268833
+Write time: 0.048848
+Total time: 0.438814
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp.txt -o outlet.shp -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -460,9 +460,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000306 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 4
-Read time: 0.092960
-Compute time: 1.159581
-Total time: 1.252541
+Read time: 0.226949
+Compute time: 2.430717
+Total time: 2.657665
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 Threshold -ssa loganssa.tif -src logansrc.tif -thresh 180 
 This run may take on the order of 1 minutes to complete.
@@ -474,7 +474,7 @@ Threshold version 5.3.9
 Input file loganssa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.010683
+Compute time: 0.033074
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net logannet.shp -w loganw.tif -o outlet.shp 
 StreamNet version 5.3.9
@@ -503,13 +503,13 @@ Warning: Projection of Outlet feature and Raster data may be different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 logannet Processors: 5
-Read time: 0.093987
-Length compute time: 0.013539
-Link compute time: 0.024949
-Link write time: 0.091522
-Watershed compute time: 0.102252
-Write time: 0.087184
-Total time: 0.413433
+Read time: 0.242822
+Length compute time: 0.046516
+Link compute time: 0.070069
+Link write time: 0.137697
+Watershed compute time: 0.641071
+Write time: 0.153129
+Total time: 1.291303
 
 C:\Users\dt\Desktop\Input\Base>Rem stream network slope area 
 
@@ -526,7 +526,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.117713
+Compute time: 0.056978
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 8 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa1.tif -o outlet.shp 
 This run may take on the order of 1 minutes to complete.
@@ -545,10 +545,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 8
-Read time: 0.045879
-Compute time: 0.205016
-Write time: 0.094304
-Total time: 0.345199
+Read time: 0.121348
+Compute time: 1.027939
+Write time: 0.182772
+Total time: 1.332060
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa1.tif -drp logandrp1.txt -o outlet.shp -par 5000 50000 10 1  
 DropAnalysis version 5.3.9
@@ -585,9 +585,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 50000.000000 0.000137 11 0 191.148209  -  263.009766  -   - 
 15000.000000  Value for optimum that drop analysis selected - see output file for details.
 Processes: 4
-Read time: 0.097975
-Compute time: 1.187894
-Total time: 1.285868
+Read time: 0.205800
+Compute time: 2.171829
+Total time: 2.377629
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 Threshold -ssa loganssa1.tif -src logansrc1.tif -thresh 15000 
 This run may take on the order of 1 minutes to complete.
@@ -599,7 +599,7 @@ Threshold version 5.3.9
 Input file loganssa1.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
-Compute time: 0.008922
+Compute time: 0.024784
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 8 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc1.tif -ord loganord5.tif -tree logantree1.dat -coord logancoord1.dat -net logannet1.shp -w loganw1.tif -o outlet.shp -sw 
 StreamNet version 5.3.9
@@ -628,13 +628,13 @@ Warning: Projection of Outlet feature and Raster data may be different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 logannet1 Processors: 8
-Read time: 0.110990
-Length compute time: 0.020481
-Link compute time: 0.109556
-Link write time: 0.083967
-Watershed compute time: 0.111078
-Write time: 0.086515
-Total time: 0.522587
+Read time: 0.263678
+Length compute time: 0.086313
+Link compute time: 0.293992
+Link write time: 0.145034
+Watershed compute time: 0.240101
+Write time: 0.173222
+Total time: 1.202341
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 LengthArea -plen loganplen.tif -ad8 loganad8.tif -ss loganlass.tif -par 0.03 1.3 
 This run may take on the order of 1 minutes to complete.
@@ -649,7 +649,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
-Compute time: 0.047518
+Compute time: 0.062057
 
 C:\Users\dt\Desktop\Input\Base>Rem Specialized grid analysis 
 
@@ -666,7 +666,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.016674
+Compute time: 0.045968
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 7 D8HDisttoStrm -p loganp.tif -src loganad8.tif -dist logandist1.tif -thresh 200  
 This run may take on the order of 1 minutes to complete.
@@ -682,10 +682,10 @@ Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
 Processors: 7
-Read time: 0.042336
-Compute time: 0.134349
-Write time: 0.083858
-Total time: 0.260543
+Read time: 0.073093
+Compute time: 0.225582
+Write time: 0.126023
+Total time: 0.424698
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 5 D8HDisttoStrm -p loganp.tif -src logansrc.tif -dist logandist.tif  
 This run may take on the order of 1 minutes to complete.
@@ -701,10 +701,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int32_t used in partition raster: -32768
 Processors: 5
-Read time: 0.029083
-Compute time: 0.067983
-Write time: 0.074188
-Total time: 0.171254
+Read time: 0.060982
+Compute time: 0.130924
+Write time: 0.115392
+Total time: 0.307298
 
 C:\Users\dt\Desktop\Input\Base>Rem downslope influence 
 
@@ -722,10 +722,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 1
-Read time: 0.088464
-Compute time: 2.150923
-Write time: 0.036418
-Total time: 2.275805
+Read time: 0.260154
+Compute time: 3.269970
+Write time: 0.049443
+Total time: 3.579567
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfupdependence -ang loganang.tif -dg logandg.tif -dep logandep.tif 
 This run may take on the order of 1 minutes to complete.
@@ -741,10 +741,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to int32_t used in partition raster: 255
 Processors: 2
-Read time: 0.076693
-Compute time: 1.329300
-Write time: 0.049762
-Total time: 1.455755
+Read time: 0.109133
+Compute time: 1.895538
+Write time: 0.067545
+Total time: 2.072216
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 7 dinfdecayaccum -ang loganang.tif -dm logandm08.tif -dsca logandsca.tif  
 This run may take on the order of 1 minutes to complete.
@@ -760,10 +760,10 @@ Input file logandm08.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 7
-Read time: 0.037339
-Compute time: 1.013181
-Write time: 0.110576
-Total time: 1.161096
+Read time: 0.091918
+Compute time: 1.477947
+Write time: 0.194182
+Total time: 1.764046
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpt.tif -q logansca.tif  
 This run may take on the order of 1 minutes to complete.
@@ -785,10 +785,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 3
-Read time: 0.084425
-Compute time: 1.824979
-Write time: 0.107430
-Total time: 2.016834
+Read time: 0.174574
+Compute time: 1.877894
+Write time: 0.078119
+Total time: 2.130586
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto.tif -q logansca.tif  -o outlet.shp -csol 2.4 
 This run may take on the order of 1 minutes to complete.
@@ -813,10 +813,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 5
-Read time: 0.173494
-Compute time: 2.056796
-Write time: 0.110140
-Total time: 2.340430
+Read time: 0.233622
+Compute time: 1.309800
+Write time: 0.124144
+Total time: 1.667565
 
 C:\Users\dt\Desktop\Input\Base>Rem Trans lim accum 
 
@@ -837,10 +837,10 @@ Input file logantc.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 7
-Read time: 0.088502
-Compute time: 2.371964
-Write time: 0.240815
-Total time: 2.701281
+Read time: 0.094170
+Compute time: 1.750066
+Write time: 0.288190
+Total time: 2.132425
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 6 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla1.tif -tdep logantdep1.tif -o outlet.shp -cs logandg.tif -ctpt loganctpt1.tif  
 This run may take on the order of 1 minutes to complete.
@@ -865,10 +865,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 6
-Read time: 0.041069
-Compute time: 1.006183
-Write time: 0.272505
-Total time: 1.319757
+Read time: 0.079316
+Compute time: 1.378520
+Write time: 0.275565
+Total time: 1.733401
 
 C:\Users\dt\Desktop\Input\Base>rem REVERSE ACCUMULATION 
 
@@ -886,10 +886,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 4
-Read time: 0.083355
-Compute time: 1.536424
-Write time: 0.102223
-Total time: 1.722003
+Read time: 0.105957
+Compute time: 2.380441
+Write time: 0.225948
+Total time: 2.712345
 
 C:\Users\dt\Desktop\Input\Base>rem MOVEOUTLETS 
 
@@ -903,7 +903,7 @@ Threshold version 5.3.9
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.016650
+Compute time: 0.043722
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -np 3 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20  
 MoveOutletsToStreams version 5.3.9
@@ -918,7 +918,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmoved Total time: 0.091620
+Outletsmoved Total time: 0.178416
 
 C:\Users\dt\Desktop\Input\Base>rem DISTDOWN 
 
@@ -936,10 +936,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 1
-Read time: 0.105082
-Compute time: 2.532130
-Write time: 0.077461
-Total time: 2.714673
+Read time: 0.277007
+Compute time: 4.850171
+Write time: 0.139656
+Total time: 5.266834
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhmin.tif -m min h 
 This run may take on the order of 1 minutes to complete.
@@ -955,10 +955,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.063789
-Compute time: 1.286426
-Write time: 0.079432
-Total time: 1.429647
+Read time: 0.146979
+Compute time: 2.781637
+Write time: 0.134149
+Total time: 3.062766
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhmax.tif -m max h 
 This run may take on the order of 1 minutes to complete.
@@ -974,10 +974,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.051242
-Compute time: 1.270205
-Write time: 0.071541
-Total time: 1.392989
+Read time: 0.110227
+Compute time: 1.721303
+Write time: 0.135772
+Total time: 1.967301
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddvave.tif -m ave v 
 This run may take on the order of 1 minutes to complete.
@@ -996,10 +996,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.070224
-Compute time: 0.893910
-Write time: 0.070549
-Total time: 1.034682
+Read time: 0.224538
+Compute time: 1.525107
+Write time: 0.114619
+Total time: 1.864264
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddvmin.tif -m min v 
 This run may take on the order of 1 minutes to complete.
@@ -1018,10 +1018,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 5
-Read time: 0.067906
-Compute time: 1.056491
-Write time: 0.074328
-Total time: 1.198726
+Read time: 0.139515
+Compute time: 1.659413
+Write time: 0.168033
+Total time: 1.966961
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 6 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddvmax.tif -m max v 
 This run may take on the order of 1 minutes to complete.
@@ -1040,10 +1040,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 6
-Read time: 0.069492
-Compute time: 1.111316
-Write time: 0.104430
-Total time: 1.285239
+Read time: 0.157158
+Compute time: 1.474210
+Write time: 0.132956
+Total time: 1.764323
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 7 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsave.tif -m ave s 
 This run may take on the order of 1 minutes to complete.
@@ -1062,10 +1062,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.069654
-Compute time: 1.154025
-Write time: 0.081152
-Total time: 1.304831
+Read time: 0.140669
+Compute time: 1.486923
+Write time: 0.143891
+Total time: 1.771483
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 8 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsmin.tif -m min s 
 This run may take on the order of 1 minutes to complete.
@@ -1084,10 +1084,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 8
-Read time: 0.071792
-Compute time: 0.975702
-Write time: 0.080518
-Total time: 1.128013
+Read time: 0.160905
+Compute time: 1.457964
+Write time: 0.142097
+Total time: 1.760966
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 1 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsmax.tif -m max s 
 This run may take on the order of 1 minutes to complete.
@@ -1106,10 +1106,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 1
-Read time: 0.155534
-Compute time: 2.142293
-Write time: 0.071824
-Total time: 2.369652
+Read time: 0.309393
+Compute time: 2.547634
+Write time: 0.118540
+Total time: 2.975567
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddpave.tif -m ave p 
 This run may take on the order of 1 minutes to complete.
@@ -1128,10 +1128,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.086313
-Compute time: 1.467433
-Write time: 0.063967
-Total time: 1.617713
+Read time: 0.177609
+Compute time: 2.367385
+Write time: 0.124110
+Total time: 2.669103
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddpmin.tif -m min p 
 This run may take on the order of 1 minutes to complete.
@@ -1150,10 +1150,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.070207
-Compute time: 1.128954
-Write time: 0.068875
-Total time: 1.268036
+Read time: 0.162844
+Compute time: 1.786942
+Write time: 0.098796
+Total time: 2.048582
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddpmax.tif -m max p 
 This run may take on the order of 1 minutes to complete.
@@ -1172,10 +1172,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.076746
-Compute time: 0.945410
-Write time: 0.072782
-Total time: 1.094938
+Read time: 0.161872
+Compute time: 1.678114
+Write time: 0.130863
+Total time: 1.970849
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddvavenc.tif -m ave v -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1194,10 +1194,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.091326
-Compute time: 1.198341
-Write time: 0.069258
-Total time: 1.358925
+Read time: 0.281342
+Compute time: 1.947120
+Write time: 0.077696
+Total time: 2.306159
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhminnc.tif -m min h -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1213,10 +1213,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.056254
-Compute time: 1.113529
-Write time: 0.065886
-Total time: 1.235669
+Read time: 0.098137
+Compute time: 1.685495
+Write time: 0.104762
+Total time: 1.888393
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddpmaxnc.tif -m max p -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1235,10 +1235,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.075504
-Compute time: 0.891666
-Write time: 0.068944
-Total time: 1.036115
+Read time: 0.150621
+Compute time: 2.203107
+Write time: 0.176435
+Total time: 2.530164
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsmaxnc.tif -m max s -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1257,10 +1257,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.075545
-Compute time: 0.872207
-Write time: 0.073841
-Total time: 1.021593
+Read time: 0.180331
+Compute time: 1.919460
+Write time: 0.333238
+Total time: 2.433029
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsmaxwg.tif -m max s -wg logandwg.tif 
 This run may take on the order of 1 minutes to complete.
@@ -1282,10 +1282,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.082393
-Compute time: 0.941193
-Write time: 0.070856
-Total time: 1.094442
+Read time: 0.216304
+Compute time: 2.413713
+Write time: 0.119997
+Total time: 2.750015
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhavewg.tif -m ave h -wg logandwg.tif 
 This run may take on the order of 1 minutes to complete.
@@ -1304,10 +1304,10 @@ Input file logansrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.061119
-Compute time: 0.866352
-Write time: 0.072093
-Total time: 0.999563
+Read time: 0.113246
+Compute time: 1.407178
+Write time: 0.101304
+Total time: 1.621727
 
 C:\Users\dt\Desktop\Input\Base>rem DISTANCE UP 
 
@@ -1322,10 +1322,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 1
-Read time: 0.073753
-Compute time: 2.362707
-Write time: 0.129143
-Total time: 2.565602
+Read time: 0.136651
+Compute time: 2.839522
+Write time: 0.168129
+Total time: 3.144303
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhmin.tif -m min h -thresh 0.5 
 This run may take on the order of 1 minutes to complete.
@@ -1338,10 +1338,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 2
-Read time: 0.051266
-Compute time: 1.307592
-Write time: 0.070476
-Total time: 1.429335
+Read time: 0.098915
+Compute time: 1.847554
+Write time: 0.105033
+Total time: 2.051502
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhmax.tif -m max h -thresh 0.8 
 This run may take on the order of 1 minutes to complete.
@@ -1354,10 +1354,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 3
-Read time: 0.037202
-Compute time: 1.063277
-Write time: 0.068529
-Total time: 1.169008
+Read time: 0.080809
+Compute time: 1.611535
+Write time: 0.126173
+Total time: 1.818517
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduvave.tif -m ave v 
 This run may take on the order of 1 minutes to complete.
@@ -1373,10 +1373,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 4
-Read time: 0.066101
-Compute time: 1.067287
-Write time: 0.094476
-Total time: 1.227864
+Read time: 0.132986
+Compute time: 1.564394
+Write time: 0.173698
+Total time: 1.871078
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduvmin.tif -m min v 
 This run may take on the order of 1 minutes to complete.
@@ -1392,10 +1392,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 5
-Read time: 0.069789
-Compute time: 0.994645
-Write time: 0.098371
-Total time: 1.162806
+Read time: 0.119637
+Compute time: 1.365804
+Write time: 0.165241
+Total time: 1.650682
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 6 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduvmax.tif -m max v 
 This run may take on the order of 1 minutes to complete.
@@ -1411,10 +1411,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 6
-Read time: 0.058739
-Compute time: 1.027892
-Write time: 0.099883
-Total time: 1.186513
+Read time: 0.122872
+Compute time: 1.360964
+Write time: 0.130798
+Total time: 1.614634
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 7 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandusave.tif -m ave s -thresh 0.9 
 This run may take on the order of 1 minutes to complete.
@@ -1430,10 +1430,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 7
-Read time: 0.059174
-Compute time: 1.066772
-Write time: 0.108411
-Total time: 1.234357
+Read time: 0.117031
+Compute time: 1.427542
+Write time: 0.136739
+Total time: 1.681312
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 8 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandusmin.tif -m min s 
 This run may take on the order of 1 minutes to complete.
@@ -1449,10 +1449,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 8
-Read time: 0.060519
-Compute time: 1.029503
-Write time: 0.100147
-Total time: 1.190169
+Read time: 0.100687
+Compute time: 1.463917
+Write time: 0.145937
+Total time: 1.710542
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 1 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandusmax.tif -m max s 
 This run may take on the order of 1 minutes to complete.
@@ -1468,10 +1468,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 1
-Read time: 0.134117
-Compute time: 2.402219
-Write time: 0.125716
-Total time: 2.662052
+Read time: 0.271673
+Compute time: 3.194098
+Write time: 0.121085
+Total time: 3.586856
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandupave.tif -m ave p 
 This run may take on the order of 1 minutes to complete.
@@ -1487,10 +1487,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 2
-Read time: 0.087352
-Compute time: 1.393338
-Write time: 0.095914
-Total time: 1.576604
+Read time: 0.157893
+Compute time: 1.998924
+Write time: 0.137235
+Total time: 2.294051
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandupmin.tif -m min p 
 This run may take on the order of 1 minutes to complete.
@@ -1506,10 +1506,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 3
-Read time: 0.073005
-Compute time: 1.082843
-Write time: 0.122585
-Total time: 1.278433
+Read time: 0.145790
+Compute time: 1.685692
+Write time: 0.125934
+Total time: 1.957416
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandupmax.tif -m max p 
 This run may take on the order of 1 minutes to complete.
@@ -1525,10 +1525,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 4
-Read time: 0.075707
-Compute time: 1.257260
-Write time: 0.107356
-Total time: 1.440323
+Read time: 0.125920
+Compute time: 1.499448
+Write time: 0.137042
+Total time: 1.762410
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 2 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduvavenc.tif -m ave v -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1544,10 +1544,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 2
-Read time: 0.102540
-Compute time: 1.567507
-Write time: 0.099067
-Total time: 1.769114
+Read time: 0.195825
+Compute time: 1.884676
+Write time: 0.130332
+Total time: 2.210833
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhminnc.tif -m min h -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1560,10 +1560,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 3
-Read time: 0.037408
-Compute time: 1.024139
-Write time: 0.080084
-Total time: 1.141632
+Read time: 0.087353
+Compute time: 1.615887
+Write time: 0.147723
+Total time: 1.850962
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandupmaxnc.tif -m max p -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1579,10 +1579,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 4
-Read time: 0.076144
-Compute time: 0.982634
-Write time: 0.147418
-Total time: 1.206196
+Read time: 0.154631
+Compute time: 1.698500
+Write time: 0.156674
+Total time: 2.009805
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandusmaxnc.tif -m max s -nc 
 This run may take on the order of 1 minutes to complete.
@@ -1598,10 +1598,10 @@ Input file loganfel.tif has projected coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 4
-Read time: 0.068981
-Compute time: 0.971181
-Write time: 0.097427
-Total time: 1.137589
+Read time: 0.142999
+Compute time: 1.530742
+Write time: 0.152163
+Total time: 1.825903
 
 C:\Users\dt\Desktop\Input\Base>rem AVALANCHE 
 
@@ -1622,10 +1622,10 @@ Input file loganass.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to int16_t used in partition raster: 255
 Processors: 2
-Read time: 0.085239
-Compute time: 1.275513
-Write time: 0.090467
-Total time: 1.451219
+Read time: 0.199607
+Compute time: 2.164143
+Write time: 0.122807
+Total time: 2.486557
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 DinfAvalanche -ang loganang.tif -fel loganfel.tif -ass loganass.tif -rz loganrz1.tif -dfs logandfs1.tif -thresh 0.1 -alpha 10 
 This run may take on the order of 1 minutes to complete.
@@ -1644,10 +1644,10 @@ Input file loganass.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to int16_t used in partition raster: 255
 Processors: 3
-Read time: 0.076359
-Compute time: 1.105365
-Write time: 0.090384
-Total time: 1.272109
+Read time: 0.155594
+Compute time: 3.017903
+Write time: 0.235425
+Total time: 3.408922
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 DinfAvalanche -ang loganang.tif -fel loganfel.tif -ass loganass.tif -rz loganrz2.tif -dfs logandfs2.tif -direct -thresh 0.01 -alpha 5 
 This run may take on the order of 1 minutes to complete.
@@ -1666,10 +1666,10 @@ Input file loganass.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to int16_t used in partition raster: 255
 Processors: 4
-Read time: 0.074754
-Compute time: 0.992323
-Write time: 0.092608
-Total time: 1.159685
+Read time: 0.163531
+Compute time: 1.824492
+Write time: 0.142961
+Total time: 2.130984
 
 C:\Users\dt\Desktop\Input\Base>rem SLOPEAVEDOWN 
 
@@ -1686,11 +1686,14 @@ Nodata value recast to float used in partition raster: -300000000549775575777803
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
+Number of slope down interations to do 2
+Done iteration 0
+Done iteration 1
 Processors: 3
-Read time: 0.047651
-Compute time: 0.447610
-Write time: 0.096221
-Total time: 0.591482
+Read time: 0.120373
+Compute time: 0.794839
+Write time: 0.166779
+Total time: 1.081991
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 3 slopeavedown -p loganp.tif -fel loganfel.tif -slpd loganslpd1.tif -dn 1000 
 This run may take on the order of 1 minutes to complete.
@@ -1705,11 +1708,46 @@ Nodata value recast to float used in partition raster: -300000000549775575777803
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
+Number of slope down interations to do 34
+Done iteration 0
+Done iteration 1
+Done iteration 2
+Done iteration 3
+Done iteration 4
+Done iteration 5
+Done iteration 6
+Done iteration 7
+Done iteration 8
+Done iteration 9
+Done iteration 10
+Done iteration 11
+Done iteration 12
+Done iteration 13
+Done iteration 14
+Done iteration 15
+Done iteration 16
+Done iteration 17
+Done iteration 18
+Done iteration 19
+Done iteration 20
+Done iteration 21
+Done iteration 22
+Done iteration 23
+Done iteration 24
+Done iteration 25
+Done iteration 26
+Done iteration 27
+Done iteration 28
+Done iteration 29
+Done iteration 30
+Done iteration 31
+Done iteration 32
+Done iteration 33
 Processors: 3
-Read time: 0.049386
-Compute time: 6.744041
-Write time: 0.094595
-Total time: 6.888022
+Read time: 0.108013
+Compute time: 10.105459
+Write time: 0.122161
+Total time: 10.335632
 
 C:\Users\dt\Desktop\Input\Base>rem test case for tiffio partitions within a stripe 
 
@@ -1724,10 +1762,10 @@ Input file topo3fel1ang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 6
-Read time: 0.019137
-Compute time: 0.327077
-Write time: 0.065949
-Total time: 0.412163
+Read time: 0.034714
+Compute time: 0.638110
+Write time: 0.080913
+Total time: 0.753738
 
 C:\Users\dt\Desktop\Input\Base>rem test case for double precision file 
 
@@ -1751,10 +1789,10 @@ Warning! Top edge does not match exactly:
 Nodata value input to create partition from file: -179769300000000004979913091153546431177385676945343486730197993498529636492108312404543796370045487218955201046137662191918513706549560771088224207924409275479864981823815660983343422176365744870072127934490865277449576937261468130920376085948653305075071243237207672347403131791038321491100101082182265602048.000000
 Nodata value recast to float used in partition raster: -inf
 Processors: 4
-Read time: 0.032350
-Compute time: 1.359113
-Write time: 0.120358
-Total time: 1.511821
+Read time: 0.073800
+Compute time: 2.188955
+Write time: 0.186680
+Total time: 2.449435
 
 C:\Users\dt\Desktop\Input\Base>rem gagewatershed test 
 
@@ -1772,10 +1810,10 @@ Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 7
-Read time: 0.037174
-Compute time: 0.106031
-Write time: 0.035772
-Total time: 0.178977
+Read time: 0.091097
+Compute time: 0.221947
+Write time: 0.051029
+Total time: 0.364074
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 4 gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw1.tif  
 Gage Watershed version 5.3.9
@@ -1791,10 +1829,10 @@ Projection of Outlet feature NAD_1983_UTM_Zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 4
-Read time: 0.035847
-Compute time: 0.074366
-Write time: 0.037420
-Total time: 0.147633
+Read time: 0.103649
+Compute time: 0.174342
+Write time: 0.057217
+Total time: 0.335208
 
 C:\Users\dt\Desktop\Input\Base>mpiexec -n 5 gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw1.tif -id gwid1.txt -upid gwup.txt 
 Gage Watershed version 5.3.9
@@ -1809,10 +1847,10 @@ Projection of Raster datasource NAD_1983_UTM_zone_12N.
 Nodata value input to create partition from file: -2147483648.000000
 Nodata value recast to int16_t used in partition raster: 0
 Size: 5
-Read time: 0.057714
-Compute time: 0.096439
-Write time: 0.085947
-Total time: 0.240099
+Read time: 0.094407
+Compute time: 0.203817
+Write time: 0.058383
+Total time: 0.356607
 
 C:\Users\dt\Desktop\Input\Base>rem Connect down 
 
@@ -1827,7 +1865,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-loganOutlets loganOutlets_Moved Total time: 0.091895
+loganOutlets loganOutlets_Moved Total time: 0.206071
 
 C:\Users\dt\Desktop\Input\Base>cd .. 
 
@@ -1846,11 +1884,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.008133
-Data read time: 0.003298
-Compute time: 0.279978
-Write time: 0.074911
-Total time: 0.366320
+Header read time: 0.014691
+Data read time: 0.012711
+Compute time: 0.486871
+Write time: 0.236365
+Total time: 0.750638
 
 C:\Users\dt\Desktop\Input\fts>mpiexec -n 4 dinfflowdir fs_small.tif 
 DinfFlowDir version 5.3.9
@@ -1875,13 +1913,13 @@ Draining flats away from higher adjacent terrain
 .......
 Setting directions
 Processors: 4
-Header read time: 0.015165
-Data read time: 0.022810
-Compute Slope time: 0.372042
-Write Slope time: 0.166821
-Resolve Flat time: 5.218950
-Write Flat time: 0.074192
-Total time: 5.869981
+Header read time: 0.022269
+Data read time: 0.044532
+Compute Slope time: 0.513712
+Write Slope time: 0.175776
+Resolve Flat time: 11.568566
+Write Flat time: 0.096931
+Total time: 12.421787
 
 C:\Users\dt\Desktop\Input\fts>mpiexec -n 4 d8flowdir fs_small.tif 
 D8FlowDir version 5.3.9
@@ -1906,13 +1944,13 @@ Draining flats away from higher adjacent terrain
 .......
 Setting directions
 Processors: 4
-Header read time: 0.014428
-Data read time: 0.015786
-Compute Slope time: 0.135529
-Write Slope time: 0.076577
-Resolve Flat time: 5.027594
-Write Flat time: 0.041081
-Total time: 5.310994
+Header read time: 0.020688
+Data read time: 0.040715
+Compute Slope time: 0.183158
+Write Slope time: 0.103714
+Resolve Flat time: 10.612190
+Write Flat time: 0.056822
+Total time: 11.017287
 
 C:\Users\dt\Desktop\Input\fts>mpiexec -n 1 aread8 fs_small.tif 
 This run may take on the order of 1 minutes to complete.
@@ -1925,10 +1963,10 @@ Input file fs_smallp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 1
-Read time: 0.024263
-Compute time: 0.357843
-Write time: 0.051177
-Total time: 0.433283
+Read time: 0.048419
+Compute time: 0.539588
+Write time: 0.060130
+Total time: 0.648136
 
 C:\Users\dt\Desktop\Input\fts>mpiexec -n 2 threshold -ssa fs_smallad8.tif -src fs_smallsrc.tif -thresh 500 
 This run may take on the order of 1 minutes to complete.
@@ -1940,7 +1978,7 @@ Threshold version 5.3.9
 Input file fs_smallad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.007887
+Compute time: 0.016076
 
 C:\Users\dt\Desktop\Input\fts>mpiexec -n 5 dinfdistdown -ang fs_smallang.tif -fel fs_smallfel.tif -src fs_smallsrc.tif -dd fs_smallddhavewg.tif -m ave h -wg streambuffreclass2.tif 
 This run may take on the order of 1 minutes to complete.
@@ -1959,10 +1997,10 @@ Input file fs_smallsrc.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 5
-Read time: 0.039580
-Compute time: 0.830555
-Write time: 0.061319
-Total time: 0.931455
+Read time: 0.080022
+Compute time: 1.147743
+Write time: 0.065540
+Total time: 1.293305
 
 C:\Users\dt\Desktop\Input\fts>cd .. 
 
@@ -1981,11 +2019,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 8
-Header read time: 0.011466
-Data read time: 0.001271
-Compute time: 0.151947
-Write time: 0.036920
-Total time: 0.201605
+Header read time: 0.025875
+Data read time: 0.003059
+Compute time: 0.524646
+Write time: 0.052906
+Total time: 0.606486
 
 C:\Users\dt\Desktop\Input\Base>rem test with VRT format 
 
@@ -2000,11 +2038,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 8
-Header read time: 0.014301
-Data read time: 0.000486
-Compute time: 0.063023
-Write time: 0.035929
-Total time: 0.113739
+Header read time: 0.012648
+Data read time: 0.002177
+Compute time: 0.157338
+Write time: 0.043194
+Total time: 0.215357
 
 C:\Users\dt\Desktop\Input\Base>rem test with img file format 
 
@@ -2019,11 +2057,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 8
-Header read time: 0.044045
-Data read time: 0.005333
-Compute time: 0.364834
-Write time: 0.102964
-Total time: 0.517175
+Header read time: 0.079274
+Data read time: 0.008585
+Compute time: 0.689621
+Write time: 0.133892
+Total time: 0.911372
 
 C:\Users\dt\Desktop\Input\Base>rem test with ESRIGRID file format 
 
@@ -2038,11 +2076,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 8
-Header read time: 0.025891
-Data read time: 0.013430
-Compute time: 0.324246
-Write time: 0.092655
-Total time: 0.456222
+Header read time: 0.031811
+Data read time: 0.007729
+Compute time: 0.702868
+Write time: 0.142042
+Total time: 0.884450
 
 C:\Users\dt\Desktop\Input\Base>cd .. 
 
@@ -2063,11 +2101,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.006511
-Data read time: 0.001219
-Compute time: 0.126256
-Write time: 0.069288
-Total time: 0.203274
+Header read time: 0.012121
+Data read time: 0.005296
+Compute time: 0.230633
+Write time: 0.164090
+Total time: 0.412140
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 D8Flowdir -p enogeop.tif -sd8 enogeosd8.tif -fel enogeofel.tif  
 D8FlowDir version 5.3.9
@@ -2092,13 +2130,13 @@ Draining flats away from higher adjacent terrain
 ....
 Setting directions
 Processors: 5
-Header read time: 0.008622
-Data read time: 0.008462
-Compute Slope time: 0.056586
-Write Slope time: 0.081924
-Resolve Flat time: 0.774695
-Write Flat time: 0.056463
-Total time: 0.986753
+Header read time: 0.017934
+Data read time: 0.051410
+Compute Slope time: 0.061332
+Write Slope time: 0.210662
+Resolve Flat time: 1.849765
+Write Flat time: 0.092151
+Total time: 2.283255
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 DinfFlowdir -ang enogeoang.tif -slp enogeoslp.tif -fel enogeofel.tif 
 DinfFlowDir version 5.3.9
@@ -2123,13 +2161,13 @@ Draining flats away from higher adjacent terrain
 ....
 Setting directions
 Processors: 4
-Header read time: 0.006493
-Data read time: 0.008255
-Compute Slope time: 0.174334
-Write Slope time: 0.079808
-Resolve Flat time: 0.446735
-Write Flat time: 0.060315
-Total time: 0.775939
+Header read time: 0.016743
+Data read time: 0.025346
+Compute Slope time: 0.241605
+Write Slope time: 0.176085
+Resolve Flat time: 1.565495
+Write Flat time: 0.128144
+Total time: 2.153418
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -np 4 AreaD8 enogeo.tif 
 This run may take on the order of 1 minutes to complete.
@@ -2142,10 +2180,10 @@ Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 4
-Read time: 0.011286
-Compute time: 0.100171
-Write time: 0.047987
-Total time: 0.159444
+Read time: 0.022128
+Compute time: 0.145953
+Write time: 0.134227
+Total time: 0.302307
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -np 12 AreaDinf enogeo.tif 
 This run may take on the order of 1 minutes to complete.
@@ -2158,10 +2196,10 @@ Input file enogeoang.tif has geographic coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 12
-Read time: 0.012020
-Compute time: 0.490798
-Write time: 0.094983
-Total time: 0.597801
+Read time: 0.029579
+Compute time: 0.864367
+Write time: 0.211080
+Total time: 1.105026
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 7 aread8 -p enogeop.tif -o Outlets.shp -ad8 enogeoad8o.tif 
 This run may take on the order of 1 minutes to complete.
@@ -2174,10 +2212,10 @@ Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 7
-Read time: 0.042527
-Compute time: 0.049286
-Write time: 0.038039
-Total time: 0.129852
+Read time: 0.110859
+Compute time: 0.144127
+Write time: 0.099674
+Total time: 0.354661
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 1 areadinf -ang enogeoang.tif -o Outlets.shp -sca enogeoscao.tif 
 This run may take on the order of 1 minutes to complete.
@@ -2190,10 +2228,10 @@ Input file enogeoang.tif has geographic coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 1
-Read time: 0.041410
-Compute time: 0.220015
-Write time: 0.042826
-Total time: 0.304251
+Read time: 0.099536
+Compute time: 0.272056
+Write time: 0.127122
+Total time: 0.498714
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 Gridnet -p enogeop.tif -plen enogeoplen.tif -tlen enogeotlen.tif -gord enogeogord.tif  
 This run may take on the order of 1 minutes to complete.
@@ -2206,10 +2244,10 @@ Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 5
-Read time: 0.009906
-Compute time: 0.155068
-Write time: 0.139394
-Total time: 0.304367
+Read time: 0.024416
+Compute time: 0.262480
+Write time: 0.430327
+Total time: 0.717223
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 Gridnet -p enogeop.tif -plen enogeoplen1.tif -tlen enogeotlen1.tif -gord enogeogord1.tif -mask enogeoad8.tif -thresh 100  
 This run may take on the order of 1 minutes to complete.
@@ -2225,10 +2263,10 @@ Input file enogeoad8.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
 Processors: 5
-Read time: 0.016926
-Compute time: 0.106326
-Write time: 0.128779
-Total time: 0.252031
+Read time: 0.038006
+Compute time: 0.332781
+Write time: 0.367301
+Total time: 0.738087
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 7 Gridnet -p enogeop.tif -plen enogeoplen2.tif -tlen enogeotlen2.tif -gord enogeogord2.tif -o Outlets.shp  
 This run may take on the order of 1 minutes to complete.
@@ -2241,10 +2279,10 @@ Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.027028
-Compute time: 0.072189
-Write time: 0.142496
-Total time: 0.241714
+Read time: 0.124600
+Compute time: 0.256996
+Write time: 0.362941
+Total time: 0.744536
 
 C:\Users\dt\Desktop\Input\Geographic>Rem stream network peuker douglas 
 
@@ -2261,10 +2299,10 @@ Nodata value recast to float used in partition raster: -300000000549775575777803
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 7
-Read time: 0.014896
-Compute time: 0.036545
-Write time: 0.057045
-Total time: 0.108486
+Read time: 0.023268
+Compute time: 0.093427
+Write time: 0.172832
+Total time: 0.289527
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 Aread8 -p enogeop.tif -o Outlets.shp -ad8 enogeossa.tif -wg enogeoss.tiff 
 This run may take on the order of 1 minutes to complete.
@@ -2280,10 +2318,10 @@ Input file enogeoss.tiff has geographic coordinate system.
 Nodata value input to create partition from file: -2.000000
 Nodata value recast to float used in partition raster: -2.000000
 Number of Processes: 4
-Read time: 0.037392
-Compute time: 0.044059
-Write time: 0.038110
-Total time: 0.119561
+Read time: 0.098700
+Compute time: 0.094938
+Write time: 0.098209
+Total time: 0.291847
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 Dropanalysis -p enogeop.tif -fel enogeofel.tif -ad8 enogeoad8.tif -ssa enogeossa.tif -drp enogeodrp.txt -o Outlets.shp -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -2317,9 +2355,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.001111 11 3 5.156597 7.280238 4.639002 2.721691 -0.744703
 107.721756  Value for optimum that drop analysis selected - see output file for details.
 Processes: 4
-Read time: 0.050968
-Compute time: 0.555384
-Total time: 0.606352
+Read time: 0.155696
+Compute time: 0.906773
+Total time: 1.062469
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 Threshold -ssa enogeossa.tif -src enogeosrc.tif -thresh 180 
 This run may take on the order of 1 minutes to complete.
@@ -2331,7 +2369,7 @@ Threshold version 5.3.9
 Input file enogeossa.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.007549
+Compute time: 0.016142
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 Streamnet -fel enogeofel.tif -p enogeop.tif -ad8 enogeoad8.tif -src enogeosrc.tif -ord enogeoord3.tif -tree enogeotree.dat -coord enogeocoord.dat -net enogeonet.shp -w enogeow.tif -o Outlets.shp 
 StreamNet version 5.3.9
@@ -2357,13 +2395,13 @@ Creating links
 
  Calculating watersheds
 enogeonet Processors: 5
-Read time: 0.043880
-Length compute time: 0.007439
-Link compute time: 0.010319
-Link write time: 0.045994
-Watershed compute time: 0.034764
-Write time: 0.079822
-Total time: 0.222217
+Read time: 0.152715
+Length compute time: 0.013127
+Link compute time: 0.027646
+Link write time: 0.088512
+Watershed compute time: 0.057189
+Write time: 0.159103
+Total time: 0.498291
 
 C:\Users\dt\Desktop\Input\Geographic>Rem stream network slope area 
 
@@ -2380,7 +2418,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file enogeosca.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.012053
+Compute time: 0.080683
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 8 D8FlowpathExtremeUp -p enogeop.tif -sa enogeosa.tif -ssa enogeossa1.tif -o Outlets.shp 
 This run may take on the order of 1 minutes to complete.
@@ -2396,10 +2434,10 @@ Input file enogeosa.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 8
-Read time: 0.043956
-Compute time: 0.073338
-Write time: 0.063927
-Total time: 0.181221
+Read time: 0.094101
+Compute time: 0.173700
+Write time: 0.109844
+Total time: 0.377645
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 Dropanalysis -p enogeop.tif -fel enogeofel.tif -ad8 enogeoad8.tif -ssa enogeossa1.tif -drp enogeodrp1.txt -o Outlets.shp -par 10 2000 10 1  
 DropAnalysis version 5.3.9
@@ -2433,9 +2471,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 2000.000000 0.000512 2 0 15.115761  -  11.126370  -   - 
 231.111115  Value for optimum that drop analysis selected - see output file for details.
 Processes: 4
-Read time: 0.049909
-Compute time: 0.459416
-Total time: 0.509325
+Read time: 0.143664
+Compute time: 1.131875
+Total time: 1.275539
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 Threshold -ssa enogeossa1.tif -src enogeosrc1.tif -thresh 32 
 This run may take on the order of 1 minutes to complete.
@@ -2447,7 +2485,7 @@ Threshold version 5.3.9
 Input file enogeossa1.tif has geographic coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
-Compute time: 0.005566
+Compute time: 0.024689
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 8 Streamnet -fel enogeofel.tif -p enogeop.tif -ad8 enogeoad8.tif -src enogeosrc1.tif -ord enogeoord5.tif -tree enogeotree1.dat -coord enogeocoord1.dat -net enogeonet1.shp -w enogeow1.tif -o Outlets.shp -sw 
 StreamNet version 5.3.9
@@ -2473,13 +2511,13 @@ Creating links
 
  Calculating watersheds
 enogeonet1 Processors: 8
-Read time: 0.055008
-Length compute time: 0.017120
-Link compute time: 0.068176
-Link write time: 0.068823
-Watershed compute time: 0.221334
-Write time: 0.185701
-Total time: 0.616162
+Read time: 0.138643
+Length compute time: 0.049255
+Link compute time: 0.184813
+Link write time: 0.511545
+Watershed compute time: 0.242203
+Write time: 0.181725
+Total time: 1.308184
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 3 LengthArea -plen enogeoplen.tif -ad8 enogeoad8.tif -ss enogeolass.tif -par 0.03 1.3 
 This run may take on the order of 1 minutes to complete.
@@ -2494,7 +2532,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file enogeoad8.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
-Compute time: 0.014201
+Compute time: 0.024172
 
 C:\Users\dt\Desktop\Input\Geographic>Rem Specialized grid analysis 
 
@@ -2511,7 +2549,7 @@ Nodata value recast to float used in partition raster: -1.000000
 Input file enogeosca.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.007729
+Compute time: 0.035845
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -np 7 D8HDisttoStrm -p enogeop.tif -src enogeoad8.tif -dist enogeodist1.tif -thresh 200  
 This run may take on the order of 1 minutes to complete.
@@ -2527,10 +2565,10 @@ Input file enogeoad8.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to int32_t used in partition raster: -1
 Processors: 7
-Read time: 0.020700
-Compute time: 0.055045
-Write time: 0.094240
-Total time: 0.169985
+Read time: 0.035431
+Compute time: 0.109858
+Write time: 0.170819
+Total time: 0.316108
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -np 5 D8HDisttoStrm -p enogeop.tif -src enogeosrc.tif -dist enogeodist.tif  
 This run may take on the order of 1 minutes to complete.
@@ -2546,10 +2584,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int32_t used in partition raster: -32768
 Processors: 5
-Read time: 0.014404
-Compute time: 0.023240
-Write time: 0.068089
-Total time: 0.105732
+Read time: 0.036653
+Compute time: 0.063798
+Write time: 0.163617
+Total time: 0.264068
 
 C:\Users\dt\Desktop\Input\Geographic>rem MOVEOUTLETS 
 
@@ -2563,7 +2601,7 @@ Threshold version 5.3.9
 Input file enogeoad8.tif has geographic coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.008359
+Compute time: 0.015920
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -np 3 MoveOutletstoStreams -p enogeop.tif -src enogeosrc.tif -o Outlets.shp -om Outletsmoved.shp -md 20  
 MoveOutletsToStreams version 5.3.9
@@ -2578,7 +2616,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmoved Total time: 0.043952
+Outletsmoved Total time: 0.117881
 
 C:\Users\dt\Desktop\Input\Geographic>rem DISTDOWN 
 
@@ -2596,10 +2634,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 1
-Read time: 0.033742
-Compute time: 0.928712
-Write time: 0.054398
-Total time: 1.016853
+Read time: 0.059420
+Compute time: 1.340674
+Write time: 0.141510
+Total time: 1.541603
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 2 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhmin.tif -m min h 
 This run may take on the order of 1 minutes to complete.
@@ -2615,10 +2653,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.022234
-Compute time: 0.506275
-Write time: 0.060616
-Total time: 0.589125
+Read time: 0.055505
+Compute time: 0.695103
+Write time: 0.146487
+Total time: 0.897095
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 3 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhmax.tif -m max h 
 This run may take on the order of 1 minutes to complete.
@@ -2634,10 +2672,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.018654
-Compute time: 0.445060
-Write time: 0.058270
-Total time: 0.521983
+Read time: 0.061403
+Compute time: 0.760065
+Write time: 0.144409
+Total time: 0.965877
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddvave.tif -m ave v 
 This run may take on the order of 1 minutes to complete.
@@ -2656,10 +2694,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.031132
-Compute time: 0.456487
-Write time: 0.063213
-Total time: 0.550832
+Read time: 0.061243
+Compute time: 0.661877
+Write time: 0.138405
+Total time: 0.861525
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 5 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddvmin.tif -m min v 
 This run may take on the order of 1 minutes to complete.
@@ -2678,10 +2716,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 5
-Read time: 0.031455
-Compute time: 0.423887
-Write time: 0.078105
-Total time: 0.533448
+Read time: 0.086507
+Compute time: 0.805814
+Write time: 0.276966
+Total time: 1.169286
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 6 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddvmax.tif -m max v 
 This run may take on the order of 1 minutes to complete.
@@ -2700,10 +2738,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 6
-Read time: 0.029771
-Compute time: 0.440216
-Write time: 0.068330
-Total time: 0.538317
+Read time: 0.078531
+Compute time: 0.636925
+Write time: 0.183937
+Total time: 0.899393
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 7 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddsave.tif -m ave s 
 This run may take on the order of 1 minutes to complete.
@@ -2722,10 +2760,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.030087
-Compute time: 0.443856
-Write time: 0.072836
-Total time: 0.546779
+Read time: 0.058084
+Compute time: 0.704698
+Write time: 0.165235
+Total time: 0.928017
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 8 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddsmin.tif -m min s 
 This run may take on the order of 1 minutes to complete.
@@ -2744,10 +2782,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 8
-Read time: 0.027902
-Compute time: 0.438364
-Write time: 0.075795
-Total time: 0.542060
+Read time: 0.084559
+Compute time: 0.705723
+Write time: 0.142492
+Total time: 0.932775
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 1 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddsmax.tif -m max s 
 This run may take on the order of 1 minutes to complete.
@@ -2766,10 +2804,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 1
-Read time: 0.058611
-Compute time: 0.795039
-Write time: 0.061484
-Total time: 0.915134
+Read time: 0.136223
+Compute time: 1.120929
+Write time: 0.169056
+Total time: 1.426207
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 2 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddpave.tif -m ave p 
 This run may take on the order of 1 minutes to complete.
@@ -2788,10 +2826,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.041696
-Compute time: 0.467824
-Write time: 0.059759
-Total time: 0.569279
+Read time: 0.086761
+Compute time: 0.931817
+Write time: 0.148181
+Total time: 1.166760
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 3 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddpmin.tif -m min p 
 This run may take on the order of 1 minutes to complete.
@@ -2810,10 +2848,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.029688
-Compute time: 0.434956
-Write time: 0.063784
-Total time: 0.528427
+Read time: 0.100398
+Compute time: 0.785388
+Write time: 0.178321
+Total time: 1.064107
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddpmax.tif -m max p 
 This run may take on the order of 1 minutes to complete.
@@ -2832,10 +2870,10 @@ Input file enogeosrc.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 4
-Read time: 0.032629
-Compute time: 0.433958
-Write time: 0.066778
-Total time: 0.533365
+Read time: 0.086994
+Compute time: 0.724681
+Write time: 0.141750
+Total time: 0.953424
 
 C:\Users\dt\Desktop\Input\Geographic>rem DISTANCE UP 
 
@@ -2850,10 +2888,10 @@ Input file enogeoang.tif has geographic coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 1
-Read time: 0.027968
-Compute time: 0.841046
-Write time: 0.140984
-Total time: 1.009999
+Read time: 0.057305
+Compute time: 1.660409
+Write time: 0.161693
+Total time: 1.879407
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 2 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeoduhmin.tif -m min h -thresh 0.5 
 This run may take on the order of 1 minutes to complete.
@@ -2866,10 +2904,10 @@ Input file enogeoang.tif has geographic coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 2
-Read time: 0.027683
-Compute time: 0.680511
-Write time: 0.063756
-Total time: 0.771950
+Read time: 0.038284
+Compute time: 0.792240
+Write time: 0.155206
+Total time: 0.985729
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 6 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeoduvmax.tif -m max v 
 This run may take on the order of 1 minutes to complete.
@@ -2885,10 +2923,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 6
-Read time: 0.021872
-Compute time: 0.401309
-Write time: 0.090122
-Total time: 0.513303
+Read time: 0.048803
+Compute time: 0.754476
+Write time: 0.161730
+Total time: 0.965009
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 7 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodusave.tif -m ave s -thresh 0.9 
 This run may take on the order of 1 minutes to complete.
@@ -2904,10 +2942,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 7
-Read time: 0.027112
-Compute time: 0.407760
-Write time: 0.075492
-Total time: 0.510363
+Read time: 0.051837
+Compute time: 0.758194
+Write time: 0.179944
+Total time: 0.989976
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 8 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodusmin.tif -m min s 
 This run may take on the order of 1 minutes to complete.
@@ -2923,10 +2961,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 8
-Read time: 0.024456
-Compute time: 0.466464
-Write time: 0.076916
-Total time: 0.567836
+Read time: 0.044152
+Compute time: 1.005670
+Write time: 0.213143
+Total time: 1.262966
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 1 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodusmax.tif -m max s 
 This run may take on the order of 1 minutes to complete.
@@ -2942,10 +2980,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 1
-Read time: 0.061563
-Compute time: 0.884135
-Write time: 0.072689
-Total time: 1.018388
+Read time: 0.102947
+Compute time: 1.324717
+Write time: 0.156417
+Total time: 1.584081
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 2 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupave.tif -m ave p 
 This run may take on the order of 1 minutes to complete.
@@ -2961,10 +2999,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 2
-Read time: 0.031527
-Compute time: 0.474032
-Write time: 0.072676
-Total time: 0.578235
+Read time: 0.101952
+Compute time: 1.085986
+Write time: 0.157768
+Total time: 1.345706
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 3 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupmin.tif -m min p 
 This run may take on the order of 1 minutes to complete.
@@ -2980,10 +3018,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 3
-Read time: 0.027271
-Compute time: 0.494473
-Write time: 0.074405
-Total time: 0.596149
+Read time: 0.064050
+Compute time: 0.802767
+Write time: 0.201547
+Total time: 1.068364
 
 C:\Users\dt\Desktop\Input\Geographic>mpiexec -n 4 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupmax.tif -m max p 
 This run may take on the order of 1 minutes to complete.
@@ -2999,10 +3037,10 @@ Input file enogeofel.tif has geographic coordinate system.
 Nodata value input to create partition from file: -300000000549775575777803994281145270272.000000
 Nodata value recast to float used in partition raster: -300000000549775575777803994281145270272.000000
 Processors: 4
-Read time: 0.029078
-Compute time: 0.427831
-Write time: 0.077015
-Total time: 0.533924
+Read time: 0.065751
+Compute time: 0.698920
+Write time: 0.160692
+Total time: 0.925363
 
 C:\Users\dt\Desktop\Input\Geographic>rem SLOPEAVEDOWN 
 
@@ -3019,11 +3057,19 @@ Nodata value recast to float used in partition raster: -300000000549775575777803
 Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
+Number of slope down interations to do 7
+Done iteration 0
+Done iteration 1
+Done iteration 2
+Done iteration 3
+Done iteration 4
+Done iteration 5
+Done iteration 6
 Processors: 3
-Read time: 0.024474
-Compute time: 0.541499
-Write time: 0.109362
-Total time: 0.675336
+Read time: 0.047281
+Compute time: 1.130688
+Write time: 0.201707
+Total time: 1.379675
 
 C:\Users\dt\Desktop\Input\Geographic>rem gagewatershed test 
 
@@ -3038,10 +3084,10 @@ Input file enogeop.tif has geographic coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 7
-Read time: 0.038014
-Compute time: 0.033133
-Write time: 0.034824
-Total time: 0.105970
+Read time: 0.075970
+Compute time: 0.148549
+Write time: 0.108036
+Total time: 0.332555
 
 C:\Users\dt\Desktop\Input\Geographic>cd .. 
 
@@ -3060,11 +3106,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.014917
-Data read time: 0.002974
-Compute time: 0.288571
-Write time: 0.087840
-Total time: 0.394302
+Header read time: 0.040933
+Data read time: 0.012665
+Compute time: 0.746702
+Write time: 0.148466
+Total time: 0.948767
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfelim.img 
 PitRemove version 5.3.9
@@ -3077,11 +3123,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.012481
-Data read time: 0.003674
-Compute time: 0.271668
-Write time: 0.070960
-Total time: 0.358783
+Header read time: 0.035831
+Data read time: 0.011775
+Compute time: 0.584639
+Write time: 0.219870
+Total time: 0.852115
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfelsd.sdat 
 PitRemove version 5.3.9
@@ -3094,11 +3140,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.014499
-Data read time: 0.003115
-Compute time: 0.270338
-Write time: 0.079321
-Total time: 0.367273
+Header read time: 0.031180
+Data read time: 0.011442
+Compute time: 0.649758
+Write time: 0.204291
+Total time: 0.896671
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel.bil 
 PitRemove version 5.3.9
@@ -3111,11 +3157,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.011800
-Data read time: 0.003747
-Compute time: 0.269538
-Write time: 0.069837
-Total time: 0.354922
+Header read time: 0.025739
+Data read time: 0.014064
+Compute time: 0.599473
+Write time: 0.163770
+Total time: 0.803046
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel1.bin 
 PitRemove version 5.3.9
@@ -3128,11 +3174,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.019406
-Data read time: 0.004331
-Compute time: 0.321610
-Write time: 0.073077
-Total time: 0.418424
+Header read time: 0.048502
+Data read time: 0.012825
+Compute time: 0.510424
+Write time: 0.189187
+Total time: 0.760938
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel.bil 
 PitRemove version 5.3.9
@@ -3145,11 +3191,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.024170
-Data read time: 0.004493
-Compute time: 0.281486
-Write time: 0.059212
-Total time: 0.369361
+Header read time: 0.026894
+Data read time: 0.012055
+Compute time: 0.561856
+Write time: 0.254790
+Total time: 0.855595
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 D8Flowdir -fel loganfel1.bin -p bilp.bil -sd8 binsd8.bin 
 D8FlowDir version 5.3.9
@@ -3180,13 +3226,13 @@ Draining flats away from higher adjacent terrain
 ..
 Setting directions
 Processors: 3
-Header read time: 0.029013
-Data read time: 0.007303
-Compute Slope time: 0.162920
-Write Slope time: 0.016442
-Resolve Flat time: 0.893874
-Write Flat time: 0.038229
-Total time: 1.147781
+Header read time: 0.090259
+Data read time: 0.031075
+Compute Slope time: 0.315663
+Write Slope time: 0.058300
+Resolve Flat time: 1.152275
+Write Flat time: 0.059742
+Total time: 1.707315
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -n 5 aread8 -p bilp.bil -ad8 loganad8.img 
 This run may take on the order of 1 minutes to complete.
@@ -3199,10 +3245,10 @@ Input file bilp.bil has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 5
-Read time: 0.053993
-Compute time: 0.187736
-Write time: 0.030047
-Total time: 0.271777
+Read time: 0.124688
+Compute time: 0.891011
+Write time: 0.083253
+Total time: 1.098952
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -n 2 dinfflowdir -fel loganfel.bil -ang ang.ang -slp slp.slp 
 DinfFlowDir version 5.3.9
@@ -3233,13 +3279,13 @@ Draining flats away from higher adjacent terrain
 ..
 Setting directions
 Processors: 2
-Header read time: 0.036393
-Data read time: 0.007780
-Compute Slope time: 0.717144
-Write Slope time: 0.100604
-Resolve Flat time: 0.431643
-Write Flat time: 0.090052
-Total time: 1.383616
+Header read time: 0.103920
+Data read time: 0.037315
+Compute Slope time: 1.394766
+Write Slope time: 0.227965
+Resolve Flat time: 1.091478
+Write Flat time: 0.144923
+Total time: 3.000367
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel2.lg 
 PitRemove version 5.3.9
@@ -3252,11 +3298,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.017020
-Data read time: 0.004299
-Compute time: 0.601956
-Write time: 0.090003
-Total time: 0.713278
+Header read time: 0.029305
+Data read time: 0.013440
+Compute time: 0.461491
+Write time: 0.138607
+Total time: 0.642843
 
 C:\Users\dt\Desktop\Input\gridtypes>mpiexec -np 3 PitRemove -z logan.tif -fel loganfel3 
 PitRemove version 5.3.9
@@ -3269,11 +3315,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 3
-Header read time: 0.011450
-Data read time: 0.003544
-Compute time: 0.260260
-Write time: 0.089974
-Total time: 0.365228
+Header read time: 0.028179
+Data read time: 0.018571
+Compute time: 0.472543
+Write time: 0.143774
+Total time: 0.663066
 
 C:\Users\dt\Desktop\Input\gridtypes>cd .. 
 
@@ -3297,8 +3343,8 @@ Nodata value input to create partition from file: -2147483648.000000
 Nodata value recast to int16_t used in partition raster: 0
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.630365
-File write time: 0.353757
+Compute time: 1.014012
+File write time: 0.578221
 
 C:\Users\dt\Desktop\Input\sinmapsi>Rem Testing with Sinmap manual example 
 
@@ -3313,11 +3359,11 @@ Run time is highly uncertain as it depends on the complexity of the input data
 and speed and memory of the computer. This estimate is based on our testing on 
 a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
 Processes: 4
-Header read time: 0.006218
-Data read time: 0.000945
-Compute time: 0.015768
-Write time: 0.035941
-Total time: 0.058872
+Header read time: 0.015352
+Data read time: 0.003608
+Compute time: 0.043606
+Write time: 0.063198
+Total time: 0.125764
 
 C:\Users\dt\Desktop\Input\sinmapsi>mpiexec -n 4 dinfflowdir -fel demfel.tif -slp demslp.tif -ang demang.tif 
 DinfFlowDir version 5.3.9
@@ -3342,13 +3388,13 @@ Draining flats away from higher adjacent terrain
 ...
 Setting directions
 Processors: 4
-Header read time: 0.006922
-Data read time: 0.003303
-Compute Slope time: 0.024987
-Write Slope time: 0.015167
-Resolve Flat time: 0.043192
-Write Flat time: 0.070459
-Total time: 0.164029
+Header read time: 0.014881
+Data read time: 0.009864
+Compute Slope time: 0.055632
+Write Slope time: 0.060328
+Resolve Flat time: 0.171836
+Write Flat time: 0.039908
+Total time: 0.352449
 
 C:\Users\dt\Desktop\Input\sinmapsi>mpiexec -n 2 areadinf -ang demang.tif -sca demsca.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3361,10 +3407,10 @@ Input file demang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 2
-Read time: 0.007769
-Compute time: 0.077966
-Write time: 0.021285
-Total time: 0.107020
+Read time: 0.022743
+Compute time: 0.162243
+Write time: 0.029479
+Total time: 0.214465
 
 C:\Users\dt\Desktop\Input\sinmapsi>mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demreg12.tif -calpar dempar12.csv -si demsi1.tif -sat demsat1.tif -par 0.0009 0.00135 9.81 1000 
 This run may take on the order of 1 minutes to complete.
@@ -3382,8 +3428,8 @@ Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.027221
-File write time: 0.039444
+Compute time: 0.055559
+File write time: 0.056733
 
 C:\Users\dt\Desktop\Input\sinmapsi>mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demregsh.tif -calpar demparsh.dat -si demsi2.tif -sat demsat2.tif -par 0.0009 0.00135 9.81 1000 
 This run may take on the order of 1 minutes to complete.
@@ -3401,8 +3447,8 @@ Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Compute time: 0.030252
-File write time: 0.065530
+Compute time: 0.049076
+File write time: 0.052391
 
 C:\Users\dt\Desktop\Input\sinmapsi>cd .. 
 
@@ -3424,10 +3470,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 7
-Read time: 0.063615
-Compute time: 0.213421
-Write time: 0.035981
-Total time: 0.313017
+Read time: 0.124008
+Compute time: 0.580092
+Write time: 0.076479
+Total time: 0.780579
 
 C:\Users\dt\Desktop\Input\AreaD8_data>test using sqlite file 
 'test' is not recognized as an internal or external command,
@@ -3444,10 +3490,10 @@ Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 3
-Read time: 0.028459
-Compute time: 0.145707
-Write time: 0.034764
-Total time: 0.208930
+Read time: 0.192865
+Compute time: 0.203156
+Write time: 0.054828
+Total time: 0.450849
 
 C:\Users\dt\Desktop\Input\AreaD8_data>test using json file 
 'test' is not recognized as an internal or external command,
@@ -3467,10 +3513,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 4
-Read time: 0.019378
-Compute time: 0.123095
-Write time: 0.038669
-Total time: 0.181142
+Read time: 0.057769
+Compute time: 0.221778
+Write time: 0.080084
+Total time: 0.359631
 
 C:\Users\dt\Desktop\Input\AreaD8_data>mpiexec -n 6 aread8 -p loganp.tif -o LoganOutlet.json -lyrname OGRGeoJson -ad8 loganad8_5.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3486,10 +3532,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 6
-Read time: 0.019137
-Compute time: 0.144387
-Write time: 0.038179
-Total time: 0.201703
+Read time: 0.040369
+Compute time: 0.315158
+Write time: 0.060226
+Total time: 0.415753
 
 C:\Users\dt\Desktop\Input\AreaD8_data>test using geodatabase file 
 'test' is not recognized as an internal or external command,
@@ -3509,10 +3555,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 7
-Read time: 0.065758
-Compute time: 0.168536
-Write time: 0.037720
-Total time: 0.272014
+Read time: 0.145706
+Compute time: 0.573831
+Write time: 0.070202
+Total time: 0.789738
 
 C:\Users\dt\Desktop\Input\AreaD8_data>mpiexec -n 5 aread8 -p loganp.tif -o Logan.gdb -lyrname Outlet -ad8 loganad8_7.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3528,10 +3574,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 5
-Read time: 0.037420
-Compute time: 0.132907
-Write time: 0.042197
-Total time: 0.212523
+Read time: 0.123822
+Compute time: 0.335012
+Write time: 0.046855
+Total time: 0.505689
 
 C:\Users\dt\Desktop\Input\AreaD8_data>mpiexec -n 2 aread8 -p loganp.tif -o Logan.gdb -lyrno 0 -ad8 loganad8_8.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3547,10 +3593,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 2
-Read time: 0.038807
-Compute time: 0.153472
-Write time: 0.042506
-Total time: 0.234785
+Read time: 0.137901
+Compute time: 0.255409
+Write time: 0.063956
+Total time: 0.457267
 
 C:\Users\dt\Desktop\Input\AreaD8_data>cd ../AreaDinf 
 
@@ -3570,10 +3616,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 7
-Read time: 0.053396
-Compute time: 0.668934
-Write time: 0.080400
-Total time: 0.802730
+Read time: 0.141201
+Compute time: 1.283498
+Write time: 0.202732
+Total time: 1.627431
 
 C:\Users\dt\Desktop\Input\AreaDinf>test using sqlite file 
 'test' is not recognized as an internal or external command,
@@ -3590,10 +3636,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 1
-Read time: 0.092832
-Compute time: 0.866131
-Write time: 0.067429
-Total time: 1.026392
+Read time: 0.276328
+Compute time: 1.809408
+Write time: 0.110213
+Total time: 2.195948
 
 C:\Users\dt\Desktop\Input\AreaDinf>mpiexec -n 3 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrname LoganOutlet -sca logansca_3.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3606,10 +3652,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 3
-Read time: 0.051013
-Compute time: 0.636982
-Write time: 0.083485
-Total time: 0.771481
+Read time: 0.122188
+Compute time: 1.083142
+Write time: 0.123760
+Total time: 1.329090
 
 C:\Users\dt\Desktop\Input\AreaDinf>mpiexec -n 5 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrno 1 -sca logansca_4.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3622,10 +3668,10 @@ Input file loganang.tif has projected coordinate system.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 5
-Read time: 0.060688
-Compute time: 0.687984
-Write time: 0.088930
-Total time: 0.837601
+Read time: 0.123786
+Compute time: 1.112129
+Write time: 0.106053
+Total time: 1.341969
 
 C:\Users\dt\Desktop\Input\AreaDinf>test using json file 
 'test' is not recognized as an internal or external command,
@@ -3645,10 +3691,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 3
-Read time: 0.045054
-Compute time: 0.682512
-Write time: 0.087242
-Total time: 0.814807
+Read time: 0.091917
+Compute time: 1.141894
+Write time: 0.111502
+Total time: 1.345314
 
 C:\Users\dt\Desktop\Input\AreaDinf>mpiexec -n 5 areadinf -ang loganang.tif -o LoganOutlet.json -lyrname OGRGeoJson -sca logansca_6.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3664,10 +3710,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 5
-Read time: 0.047124
-Compute time: 0.728035
-Write time: 0.089630
-Total time: 0.864789
+Read time: 0.079326
+Compute time: 1.097704
+Write time: 0.127186
+Total time: 1.304217
 
 C:\Users\dt\Desktop\Input\AreaDinf>test using geodatabase file 
 'test' is not recognized as an internal or external command,
@@ -3687,10 +3733,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 5
-Read time: 0.066089
-Compute time: 0.568754
-Write time: 0.073639
-Total time: 0.708482
+Read time: 0.199186
+Compute time: 1.324155
+Write time: 0.121458
+Total time: 1.644798
 
 C:\Users\dt\Desktop\Input\AreaDinf>mpiexec -n 3 areadinf -ang loganang.tif -o Logan.gdb -lyrname Outlet -sca logansca_8.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3706,10 +3752,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 3
-Read time: 0.068323
-Compute time: 0.540041
-Write time: 0.069618
-Total time: 0.677982
+Read time: 0.192582
+Compute time: 1.175310
+Write time: 0.113894
+Total time: 1.481786
 
 C:\Users\dt\Desktop\Input\AreaDinf>mpiexec -n 6 areadinf -ang loganang.tif -o Logan.gdb -lyrno 0 -sca logansca_9.tif 
 This run may take on the order of 1 minutes to complete.
@@ -3725,10 +3771,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 Processors: 6
-Read time: 0.056782
-Compute time: 0.541344
-Write time: 0.074905
-Total time: 0.673031
+Read time: 0.162375
+Compute time: 0.960496
+Write time: 0.099873
+Total time: 1.222745
 
 C:\Users\dt\Desktop\Input\AreaDinf>cd ../Gridnet 
 
@@ -3746,10 +3792,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.047292
-Compute time: 0.256482
-Write time: 0.136016
-Total time: 0.439791
+Read time: 0.098172
+Compute time: 0.597543
+Write time: 0.275993
+Total time: 0.971708
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 6 Gridnet -p loganp.tif -plen loganplen3.tif -tlen logantlen3.tif -gord logangord3.tif -o LoganSample.sqlite -lyrname LoganOutlet 
 This run may take on the order of 1 minutes to complete.
@@ -3762,10 +3808,10 @@ Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 6
-Read time: 0.039731
-Compute time: 0.198653
-Write time: 0.137225
-Total time: 0.375610
+Read time: 0.082278
+Compute time: 0.285692
+Write time: 0.222796
+Total time: 0.590766
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen4.tif -tlen logantlen4.tif -gord logangord4.tif -o LoganSample.sqlite -lyrno 1 
 This run may take on the order of 1 minutes to complete.
@@ -3778,10 +3824,10 @@ Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.029943
-Compute time: 0.183030
-Write time: 0.136225
-Total time: 0.349198
+Read time: 0.077472
+Compute time: 0.247245
+Write time: 0.179010
+Total time: 0.503727
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen5.tif -tlen logantlen5.tif -gord logangord5.tif -o LoganOutlet.json 
 This run may take on the order of 1 minutes to complete.
@@ -3797,10 +3843,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.027316
-Compute time: 0.176476
-Write time: 0.129433
-Total time: 0.333226
+Read time: 0.043128
+Compute time: 0.247074
+Write time: 0.194450
+Total time: 0.484652
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 7 Gridnet -p loganp.tif -plen loganplen6.tif -tlen logantlen6.tif -gord logangord6.tif -o LoganOutlet.json -lyrname OGRGeoJson  
 This run may take on the order of 1 minutes to complete.
@@ -3816,10 +3862,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 7
-Read time: 0.022281
-Compute time: 0.266916
-Write time: 0.145300
-Total time: 0.434497
+Read time: 0.068579
+Compute time: 0.475792
+Write time: 0.198233
+Total time: 0.742605
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 1 Gridnet -p loganp.tif -plen loganplen7.tif -tlen logantlen7.tif -gord logangord7.tif -o Logan.gdb 
 This run may take on the order of 1 minutes to complete.
@@ -3835,10 +3881,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 1
-Read time: 0.051148
-Compute time: 0.295856
-Write time: 0.133862
-Total time: 0.480865
+Read time: 0.167742
+Compute time: 0.495244
+Write time: 0.207478
+Total time: 0.870464
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen8.tif -tlen logantlen8.tif -gord logangord8.tif -o Logan.gdb -lyrname Outlet 
 This run may take on the order of 1 minutes to complete.
@@ -3854,10 +3900,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 3
-Read time: 0.039035
-Compute time: 0.173718
-Write time: 0.130075
-Total time: 0.342828
+Read time: 0.145618
+Compute time: 0.269565
+Write time: 0.180021
+Total time: 0.595204
 
 C:\Users\dt\Desktop\Input\Gridnet>mpiexec -n 2 Gridnet -p loganp.tif -plen loganplen9.tif -tlen logantlen9.tif -gord logangord9.tif -o Logan.gdb -lyrno 0 
 This run may take on the order of 1 minutes to complete.
@@ -3873,10 +3919,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Processors: 2
-Read time: 0.040198
-Compute time: 0.183221
-Write time: 0.294031
-Total time: 0.517450
+Read time: 0.126821
+Compute time: 0.300168
+Write time: 0.192093
+Total time: 0.619082
 
 C:\Users\dt\Desktop\Input\Gridnet>Rem stream network peuker douglas 
 
@@ -3917,9 +3963,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 1
-Read time: 0.186375
-Compute time: 2.323753
-Total time: 2.510129
+Read time: 0.407063
+Compute time: 3.933290
+Total time: 4.340352
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp3.txt -o LoganSample.sqlite -lyrname LoganOutlet -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -3953,9 +3999,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 5
-Read time: 0.092650
-Compute time: 1.485173
-Total time: 1.577823
+Read time: 0.190647
+Compute time: 3.216464
+Total time: 3.407111
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 2 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp4.txt -o LoganSample.sqlite -lyrno 1 -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -3989,9 +4035,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 2
-Read time: 0.111241
-Compute time: 1.356303
-Total time: 1.467544
+Read time: 0.228515
+Compute time: 2.561411
+Total time: 2.789926
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp5.txt -o LoganOutlet.json -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -4028,9 +4074,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 5
-Read time: 0.076920
-Compute time: 1.488082
-Total time: 1.565002
+Read time: 0.187226
+Compute time: 2.848649
+Total time: 3.035875
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp6.txt -o LoganOutlet.json -lyrname OGRGeoJson  -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -4067,9 +4113,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 4
-Read time: 0.078929
-Compute time: 1.124640
-Total time: 1.203568
+Read time: 0.169655
+Compute time: 2.248944
+Total time: 2.418599
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 3 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp7.txt -o Logan.gdb -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -4106,9 +4152,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430801 289.485138 151.132095 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 3
-Read time: 0.106771
-Compute time: 1.231540
-Total time: 1.338310
+Read time: 0.263006
+Compute time: 2.281832
+Total time: 2.544838
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp8.txt -o Logan.gdb -lyrname Outlet -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -4145,9 +4191,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430817 289.485138 151.132065 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 5
-Read time: 0.106313
-Compute time: 1.480169
-Total time: 1.586482
+Read time: 0.241589
+Compute time: 3.194800
+Total time: 3.436390
 
 C:\Users\dt\Desktop\Input\peukerDouglas>mpiexec -n 6 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp9.txt -o Logan.gdb -lyrno 0 -par 5 500 10 0  
 DropAnalysis version 5.3.9
@@ -4184,9 +4230,9 @@ Threshold DrainDen NoFirstOrd NoHighOrd MeanDFirstOrd MeanDHighOrd StdDevFirstOr
 500.000153 0.000324 32 4 209.430801 289.485138 151.132095 135.973572 -1.007311
 179.690720  Value for optimum that drop analysis selected - see output file for details.
 Processes: 6
-Read time: 0.096297
-Compute time: 1.554250
-Total time: 1.650548
+Read time: 0.220772
+Compute time: 3.116000
+Total time: 3.336771
 
 C:\Users\dt\Desktop\Input\peukerDouglas>cd ../streamnet_data 
 
@@ -4217,13 +4263,13 @@ Warning: Projection of Outlet feature and Raster data may be different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature NAD83_UTM_zone_12N.
 logannet1 Processors: 5
-Read time: 0.090594
-Length compute time: 0.014126
-Link compute time: 0.023594
-Link write time: 0.075271
-Watershed compute time: 0.096453
-Write time: 0.082172
-Total time: 0.382211
+Read time: 0.187428
+Length compute time: 0.038198
+Link compute time: 0.092326
+Link write time: 0.145829
+Watershed compute time: 0.738286
+Write time: 0.352702
+Total time: 1.554769
 
 C:\Users\dt\Desktop\Input\streamnet_data>mpiexec -n 3 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net LoganSample.sqlite -netlyr Mynetwork.shp -w loganw.tif -o LoganSample.sqlite -lyrname LoganOutlet 
 StreamNet version 5.3.9
@@ -4249,13 +4295,13 @@ Creating links
 
  Calculating watersheds
 Processors: 3
-Read time: 0.091132
-Length compute time: 0.015513
-Link compute time: 0.011848
-Link write time: 6.164512
-Watershed compute time: 0.083390
-Write time: 0.085926
-Total time: 6.452321
+Read time: 0.287417
+Length compute time: 0.037365
+Link compute time: 0.038069
+Link write time: 5.622667
+Watershed compute time: 0.152686
+Write time: 0.125019
+Total time: 6.263224
 
 C:\Users\dt\Desktop\Input\streamnet_data>mpiexec -n 7 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net logannet3.kml -netlyr logannet3 -w loganw.tif -o Logan.gdb -lyrname Outlet 
 StreamNet version 5.3.9
@@ -4284,13 +4330,13 @@ Warning: Projection of Outlet feature and Raster data may be different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature NAD83_UTM_zone_12N.
 Processors: 7
-Read time: 0.083017
-Length compute time: 0.031187
-Link compute time: 0.269721
-Link write time: 0.378500
-Watershed compute time: 0.142497
-Write time: 0.096826
-Total time: 1.001748
+Read time: 0.224300
+Length compute time: 0.060397
+Link compute time: 0.340482
+Link write time: 0.279847
+Watershed compute time: 0.230041
+Write time: 0.153137
+Total time: 1.288205
 
 C:\Users\dt\Desktop\Input\streamnet_data>mpiexec -n 7 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net logannet3.json -netlyr logannet3 -w loganw.tif -o Logan.gdb -lyrno 0 
 StreamNet version 5.3.9
@@ -4319,13 +4365,13 @@ Warning: Projection of Outlet feature and Raster data may be different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature NAD83_UTM_zone_12N.
 Processors: 7
-Read time: 0.150161
-Length compute time: 0.058000
-Link compute time: 0.082865
-Link write time: 0.132094
-Watershed compute time: 0.100885
-Write time: 0.087668
-Total time: 0.611673
+Read time: 0.208683
+Length compute time: 0.062404
+Link compute time: 0.279168
+Link write time: 0.251827
+Watershed compute time: 0.647174
+Write time: 0.148906
+Total time: 1.598162
 
 C:\Users\dt\Desktop\Input\streamnet_data>mpiexec -n 5 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net logannet4.json -netlyr logannet4 -w loganw.tif -o LoganOutlet.json -lyrno 0 
 StreamNet version 5.3.9
@@ -4354,13 +4400,13 @@ Warning: Spatial References of Outlet feature and Raster data are different.
 Projection of Raster datasource NAD83 / UTM zone 12N.
 Projection of Outlet feature WGS 84.
 Processors: 5
-Read time: 0.083522
-Length compute time: 0.017720
-Link compute time: 0.027162
-Link write time: 0.127509
-Watershed compute time: 0.128150
-Write time: 0.106576
-Total time: 0.490638
+Read time: 0.146869
+Length compute time: 0.032216
+Link compute time: 0.077712
+Link write time: 0.214378
+Watershed compute time: 0.394079
+Write time: 0.194405
+Total time: 1.059658
 
 C:\Users\dt\Desktop\Input\streamnet_data>Rem stream network slope area 
 
@@ -4383,10 +4429,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 3
-Read time: 0.056839
-Compute time: 0.160430
-Write time: 2.029949
-Total time: 2.247219
+Read time: 0.148585
+Compute time: 0.237072
+Write time: 0.081540
+Total time: 0.467197
 
 C:\Users\dt\Desktop\Input\D8flowextreme>mpiexec -n 5 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa2.tif -o LoganSample.sqlite -lyrname Loganoutlet 
 This run may take on the order of 1 minutes to complete.
@@ -4402,10 +4448,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 5
-Read time: 0.048056
-Compute time: 0.138329
-Write time: 0.073485
-Total time: 0.259870
+Read time: 0.100705
+Compute time: 0.289537
+Write time: 0.088746
+Total time: 0.478988
 
 C:\Users\dt\Desktop\Input\D8flowextreme>mpiexec -n 7 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa3.tif -o LoganSample.sqlite -lyrno 1 
 This run may take on the order of 1 minutes to complete.
@@ -4421,10 +4467,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 7
-Read time: 0.054058
-Compute time: 0.184546
-Write time: 0.076587
-Total time: 0.315191
+Read time: 0.333130
+Compute time: 0.491477
+Write time: 0.125289
+Total time: 0.949896
 
 C:\Users\dt\Desktop\Input\D8flowextreme>mpiexec -n 1 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa4.tif -o Logan.gdb  
 This run may take on the order of 1 minutes to complete.
@@ -4443,10 +4489,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 1
-Read time: 0.124311
-Compute time: 0.228428
-Write time: 0.074389
-Total time: 0.427129
+Read time: 0.236368
+Compute time: 0.328281
+Write time: 0.130185
+Total time: 0.694834
 
 C:\Users\dt\Desktop\Input\D8flowextreme>mpiexec -n 8 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa5.tif -o Logan.gdb -lyrno 0 
 This run may take on the order of 1 minutes to complete.
@@ -4465,10 +4511,10 @@ Input file logansa.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 8
-Read time: 0.050987
-Compute time: 0.219602
-Write time: 0.082424
-Total time: 0.353013
+Read time: 0.176133
+Compute time: 0.645782
+Write time: 0.157486
+Total time: 0.979401
 
 C:\Users\dt\Desktop\Input\D8flowextreme>Rem downslope influence 
 
@@ -4497,10 +4543,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 1
-Read time: 0.182711
-Compute time: 0.909742
-Write time: 0.051595
-Total time: 1.144048
+Read time: 0.518340
+Compute time: 1.468763
+Write time: 0.147157
+Total time: 2.134260
 
 C:\Users\dt\Desktop\Input\DinfConcLimAccum>mpiexec -n 5 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto2.tif -q logansca.tif -o LoganSample.sqlite -lyrname Loganoutlet -csol 2.4 
 This run may take on the order of 1 minutes to complete.
@@ -4522,10 +4568,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 5
-Read time: 0.078461
-Compute time: 0.620948
-Write time: 0.059456
-Total time: 0.758864
+Read time: 0.185203
+Compute time: 0.950588
+Write time: 0.083748
+Total time: 1.219539
 
 C:\Users\dt\Desktop\Input\DinfConcLimAccum>mpiexec -n 7 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto4.tif -q logansca.tif -o Logan.gdb -csol 2.4 
 This run may take on the order of 1 minutes to complete.
@@ -4550,10 +4596,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 7
-Read time: 0.095163
-Compute time: 0.637649
-Write time: 0.063293
-Total time: 0.796106
+Read time: 0.212766
+Compute time: 1.085661
+Write time: 0.145881
+Total time: 1.444307
 
 C:\Users\dt\Desktop\Input\DinfConcLimAccum>mpiexec -n 8 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto5.tif -q logansca.tif -o Logan.gdb -lyrno 0 -csol 2.4 
 This run may take on the order of 1 minutes to complete.
@@ -4578,10 +4624,10 @@ Input file logansca.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
 Processors: 8
-Read time: 0.098506
-Compute time: 0.570485
-Write time: 0.070145
-Total time: 0.739136
+Read time: 0.231444
+Compute time: 1.054637
+Write time: 0.084750
+Total time: 1.370831
 
 C:\Users\dt\Desktop\Input\DinfConcLimAccum>Rem Trans lim accum 
 
@@ -4610,10 +4656,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 2
-Read time: 0.070555
-Compute time: 0.802698
-Write time: 0.130049
-Total time: 1.003302
+Read time: 0.163598
+Compute time: 1.157661
+Write time: 0.203675
+Total time: 1.524934
 
 C:\Users\dt\Desktop\Input\DinfTransLimAcc>mpiexec -n 6 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla2.tif -tdep logantdep2.tif -o LoganSample.sqlite -lyrname Loganoutlet  -cs logandg.tif -ctpt loganctpt2.tif  
 This run may take on the order of 1 minutes to complete.
@@ -4635,10 +4681,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 6
-Read time: 0.033720
-Compute time: 0.589834
-Write time: 0.163801
-Total time: 0.787355
+Read time: 0.071193
+Compute time: 1.039665
+Write time: 0.233688
+Total time: 1.344546
 
 C:\Users\dt\Desktop\Input\DinfTransLimAcc>mpiexec -n 5 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla4.tif -tdep logantdep4.tif -o Logan.gdb  -cs logandg.tif -ctpt loganctpt4.tif  
 This run may take on the order of 1 minutes to complete.
@@ -4663,10 +4709,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 5
-Read time: 0.037556
-Compute time: 0.563501
-Write time: 0.150875
-Total time: 0.751931
+Read time: 0.067241
+Compute time: 0.946030
+Write time: 0.191382
+Total time: 1.204653
 
 C:\Users\dt\Desktop\Input\DinfTransLimAcc>mpiexec -n 7 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o Loganoutlet.json -cs logandg.tif -ctpt loganctpt5.tif  
 This run may take on the order of 1 minutes to complete.
@@ -4691,10 +4737,10 @@ Input file logandg.tif has projected coordinate system.
 Nodata value input to create partition from file: 255.000000
 Nodata value recast to float used in partition raster: 255.000000
 Processors: 7
-Read time: 0.031827
-Compute time: 1.101670
-Write time: 0.278328
-Total time: 1.411825
+Read time: 0.059390
+Compute time: 1.260668
+Write time: 0.219607
+Total time: 1.539665
 
 C:\Users\dt\Desktop\Input\DinfTransLimAcc>rem MOVEOUTLETS 
 
@@ -4713,7 +4759,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmoved Total time: 0.057384
+Outletsmoved Total time: 0.154280
 
 C:\Users\dt\Desktop\Input\MovedOutletstoStream_data>mpiexec -np 3 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o OutletstoMove.json -om Outletsmoved.kml -md 20  
 MoveOutletsToStreams version 5.3.9
@@ -4728,7 +4774,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmoved Total time: 0.025939
+Outletsmoved Total time: 0.061259
 
 C:\Users\dt\Desktop\Input\MovedOutletstoStream_data>mpiexec -np 4 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o LoganSample.sqlite -lyrno 2 -om Outletsmoved5.kml -md 20  
 MoveOutletsToStreams version 5.3.9
@@ -4743,7 +4789,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmoved5 Total time: 0.043082
+Outletsmoved5 Total time: 0.102753
 
 C:\Users\dt\Desktop\Input\MovedOutletstoStream_data>mpiexec -np 7 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o Logan.gdb -lyrno 0 -om Outletsmove.json -md 20  
 MoveOutletsToStreams version 5.3.9
@@ -4758,7 +4804,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganp.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
-Outletsmove Total time: 0.077242
+Outletsmove Total time: 0.168270
 
 C:\Users\dt\Desktop\Input\MovedOutletstoStream_data>rem gagewatershed test 
 
@@ -4778,10 +4824,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 1
-Read time: 0.031518
-Compute time: 0.095372
-Write time: 0.043756
-Total time: 0.170646
+Read time: 0.112628
+Compute time: 0.192428
+Write time: 0.062160
+Total time: 0.367216
 
 C:\Users\dt\Desktop\Input\GageWatershed>mpiexec -n 3 gagewatershed -p loganp.tif -o Logan.gdb -gw logangw3.tif -id gwid3.txt 
 Gage Watershed version 5.3.9
@@ -4797,10 +4843,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 3
-Read time: 0.057273
-Compute time: 0.089255
-Write time: 0.036347
-Total time: 0.182874
+Read time: 0.116720
+Compute time: 0.195519
+Write time: 0.043788
+Total time: 0.356027
 
 C:\Users\dt\Desktop\Input\GageWatershed>mpiexec -n 5 gagewatershed -p loganp.tif -o Logan.gdb -lyrno 0 -gw logangw3.tif -id gwid3.txt 
 Gage Watershed version 5.3.9
@@ -4816,10 +4862,10 @@ Projection of Outlet feature NAD83_UTM_zone_12N.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 5
-Read time: 0.040989
-Compute time: 0.079603
-Write time: 0.037728
-Total time: 0.158321
+Read time: 0.124784
+Compute time: 0.175115
+Write time: 0.047147
+Total time: 0.347046
 
 C:\Users\dt\Desktop\Input\GageWatershed>mpiexec -n 7 gagewatershed -p loganp.tif -o loganoutlet.json -gw logangw4.tif -id gwid4.txt 
 Gage Watershed version 5.3.9
@@ -4835,10 +4881,10 @@ Projection of Outlet feature WGS 84.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Size: 7
-Read time: 0.011754
-Compute time: 0.099015
-Write time: 0.040246
-Total time: 0.151015
+Read time: 0.023794
+Compute time: 0.163600
+Write time: 0.044820
+Total time: 0.232214
 
 C:\Users\dt\Desktop\Input\GageWatershed>rem Connect down 
 
@@ -4855,7 +4901,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-loganOutlets1 loganOutlets_Moved1 Total time: 0.170995
+loganOutlets1 loganOutlets_Moved1 Total time: 0.323429
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 3 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1 
 ConnectDown version 5.3.9
@@ -4868,7 +4914,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Total time: 0.089408
+Total time: 0.179311
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 5 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganSample.sqlite -olyr myoutlet1  -od loganSample.sqlite -odlyr myoutlet2 -d 1 
 ConnectDown version 5.3.9
@@ -4881,7 +4927,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Total time: 0.352352
+Total time: 0.362011
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 7 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.kml -od loganOutlets_Moved2.kml -d 1 
 ConnectDown version 5.3.9
@@ -4894,7 +4940,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-loganOutlets2 loganOutlets_Moved2 Total time: 0.066373
+loganOutlets2 loganOutlets_Moved2 Total time: 0.177694
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 1 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1 
 ConnectDown version 5.3.9
@@ -4907,7 +4953,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Total time: 0.152696
+Total time: 0.324099
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 3 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1 
 ConnectDown version 5.3.9
@@ -4920,7 +4966,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-loganOutlets4 loganOutlets_Moved2 Total time: 0.073909
+loganOutlets4 loganOutlets_Moved2 Total time: 0.208461
 
 C:\Users\dt\Desktop\Input\ConnectDown>mpiexec -n 8 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1 
 ConnectDown version 5.3.9
@@ -4933,7 +4979,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file loganad8.tif has projected coordinate system.
 Nodata value input to create partition from file: -1.000000
 Nodata value recast to float used in partition raster: -1.000000
-Total time: 0.073373
+Total time: 0.146148
 
 C:\Users\dt\Desktop\Input\ConnectDown>rem Test EPSG functionality 
 
@@ -4950,10 +4996,10 @@ Input file ma2_ep.tif has projected coordinate system.
 Nodata value input to create partition from file: -32768.000000
 Nodata value recast to int16_t used in partition raster: -32768
 Number of Processes: 2
-Read time: 0.019428
-Compute time: 0.014633
-Write time: 0.013750
-Total time: 0.047811
+Read time: 0.081748
+Compute time: 0.058763
+Write time: 0.019363
+Total time: 0.159874
 
 C:\Users\dt\Desktop\Input\NoEPSG>cd .. 
 
@@ -4972,7 +5018,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file subwatershed_74p.tif has projected coordinate system.
 Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
-New_Outlet Total time: 0.036928
+New_Outlet Total time: 0.106066
 
 C:\Users\dt\Desktop\Input\MoveOutlets2>mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000  
 MoveOutletsToStreams version 5.3.9
@@ -4987,7 +5033,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file subwatershed_74p.tif has projected coordinate system.
 Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
-New_Outlet1 Total time: 0.041901
+New_Outlet1 Total time: 0.103628
 
 C:\Users\dt\Desktop\Input\MoveOutlets2>mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100  
 MoveOutletsToStreams version 5.3.9
@@ -5002,7 +5048,7 @@ Nodata value recast to int16_t used in partition raster: -32768
 Input file subwatershed_74p.tif has projected coordinate system.
 Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
-New_Outlet2 Total time: 0.045263
+New_Outlet2 Total time: 0.133265
 
 C:\Users\dt\Desktop\Input\MoveOutlets2>cd .. 
 
@@ -5022,10 +5068,10 @@ Projection of Outlet feature Albers.
 Nodata value input to create partition from file: 0.000000
 Nodata value recast to int16_t used in partition raster: 0
 Size: 4
-Read time: 0.040037
-Compute time: 0.110170
-Write time: 0.047790
-Total time: 0.197998
+Read time: 0.083193
+Compute time: 0.273325
+Write time: 0.087151
+Total time: 0.443669
 
 C:\Users\dt\Desktop\Input\gwunittest>cd .. 
 
@@ -5039,7 +5085,7 @@ Nodata value input to create partition from file: 255.000000
 Nodata value recast to int16_t used in partition raster: 255
 Process: 0 changing 605160.236000, 1570498.381000, 2
 Process: 0 changing 605130.036000, 1570499.819000, 1
-Compute time: 0.000227
+Compute time: 0.000404
 
 C:\Users\dt\Desktop\Input\Editraster>cd .. 
 
@@ -5081,10 +5127,10 @@ Warning! Top edge does not match exactly:
 Nodata value input to create partition from file: 340282346638528859811704183484516925440.000000
 Nodata value recast to float used in partition raster: 340282346638528859811704183484516925440.000000
 Processors: 4
-Read time: 0.016993
-Compute time: 0.011110
-Write time: 0.064966
-Total time: 0.093069
+Read time: 0.038418
+Compute time: 0.035835
+Write time: 0.123344
+Total time: 0.197596
 
 C:\Users\dt\Desktop\Input\FlowdirCond>cd .. 
 
@@ -5105,3 +5151,27 @@ Nodata value input to create partition from file: -34028234663852885981170418348
 Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
 
 C:\Users\dt\Desktop\Input\RetLimFlow>cd .. 
+
+C:\Users\dt\Desktop\Input>cd CatchHydroGeoTest 
+
+C:\Users\dt\Desktop\Input\CatchHydroGeoTest>rem Run CatchHydroGeo 
+
+C:\Users\dt\Desktop\Input\CatchHydroGeoTest>mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt 
+This run may take on the order of 1 minutes to complete.
+This estimate is very approximate. 
+Run time is highly uncertain as it depends on the complexity of the input data 
+and speed and memory of the computer. This estimate is based on our testing on 
+a dual quad core Dell Xeon E5405 2.0GHz PC with 16GB RAM.
+CatchHydroGeo version 5.3.9
+Input file onion3dd.tif has geographic coordinate system.
+Nodata value input to create partition from file: -340282346638528859811704183484516925440.000000
+Nodata value recast to float used in partition raster: -340282346638528859811704183484516925440.000000
+Input file onion3w.tif has geographic coordinate system.
+Nodata value input to create partition from file: -2147483647.000000
+Nodata value recast to int32_t used in partition raster: -2147483647
+Input file onion3slp.tif has geographic coordinate system.
+Nodata value input to create partition from file: -1.000000
+Nodata value recast to float used in partition raster: -1.000000
+Compute time: 2.406479
+
+C:\Users\dt\Desktop\Input\CatchHydroGeoTest>cd .. 
