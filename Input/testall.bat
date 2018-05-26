@@ -254,7 +254,11 @@ mpiexec -n 2 areadinf -ang demang.tif -sca demsca.tif
 mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demreg12.tif -calpar dempar12.csv -si demsi1.tif -sat demsat1.tif -par 0.0009 0.00135 9.81 1000
 mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demregsh.tif -calpar demparsh.dat -si demsi2.tif -sat demsat2.tif -par 0.0009 0.00135 9.81 1000
 
+cd ..
 
+cd setregion
+Rem Testing of Setregion function which defines a region with the indicated ID if either it is in the gw file or has flow going to it, even though its flow direction may be no data
+mpiexec -n 3 setregion -p fdrsubset.tif -gw gwsubset.tif -out region3.tif -id 3
 cd ..
 
 Rem Testing of OGR starts here 
