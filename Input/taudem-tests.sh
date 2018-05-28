@@ -898,7 +898,7 @@ assert_success
 
 # Setregion function which defines a region with the indicated ID if either it is in the gw file or has flow going to it, even though its flow direction may be no data
 @test "mpiexec -n 3 setregion -p fdrsubset.tif -gw gwsubset.tif -out region3.tif -id 3" {
-cd sinmapsi
+cd SetRegion
 run mpiexec -n 3 setregion -p fdrsubset.tif -gw gwsubset.tif -out region3.tif -id 3
 assert_success
 }
