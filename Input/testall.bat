@@ -264,26 +264,14 @@ Rem Testing of OGR starts here
 cd AreaD8_data
 mpiexec -n 7 aread8 -p loganp.tif -o Loganoutlet.shp -ad8 loganad8_1.tif
 
-<<<<<<< HEAD
-rem test using sqlite file
-mpiexec -n 3 aread8 -p loganp.tif -o LoganSample.sqlite -lyrname LoganOutlet -ad8 loganad8_3.tif
-
-
-rem test using json file
-=======
 Rem test using sqlite file
 mpiexec -n 3 aread8 -p loganp.tif -o LoganSample.sqlite -lyrname LoganOutlet -ad8 loganad8_3.tif
 
 Rem test using json file
->>>>>>> 1-update-test-scripts
 mpiexec -n 4 aread8 -p loganp.tif -o LoganOutlet.json -ad8 loganad8_4.tif
 mpiexec -n 6 aread8 -p loganp.tif -o LoganOutlet.json -lyrname LoganOutlet -ad8 loganad8_5.tif
 
-<<<<<<< HEAD
-rem test using geodatabase file
-=======
 Rem test using geodatabase file
->>>>>>> 1-update-test-scripts
 mpiexec -n 7 aread8 -p loganp.tif -o Logan.gdb -ad8 loganad8_6.tif
 mpiexec -n 5 aread8 -p loganp.tif -o Logan.gdb -lyrname Outlet -ad8 loganad8_7.tif
 mpiexec -n 2 aread8 -p loganp.tif -o Logan.gdb -lyrno 0 -ad8 loganad8_8.tif
@@ -292,28 +280,16 @@ cd ../AreaDinf
 Rem  
 mpiexec -n 7 areadinf -ang loganang.tif -o Loganoutlet.shp -sca logansca_1.tif
 
-<<<<<<< HEAD
-rem test using sqlite file
-=======
 Rem test using sqlite file
->>>>>>> 1-update-test-scripts
 mpiexec -n 1 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrno 1 -sca logansca_2.tif
 mpiexec -n 3 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrname LoganOutlet -sca logansca_3.tif
 mpiexec -n 5 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrno 1 -sca logansca_4.tif
 
-<<<<<<< HEAD
-rem test using json file
-=======
 Rem test using json file
->>>>>>> 1-update-test-scripts
 mpiexec -n 3 areadinf -ang loganang.tif -o LoganOutlet.json -sca logansca_5.tif
 mpiexec -n 5 areadinf -ang loganang.tif -o LoganOutlet.json -lyrname LoganOutlet -sca logansca_6.tif
 
-<<<<<<< HEAD
-rem test using geodatabase file
-=======
 Rem test using geodatabase file
->>>>>>> 1-update-test-scripts
 mpiexec -n 5 areadinf -ang loganang.tif -o Logan.gdb -sca logansca_7.tif
 mpiexec -n 3 areadinf -ang loganang.tif -o Logan.gdb -lyrname Outlet -sca logansca_8.tif
 mpiexec -n 6 areadinf -ang loganang.tif -o Logan.gdb -lyrno 0 -sca logansca_9.tif
