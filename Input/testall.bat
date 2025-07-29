@@ -69,7 +69,7 @@ mpiexec -n 4 dinfRevAccum -ang loganang.tif -wg logandg.tif -racc loganracc.tif 
 
 Rem MOVEOUTLETS
 mpiexec -n 5 Threshold -ssa loganad8.tif -src logansrc2.tif -thresh 200
-mpiexec -np 3 moveoutletstostrm -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
 
 Rem DISTDOWN
 mpiexec -n 1 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhave.tif
@@ -194,7 +194,7 @@ mpiexec -np 5 D8HDisttoStrm -p enogeop.tif -src enogeosrc.tif -dist enogeodist.t
 
 Rem MOVEOUTLETS
 mpiexec -n 5 Threshold -ssa enogeoad8.tif -src enogeosrc2.tif -thresh 200
-mpiexec -np 3 moveoutletstostrm -p enogeop.tif -src enogeosrc.tif -o Outlets.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p enogeop.tif -src enogeosrc.tif -o Outlets.shp -om Outletsmoved.shp -md 20 
 
 Rem DISTDOWN
 mpiexec -n 1 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhave.tif
@@ -346,10 +346,10 @@ mpiexec -n 7 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc
 
 Rem MOVEOUTLETS
 cd ../MovedOutletstoStream_data
-mpiexec -np 1 moveoutletstostrm -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
-mpiexec -np 3 moveoutletstostrm -p loganp.tif -src logansrc.tif -o OutletstoMove.json -om Outletsmoved.kml -md 20 
-mpiexec -np 4 moveoutletstostrm -p loganp.tif -src logansrc.tif -o LoganSample.sqlite -lyrno 2 -om Outletsmoved5.kml -md 20 
-mpiexec -np 7 moveoutletstostrm -p loganp.tif -src logansrc.tif -o Logan.gdb -lyrno 0 -om Outletsmove.json -md 20 
+mpiexec -np 1 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.json -om Outletsmoved.kml -md 20 
+mpiexec -np 4 moveoutletstostreams -p loganp.tif -src logansrc.tif -o LoganSample.sqlite -lyrno 2 -om Outletsmoved5.kml -md 20 
+mpiexec -np 7 moveoutletstostreams -p loganp.tif -src logansrc.tif -o Logan.gdb -lyrno 0 -om Outletsmove.json -md 20 
 
 Rem gagewatershed test
 cd ../GageWatershed
@@ -374,9 +374,9 @@ mpiexec -n 2 aread8 -p ma2_ep.tif -ad8 ma2_ead8.tif -o outlet.shp -nc
 cd ..
 
 cd MoveOutlets2
-mpiexec  -np  8  moveoutletstostrm  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0
-mpiexec -np 1 moveoutletstostrm  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000
-mpiexec -np 8 moveoutletstostrm  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100
+mpiexec  -np  8  moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0
+mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000
+mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100
 cd ..
 
 cd gwunittest
