@@ -1,11 +1,16 @@
 Rem cd C:\Users\dt\Desktop\Input
 Rem testall > testall.out 2>&1
 Rem The 'TDIR' needs to be reset to the directory where the TauDEM executables exist on your machine
-Set TDIR=D:\Dropbox\Projects\TauDEM\Taudemdev\Taudem5PCVS2015\x64\Release
+set TDIR=C:\Program Files\TauDEM\TauDEM5Exe
 
+Rem Set paths for MPI, TauDEM, and GDAL
 set MDIR=C:\Program Files\Microsoft MPI\Bin
-set GDIR=C:\Program Files\GDAL\
-set path=%MDIR%;%TDIR%;%GDIR%
+Rem TauDEM Windows Installer installs GDAL in the bin directory of TauDEM for TauDEM use only.
+set GDAL_DIR=C:\Program Files\TauDEM\bin
+
+Rem Include all required directories in the PATH
+set PATH=%MDIR%;%TDIR%;%GDAL_DIR%;%PATH%
+
 
 Rem  Basic grid analysis
 cd Base
@@ -41,7 +46,6 @@ mpiexec -n 8 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa1.ti
 mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa1.tif -drp logandrp1.txt -o outlet.shp -par 5000 50000 10 1 
 mpiexec -n 5 Threshold -ssa loganssa1.tif -src logansrc1.tif -thresh 15000
 mpiexec -n 8 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc1.tif -ord loganord5.tif -tree logantree1.dat -coord logancoord1.dat -net logannet1.shp -w loganw1.tif -o outlet.shp -sw
-
 mpiexec -n 3 LengthArea -plen loganplen.tif -ad8 loganad8.tif -ss loganlass.tif -par 0.03 1.3
 
 Rem Specialized grid analysis
@@ -60,14 +64,14 @@ Rem Trans lim accum
 mpiexec -n 7 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla.tif -tdep logantdep.tif
 mpiexec -n 6 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla1.tif -tdep logantdep1.tif -o outlet.shp -cs logandg.tif -ctpt loganctpt1.tif 
 
-rem REVERSE ACCUMULATION
+Rem REVERSE ACCUMULATION
 mpiexec -n 4 dinfRevAccum -ang loganang.tif -wg logandg.tif -racc loganracc.tif -dmax loganrdmax.tif
 
-rem MOVEOUTLETS
+Rem MOVEOUTLETS
 mpiexec -n 5 Threshold -ssa loganad8.tif -src logansrc2.tif -thresh 200
-mpiexec -np 3 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
 
-rem DISTDOWN
+Rem DISTDOWN
 mpiexec -n 1 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhave.tif
 mpiexec -n 2 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhmin.tif -m min h
 mpiexec -n 3 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhmax.tif -m max h
@@ -87,7 +91,7 @@ mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif 
 mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddsmaxwg.tif -m max s -wg logandwg.tif
 mpiexec -n 4 dinfdistdown -ang loganang.tif -fel loganfel.tif -src logansrc.tif -dd loganddhavewg.tif -m ave h -wg logandwg.tif
 
-rem DISTANCE UP
+Rem DISTANCE UP
 mpiexec -n 1 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhave.tif
 mpiexec -n 2 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhmin.tif -m min h -thresh 0.5
 mpiexec -n 3 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhmax.tif -m max h -thresh 0.8
@@ -105,58 +109,55 @@ mpiexec -n 3 dinfdistup -ang loganang.tif -fel loganfel.tif -du loganduhminnc.ti
 mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandupmaxnc.tif -m max p -nc
 mpiexec -n 4 dinfdistup -ang loganang.tif -fel loganfel.tif -du logandusmaxnc.tif -m max s -nc
 
-rem AVALANCHE
+Rem AVALANCHE
 mpiexec -n 2 DinfAvalanche -ang loganang.tif -fel loganfel.tif -ass loganass.tif -rz loganrz.tif -dfs logandfs.tif
 mpiexec -n 3 DinfAvalanche -ang loganang.tif -fel loganfel.tif -ass loganass.tif -rz loganrz1.tif -dfs logandfs1.tif -thresh 0.1 -alpha 10
 mpiexec -n 4 DinfAvalanche -ang loganang.tif -fel loganfel.tif -ass loganass.tif -rz loganrz2.tif -dfs logandfs2.tif -direct -thresh 0.01 -alpha 5
 
-
-rem SLOPEAVEDOWN
+Rem SLOPEAVEDOWN
 mpiexec -n 3 slopeavedown -p loganp.tif -fel loganfel.tif -slpd loganslpd.tif
 mpiexec -n 3 slopeavedown -p loganp.tif -fel loganfel.tif -slpd loganslpd1.tif -dn 1000
 
-rem test case for tiffio partitions within a stripe
+Rem test case for tiffio partitions within a stripe
 mpiexec -n 6 areadinf -ang topo3fel1ang.tif -sca topo3fel1sca.tif 
 
-rem test case for double precision file
+Rem test case for double precision file
 mpiexec -n 4 areadinf -ang demDoubleang.tif -sca demDoublesca.tif -wg demDoublewgt.tif
 
-rem gagewatershed test
+Rem gagewatershed test
 mpiexec -n 7 gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw.tif -id gwid.txt
 mpiexec -n 4 gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw1.tif 
 mpiexec -n 5 gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw1.tif -id gwid1.txt -upid gwup.txt
 
-rem Connect down
+Rem Connect down
 mpiexec -n 8 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1
 cd ..
 
-
 cd fts
-rem tests on ft steward data with stream buffer
+Rem tests on ft steward data with stream buffer
 mpiexec -n 3 pitremove fs_small.tif
 mpiexec -n 4 dinfflowdir fs_small.tif
 mpiexec -n 4 d8flowdir fs_small.tif
 mpiexec -n 1 aread8 fs_small.tif
 mpiexec -n 2 threshold -ssa fs_smallad8.tif -src fs_smallsrc.tif -thresh 500
 mpiexec -n 5 dinfdistdown -ang fs_smallang.tif -fel fs_smallfel.tif -src fs_smallsrc.tif -dd fs_smallddhavewg.tif -m ave h -wg streambuffreclass2.tif
-
 cd ..
+
 cd Base
-rem test with compressed 16 bit unsigned integer that a user had trouble with
+Rem test with compressed 16 bit unsigned integer that a user had trouble with
 mpiexec -n 8 pitremove MED_01_01.tif
 
-rem test with VRT format
+Rem test with VRT format
 mpiexec -n 8 pitremove -z LoganVRT\output.vrt -fel loganvrtfel.tif
 
-rem test with img file format
+Rem test with img file format
 mpiexec -n 8 pitremove -z loganIMG\logan.img -fel loganimgfel.tif
 
-rem test with ESRIGRID file format
+Rem test with ESRIGRID file format
 mpiexec -n 8 pitremove -z loganESRIGRID\logan -fel loganesrigridfel.tif
 cd ..
 
-rem  Geographic tests
-
+Rem  Geographic tests
 cd Geographic
 Rem  Basic grid analysis
 mpiexec -np 3 PitRemove enogeo.tif  
@@ -191,11 +192,11 @@ mpiexec -n 3 SlopeAreaRatio -slp enogeoslp.tif -sca enogeosca.tif -sar enogeosar
 mpiexec -np 7 D8HDisttoStrm -p enogeop.tif -src enogeoad8.tif -dist enogeodist1.tif -thresh 200 
 mpiexec -np 5 D8HDisttoStrm -p enogeop.tif -src enogeosrc.tif -dist enogeodist.tif 
 
-rem MOVEOUTLETS
+Rem MOVEOUTLETS
 mpiexec -n 5 Threshold -ssa enogeoad8.tif -src enogeosrc2.tif -thresh 200
-mpiexec -np 3 MoveOutletstoStreams -p enogeop.tif -src enogeosrc.tif -o Outlets.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p enogeop.tif -src enogeosrc.tif -o Outlets.shp -om Outletsmoved.shp -md 20 
 
-rem DISTDOWN
+Rem DISTDOWN
 mpiexec -n 1 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhave.tif
 mpiexec -n 2 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhmin.tif -m min h
 mpiexec -n 3 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddhmax.tif -m max h
@@ -209,7 +210,7 @@ mpiexec -n 2 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.t
 mpiexec -n 3 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddpmin.tif -m min p
 mpiexec -n 4 dinfdistdown -ang enogeoang.tif -fel enogeofel.tif -src enogeosrc.tif -dd enogeoddpmax.tif -m max p
 
-rem DISTANCE UP
+Rem DISTANCE UP
 mpiexec -n 1 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeoduhave.tif
 mpiexec -n 2 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeoduhmin.tif -m min h -thresh 0.5
 mpiexec -n 6 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeoduvmax.tif -m max v
@@ -220,13 +221,13 @@ mpiexec -n 2 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupave.t
 mpiexec -n 3 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupmin.tif -m min p
 mpiexec -n 4 dinfdistup -ang enogeoang.tif -fel enogeofel.tif -du enogeodupmax.tif -m max p
 
-rem SLOPEAVEDOWN
+Rem SLOPEAVEDOWN
 mpiexec -n 3 slopeavedown -p enogeop.tif -fel enogeofel.tif -slpd enogeoslpd.tif
 
-rem gagewatershed test
+Rem gagewatershed test
 mpiexec -n 7 gagewatershed -p enogeop.tif -o Outletsmoved.shp -gw enogeogw.tif -id gwid.txt
-
 cd ..
+
 cd gridtypes
 Rem  Testing different file extensions
 mpiexec -np 3 PitRemove logan.tif
@@ -240,9 +241,8 @@ mpiexec -n 5 aread8 -p bilp.bil -ad8 loganad8.img
 mpiexec -n 2 dinfflowdir -fel loganfel.bil -ang ang.ang -slp slp.slp
 mpiexec -np 3 PitRemove -z logan.tif -fel loganfel2.lg
 mpiexec -np 3 PitRemove -z logan.tif -fel loganfel3
-
-
 cd ..
+
 cd sinmapsi
 Rem Testing SinmapSI
 mpiexec -n 1 SinmapSI -slp dmslp.tif -sca dmsca.tif -calpar dmcalp.txt -cal dmcal.tif -si dmsi.tif -sat dmsat.tif -par 0.0009 0.00135 9.81 1000
@@ -253,7 +253,6 @@ mpiexec -n 4 dinfflowdir -fel demfel.tif -slp demslp.tif -ang demang.tif
 mpiexec -n 2 areadinf -ang demang.tif -sca demsca.tif
 mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demreg12.tif -calpar dempar12.csv -si demsi1.tif -sat demsat1.tif -par 0.0009 0.00135 9.81 1000
 mpiexec -n 3 SinmapSI -slp demslp.tif -sca demsca.tif -cal demregsh.tif -calpar demparsh.dat -si demsi2.tif -sat demsat2.tif -par 0.0009 0.00135 9.81 1000
-
 cd ..
 
 cd setregion
@@ -265,15 +264,26 @@ Rem Testing of OGR starts here
 cd AreaD8_data
 mpiexec -n 7 aread8 -p loganp.tif -o Loganoutlet.shp -ad8 loganad8_1.tif
 
+<<<<<<< HEAD
 rem test using sqlite file
 mpiexec -n 3 aread8 -p loganp.tif -o LoganSample.sqlite -lyrname LoganOutlet -ad8 loganad8_3.tif
 
 
 rem test using json file
-mpiexec -n 4 aread8 -p loganp.tif -o LoganOutlet.json -ad8 loganad8_4.tif
-mpiexec -n 6 aread8 -p loganp.tif -o LoganOutlet.json -lyrname OGRGeoJson -ad8 loganad8_5.tif
+=======
+Rem test using sqlite file
+mpiexec -n 3 aread8 -p loganp.tif -o LoganSample.sqlite -lyrname LoganOutlet -ad8 loganad8_3.tif
 
+Rem test using json file
+>>>>>>> 1-update-test-scripts
+mpiexec -n 4 aread8 -p loganp.tif -o LoganOutlet.json -ad8 loganad8_4.tif
+mpiexec -n 6 aread8 -p loganp.tif -o LoganOutlet.json -lyrname LoganOutlet -ad8 loganad8_5.tif
+
+<<<<<<< HEAD
 rem test using geodatabase file
+=======
+Rem test using geodatabase file
+>>>>>>> 1-update-test-scripts
 mpiexec -n 7 aread8 -p loganp.tif -o Logan.gdb -ad8 loganad8_6.tif
 mpiexec -n 5 aread8 -p loganp.tif -o Logan.gdb -lyrname Outlet -ad8 loganad8_7.tif
 mpiexec -n 2 aread8 -p loganp.tif -o Logan.gdb -lyrno 0 -ad8 loganad8_8.tif
@@ -282,34 +292,41 @@ cd ../AreaDinf
 Rem  
 mpiexec -n 7 areadinf -ang loganang.tif -o Loganoutlet.shp -sca logansca_1.tif
 
+<<<<<<< HEAD
 rem test using sqlite file
+=======
+Rem test using sqlite file
+>>>>>>> 1-update-test-scripts
 mpiexec -n 1 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrno 1 -sca logansca_2.tif
 mpiexec -n 3 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrname LoganOutlet -sca logansca_3.tif
 mpiexec -n 5 areadinf -ang loganang.tif -o LoganSample.sqlite -lyrno 1 -sca logansca_4.tif
 
+<<<<<<< HEAD
 rem test using json file
+=======
+Rem test using json file
+>>>>>>> 1-update-test-scripts
 mpiexec -n 3 areadinf -ang loganang.tif -o LoganOutlet.json -sca logansca_5.tif
-mpiexec -n 5 areadinf -ang loganang.tif -o LoganOutlet.json -lyrname OGRGeoJson -sca logansca_6.tif
+mpiexec -n 5 areadinf -ang loganang.tif -o LoganOutlet.json -lyrname LoganOutlet -sca logansca_6.tif
 
+<<<<<<< HEAD
 rem test using geodatabase file
+=======
+Rem test using geodatabase file
+>>>>>>> 1-update-test-scripts
 mpiexec -n 5 areadinf -ang loganang.tif -o Logan.gdb -sca logansca_7.tif
 mpiexec -n 3 areadinf -ang loganang.tif -o Logan.gdb -lyrname Outlet -sca logansca_8.tif
 mpiexec -n 6 areadinf -ang loganang.tif -o Logan.gdb -lyrno 0 -sca logansca_9.tif
 
-
-
 cd ../Gridnet
-
 mpiexec -n 7 Gridnet -p loganp.tif -plen loganplen1.tif -tlen logantlen1.tif -gord logangord1.tif -o Loganoutlet.shp 
 mpiexec -n 6 Gridnet -p loganp.tif -plen loganplen3.tif -tlen logantlen3.tif -gord logangord3.tif -o LoganSample.sqlite -lyrname LoganOutlet
 mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen4.tif -tlen logantlen4.tif -gord logangord4.tif -o LoganSample.sqlite -lyrno 1
 mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen5.tif -tlen logantlen5.tif -gord logangord5.tif -o LoganOutlet.json
-mpiexec -n 7 Gridnet -p loganp.tif -plen loganplen6.tif -tlen logantlen6.tif -gord logangord6.tif -o LoganOutlet.json -lyrname OGRGeoJson 
+mpiexec -n 7 Gridnet -p loganp.tif -plen loganplen6.tif -tlen logantlen6.tif -gord logangord6.tif -o LoganOutlet.json -lyrname LoganOutlet 
 mpiexec -n 1 Gridnet -p loganp.tif -plen loganplen7.tif -tlen logantlen7.tif -gord logangord7.tif -o Logan.gdb
 mpiexec -n 3 Gridnet -p loganp.tif -plen loganplen8.tif -tlen logantlen8.tif -gord logangord8.tif -o Logan.gdb -lyrname Outlet
 mpiexec -n 2 Gridnet -p loganp.tif -plen loganplen9.tif -tlen logantlen9.tif -gord logangord9.tif -o Logan.gdb -lyrno 0
-
-
 
 Rem stream network peuker douglas
 cd ../peukerDouglas
@@ -317,11 +334,10 @@ mpiexec -n 1 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa
 mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp3.txt -o LoganSample.sqlite -lyrname LoganOutlet -par 5 500 10 0 
 mpiexec -n 2 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp4.txt -o LoganSample.sqlite -lyrno 1 -par 5 500 10 0 
 mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp5.txt -o LoganOutlet.json -par 5 500 10 0 
-mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp6.txt -o LoganOutlet.json -lyrname OGRGeoJson  -par 5 500 10 0 
+mpiexec -n 4 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp6.txt -o LoganOutlet.json -lyrname LoganOutlet  -par 5 500 10 0 
 mpiexec -n 3 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp7.txt -o Logan.gdb -par 5 500 10 0 
 mpiexec -n 5 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp8.txt -o Logan.gdb -lyrname Outlet -par 5 500 10 0 
 mpiexec -n 6 Dropanalysis -p loganp.tif -fel loganfel.tif -ad8 loganad8.tif -ssa loganssa.tif -drp logandrp9.txt -o Logan.gdb -lyrno 0 -par 5 500 10 0 
-
 
 cd ../streamnet_data
 mpiexec -n 5 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src logansrc.tif -ord loganord3.tif -tree logantree.dat -coord logancoord.dat -net logannet1.shp -w loganw.tif -o Loganoutlet.shp
@@ -333,46 +349,40 @@ mpiexec -n 5 Streamnet -fel loganfel.tif -p loganp.tif -ad8 loganad8.tif -src lo
 Rem stream network slope area
 cd ../D8flowextreme
 mpiexec -n 3 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa1.tif -o Loganoutlet.shp
-mpiexec -n 5 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa2.tif -o LoganSample.sqlite -lyrname Loganoutlet
+mpiexec -n 5 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa2.tif -o LoganSample.sqlite -lyrname LoganOutlet
 mpiexec -n 7 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa3.tif -o LoganSample.sqlite -lyrno 1
 mpiexec -n 1 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa4.tif -o Logan.gdb 
 mpiexec -n 8 D8FlowpathExtremeUp -p loganp.tif -sa logansa.tif -ssa loganssa5.tif -o Logan.gdb -lyrno 0
 
-
 Rem downslope influence
 cd ../DinfConcLimAccum
 mpiexec -n 1 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto1.img -q logansca.tif -o Loganoutlet.shp -csol 2.4
-mpiexec -n 5 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto2.tif -q logansca.tif -o LoganSample.sqlite -lyrname Loganoutlet -csol 2.4
+mpiexec -n 5 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto2.tif -q logansca.tif -o LoganSample.sqlite -lyrname LoganOutlet -csol 2.4
 mpiexec -n 7 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto4.tif -q logansca.tif -o Logan.gdb -csol 2.4
 mpiexec -n 8 dinfConcLimAccum -ang loganang.tif -dm logandm08.tif -dg logandg.tif -ctpt loganctpto5.tif -q logansca.tif -o Logan.gdb -lyrno 0 -csol 2.4
 
 Rem Trans lim accum
 cd ../DinfTransLimAcc
 mpiexec -n 2 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla1.img -tdep logantdep1.tif -o Loganoutlet.shp -cs logandg.tif -ctpt loganctpt1.tif 
-mpiexec -n 6 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla2.tif -tdep logantdep2.tif -o LoganSample.sqlite -lyrname Loganoutlet  -cs logandg.tif -ctpt loganctpt2.tif 
+mpiexec -n 6 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla2.tif -tdep logantdep2.tif -o LoganSample.sqlite -lyrname LoganOutlet  -cs logandg.tif -ctpt loganctpt2.tif 
 mpiexec -n 5 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla4.tif -tdep logantdep4.tif -o Logan.gdb  -cs logandg.tif -ctpt loganctpt4.tif 
 mpiexec -n 7 dinfTransLimAccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o Loganoutlet.json -cs logandg.tif -ctpt loganctpt5.tif 
 
-
-rem MOVEOUTLETS
+Rem MOVEOUTLETS
 cd ../MovedOutletstoStream_data
-mpiexec -np 1 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
-mpiexec -np 3 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o OutletstoMove.json -om Outletsmoved.kml -md 20 
-mpiexec -np 4 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o LoganSample.sqlite -lyrno 2 -om Outletsmoved5.kml -md 20 
-mpiexec -np 7 MoveOutletstoStreams -p loganp.tif -src logansrc.tif -o Logan.gdb -lyrno 0 -om Outletsmove.json -md 20 
+mpiexec -np 1 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20 
+mpiexec -np 3 moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.json -om Outletsmoved.kml -md 20 
+mpiexec -np 4 moveoutletstostreams -p loganp.tif -src logansrc.tif -o LoganSample.sqlite -lyrno 2 -om Outletsmoved5.kml -md 20 
+mpiexec -np 7 moveoutletstostreams -p loganp.tif -src logansrc.tif -o Logan.gdb -lyrno 0 -om Outletsmove.json -md 20 
 
-
-
-
-rem gagewatershed test
+Rem gagewatershed test
 cd ../GageWatershed
 mpiexec -n 1 gagewatershed -p loganp.tif -o LoganOutlet.shp -gw logangw1.tif -id gwid1.txt
 mpiexec -n 3 gagewatershed -p loganp.tif -o Logan.gdb -gw logangw3.tif -id gwid3.txt
 mpiexec -n 5 gagewatershed -p loganp.tif -o Logan.gdb -lyrno 0 -gw logangw3.tif -id gwid3.txt
 mpiexec -n 7 gagewatershed -p loganp.tif -o loganoutlet.json -gw logangw4.tif -id gwid4.txt
 
-
-rem Connect down
+Rem Connect down
 cd ../ConnectDown
 mpiexec -n 1 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets1.shp -od loganOutlets_Moved1.shp -d 1
 mpiexec -n 3 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1
@@ -382,42 +392,41 @@ mpiexec -n 1 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o logan
 mpiexec -n 3 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1
 mpiexec -n 8 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1
 
-rem Test EPSG functionality
+Rem Test EPSG functionality
 cd ../NoEPSG
 mpiexec -n 2 aread8 -p ma2_ep.tif -ad8 ma2_ead8.tif -o outlet.shp -nc
-
 cd ..
+
 cd MoveOutlets2
-mpiexec  -np  8  moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0 
-
-mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000 
-
-mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100 
+mpiexec  -np  8  moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0
+mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000
+mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100
 cd ..
 
 cd gwunittest
 mpiexec -n 4 gagewatershed -p fdr.tif -gw gw.tif -id id.txt -o CatchOutlets3.shp
 cd ..
+
 cd editraster
 mpiexec -n 2 editraster -in fdro.tif -out fdrmod.tif -changes changes.txt
 cd ..
 
 cd catchoutlets
-rem  Run CatchOutlets single processor, no parallel version yet
+Rem  Run CatchOutlets single processor, no parallel version yet
 mpiexec -n 1 CatchOutlets -net net1.shp -p fdr.tif -o CatchOutlets.shp -mindist 20000 -minarea 50000000 -gwstartno 5
 cd ..
 
 cd FlowdirCond
-rem Run flow direction conditioning
+Rem Run flow direction conditioning
 mpiexec -n 4 flowdircond -z wcdem.tif -p pm.tif -zfdc wcdemzfdc.tif
 cd ..
 
 cd RetLimFlow
-rem Run Retention Limited Flow Accumulation
+Rem Run Retention Limited Flow Accumulation
 mpiexec -n 6 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif
 cd ..
 
 cd CatchHydroGeoTest
-rem Run CatchHydroGeo
+Rem Run CatchHydroGeo
 mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt
 cd ..
