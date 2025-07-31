@@ -3,13 +3,11 @@ Rem testall > testall.out 2>&1
 Rem The 'TDIR' needs to be reset to the directory where the TauDEM executables exist on your machine
 set TDIR=C:\Program Files\TauDEM\TauDEM5Exe
 
-Rem Set paths for MPI, TauDEM, and GDAL
+Rem Set path for MPI
 set MDIR=C:\Program Files\Microsoft MPI\Bin
-Rem TauDEM Windows Installer installs GDAL in the bin directory of TauDEM for TauDEM use only.
-set GDAL_DIR=C:\Program Files\TauDEM\bin
 
 Rem Include all required directories in the PATH
-set PATH=%MDIR%;%TDIR%;%GDAL_DIR%;%PATH%
+set PATH=%MDIR%;%TDIR%;%PATH%
 
 
 Rem  Basic grid analysis
