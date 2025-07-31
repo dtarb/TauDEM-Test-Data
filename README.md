@@ -4,7 +4,9 @@ This repository contains input data for testing TauDEM.
 
 ## Running Tests on Windows
 
-Edit the `testall.bat` file to set the `TDIR` variable to the directory where the TauDEM executables exist on your machine. You need to edit the `TDIR` variable in the `testall.bat` file only if you have built TauDEM from source and have not installed it. If you have installed TauDEM, the `TDIR` variable should already point to the `bin` directory of the TauDEM installation. If you have built TauDEM executables in debug mode, the `TDIR` variable should point to the TuaDEM local branched version of the `src\build-debug\Debug` directory - need to use the full path to the `Debug` directory. However, if you have built TauDEM in release mode, the `TDIR` variable should point to the local TauDEM branched version of the `src\build-release\Release` directory - need to use the full path to the `Release` directory.
+The suggested testing pattern is to copy the `Input` directory into `TestRunResults`, naming it for the test being done. Then cd into the new folder. 
+
+In the testing folder, ddit the `testall.bat` file to set the `TDIR` variable to the directory where the TauDEM executables exist on your machine. You need to edit the `TDIR` variable in the `testall.bat` file only if you have built TauDEM from source and have not installed it. If you have installed TauDEM, the `TDIR` variable should already point to the `bin` directory of the TauDEM installation. If you have built TauDEM executables in debug mode, the `TDIR` variable should point to the full path of TauDEM local branched version of the `Debug` directory that holds debug executables. However, if you have built TauDEM in release mode, the `TDIR` variable should point to the full path of local TauDEM branched version of the `Release` directory.
 
 Run the script `testall.bat` and compare the answers to results in the `ReferenceResult` folder.
 
@@ -40,7 +42,7 @@ Usage:
 python compare_results.py [dir1] [dir2]
 ```
 
-For example, to compare the results in the `input/Base` folder to the reference results in the `ReferenceResult/Base` folder, run:
+For example, to compare the results in the `input/Base` folder to the reference results in the `ReferenceResults/testfolder/Base` folder, run:
 
 ```sh
 python compare_results.py input/Base ReferenceResult/Base

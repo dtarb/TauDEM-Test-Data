@@ -5,10 +5,7 @@
 # Ignore vscode AI rules
 .github/copilot-instructions.md
 
-# Ignore the input data as it stores the test run output files
-# If we need to update any input data files or add new input data files, we can temporarily remove this line from .gitignore
-Input/
-
-# Ignore TestRunResult - this folder is used for storing the test run output files from another machine
-# for the purpose of comparing the results
-TestRunResult/
+# Ignore TestRunResults - this folder is used for storing the test run output files 
+# for the purpose of comparing the results to the ReferenceResult
+# When tests are run in this folder their output should be in TestRunResults/
+TestRunResults/
