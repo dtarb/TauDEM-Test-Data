@@ -124,7 +124,7 @@ def compare_directories(dir1_path, dir2_path, max_diff_threshold=MAX_DIFF_THRESH
         return False
 
     # Get list of TIF files in first directory
-    tif_files = [f for f in os.listdir(dir1_path) if f.lower().endswith('.tif')]
+    tif_files = [f for f in os.listdir(dir1_path) if f.lower().endswith('.tif') or f.lower().endswith('.tiff')]
 
     if not tif_files:
         print(f"No TIF files found in {dir1_path}")
