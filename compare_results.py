@@ -9,7 +9,7 @@ from osgeo import gdal
 # Configure GDAL to use exceptions
 gdal.UseExceptions()
 
-MAX_DIFF_THRESHOLD = 1e-2
+MAX_DIFF_THRESHOLD = 0  # DGT tightened this down. Was 1e-2
 
 def compare_tif_files(file1_path, file2_path, max_diff_threshold=MAX_DIFF_THRESHOLD):
     """
