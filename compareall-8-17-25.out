@@ -1,0 +1,3322 @@
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>Rem Script to compare results for all folders for a specific test run 
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>Rem Usage: compareall.bat <test_run_folder> 
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>set items=Base fts Geographic gridtypes sinmapsi AreaD8_data AreaDinf Gridnet peukerDouglas streamnet_data D8flowextreme DinfConcLimAccum DinfTransLimAcc MovedOutletstoStream_data GageWatershed ConnectDown NoEPSG MoveOutlets2 gwunittest editraster catchoutlets FlowdirCond RetLimFlow CatchHydroGeoTest 
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>for %i in (Base fts Geographic gridtypes sinmapsi AreaD8_data AreaDinf Gridnet peukerDouglas streamnet_data D8flowextreme DinfConcLimAccum DinfTransLimAcc MovedOutletstoStream_data GageWatershed ConnectDown NoEPSG MoveOutlets2 gwunittest editraster catchoutlets FlowdirCond RetLimFlow CatchHydroGeoTest) do (python compare_results.py ReferenceResult\%i TestRunResults\Test-install-5.4.0-8-17-25\%i ) 
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\Base TestRunResults\Test-install-5.4.0-8-17-25\Base ) 
+Using maximum pixel difference threshold: 0
+
+Comparing demDoubleang.tif...
+Total pixels found in input file: 2092320 (1453x1440)
+File 1 Band 1 - Nodata pixels: 18180 (0.87% of total)
+File 2 Band 1 - Nodata pixels: 18180 (0.87% of total)
+Band 1 - Valid pixels for comparison: 2074140 (99.13% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demDoubleang.tif: Identical
+
+Comparing demDoublesca.tif...
+Total pixels found in input file: 2092320 (1453x1440)
+File 1 Band 1 - Nodata pixels: 109685 (5.24% of total)
+File 2 Band 1 - Nodata pixels: 109685 (5.24% of total)
+Band 1 - Valid pixels for comparison: 1982635 (94.76% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demDoublesca.tif: Identical
+
+Comparing demDoublewgt.tif...
+Total pixels found in input file: 2092320 (1453x1440)
+File 1 Band 1 - Nodata pixels: 18180 (0.87% of total)
+File 2 Band 1 - Nodata pixels: 18180 (0.87% of total)
+Band 1 - Valid pixels for comparison: 2074140 (99.13% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demDoublewgt.tif: Identical
+
+Comparing logan.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logan.tif: Identical
+
+Comparing logan30.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logan30.tif: Identical
+
+Comparing loganad8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47296 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47296 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587804 (97.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8.tif: Identical
+
+Comparing loganad8nf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 78091 (4.78% of total)
+File 2 Band 1 - Nodata pixels: 78091 (4.78% of total)
+Band 1 - Valid pixels for comparison: 1557009 (95.22% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8nf.tif: Identical
+
+Comparing loganad8o.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8o.tif: Identical
+
+Comparing loganang.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganang.tif: Identical
+
+Comparing loganangnf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 34767 (2.13% of total)
+File 2 Band 1 - Nodata pixels: 34767 (2.13% of total)
+Band 1 - Valid pixels for comparison: 1600333 (97.87% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganangnf.tif: Identical
+
+Comparing loganass.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganass.tif: Identical
+
+Comparing loganctpt.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt.tif: Identical
+
+Comparing loganctpt1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt1.tif: Identical
+
+Comparing loganctpto.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpto.tif: Identical
+
+Comparing loganddhave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddhave.tif: Identical
+
+Comparing loganddhavewg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddhavewg.tif: Identical
+
+Comparing loganddhmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddhmax.tif: Identical
+
+Comparing loganddhmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddhmin.tif: Identical
+
+Comparing loganddhminnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddhminnc.tif: Identical
+
+Comparing loganddpave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddpave.tif: Identical
+
+Comparing loganddpmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddpmax.tif: Identical
+
+Comparing loganddpmaxnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddpmaxnc.tif: Identical
+
+Comparing loganddpmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddpmin.tif: Identical
+
+Comparing loganddsave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddsave.tif: Identical
+
+Comparing loganddsmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddsmax.tif: Identical
+
+Comparing loganddsmaxnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddsmaxnc.tif: Identical
+
+Comparing loganddsmaxwg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddsmaxwg.tif: Identical
+
+Comparing loganddsmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddsmin.tif: Identical
+
+Comparing loganddvave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddvave.tif: Identical
+
+Comparing loganddvavenc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddvavenc.tif: Identical
+
+Comparing loganddvmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddvmax.tif: Identical
+
+Comparing loganddvmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 980089 (59.94% of total)
+File 2 Band 1 - Nodata pixels: 980089 (59.94% of total)
+Band 1 - Valid pixels for comparison: 655011 (40.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganddvmin.tif: Identical
+
+Comparing logandep.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandep.tif: Identical
+
+Comparing logandfs.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1634422 (99.96% of total)
+File 2 Band 1 - Nodata pixels: 1634422 (99.96% of total)
+Band 1 - Valid pixels for comparison: 678 (0.04% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandfs.tif: Identical
+
+Comparing logandfs1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1634167 (99.94% of total)
+File 2 Band 1 - Nodata pixels: 1634167 (99.94% of total)
+Band 1 - Valid pixels for comparison: 933 (0.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandfs1.tif: Identical
+
+Comparing logandfs2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1633782 (99.92% of total)
+File 2 Band 1 - Nodata pixels: 1633782 (99.92% of total)
+Band 1 - Valid pixels for comparison: 1318 (0.08% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandfs2.tif: Identical
+
+Comparing logandg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandg.tif: Identical
+
+Comparing logandi.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandi.tif: Identical
+
+Comparing logandist.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandist.tif: Identical
+
+Comparing logandist1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 153793 (9.41% of total)
+File 2 Band 1 - Nodata pixels: 153793 (9.41% of total)
+Band 1 - Valid pixels for comparison: 1481307 (90.59% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandist1.tif: Identical
+
+Comparing logandm08.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandm08.tif: Identical
+
+Comparing logandsca.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandsca.tif: Identical
+
+Comparing loganduhave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduhave.tif: Identical
+
+Comparing loganduhmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 39615 (2.42% of total)
+File 2 Band 1 - Nodata pixels: 39615 (2.42% of total)
+Band 1 - Valid pixels for comparison: 1595485 (97.58% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduhmax.tif: Identical
+
+Comparing loganduhmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47291 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47291 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587809 (97.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduhmin.tif: Identical
+
+Comparing loganduhminnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduhminnc.tif: Identical
+
+Comparing logandupave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandupave.tif: Identical
+
+Comparing logandupmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandupmax.tif: Identical
+
+Comparing logandupmaxnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandupmaxnc.tif: Identical
+
+Comparing logandupmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandupmin.tif: Identical
+
+Comparing logandusave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 38822 (2.37% of total)
+File 2 Band 1 - Nodata pixels: 38822 (2.37% of total)
+Band 1 - Valid pixels for comparison: 1596278 (97.63% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandusave.tif: Identical
+
+Comparing logandusmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandusmax.tif: Identical
+
+Comparing logandusmaxnc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandusmaxnc.tif: Identical
+
+Comparing logandusmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandusmin.tif: Identical
+
+Comparing loganduvave.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduvave.tif: Identical
+
+Comparing loganduvavenc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduvavenc.tif: Identical
+
+Comparing loganduvmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduvmax.tif: Identical
+
+Comparing loganduvmin.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganduvmin.tif: Identical
+
+Comparing logandwg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandwg.tif: Identical
+
+Comparing loganesrigridfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganesrigridfel.tif: Identical
+
+Comparing loganfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel.tif: Identical
+
+Comparing loganfel4.tiff...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel4.tiff: Identical
+
+Comparing loganfeldm.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfeldm.tif: Identical
+
+Comparing loganfeldm4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfeldm4.tif: Identical
+
+Comparing logangord.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord.tif: Identical
+
+Comparing logangord1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+File 2 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+Band 1 - Valid pixels for comparison: 79289 (4.85% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord1.tif: Identical
+
+Comparing logangord2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord2.tif: Identical
+
+Comparing logangw.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 978347 (59.83% of total)
+File 2 Band 1 - Nodata pixels: 978347 (59.83% of total)
+Band 1 - Valid pixels for comparison: 656753 (40.17% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw.tif: Identical
+
+Comparing logangw1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 978347 (59.83% of total)
+File 2 Band 1 - Nodata pixels: 978347 (59.83% of total)
+Band 1 - Valid pixels for comparison: 656753 (40.17% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw1.tif: Identical
+
+Comparing logangw2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1009101 (61.71% of total)
+File 2 Band 1 - Nodata pixels: 1009101 (61.71% of total)
+Band 1 - Valid pixels for comparison: 625999 (38.29% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw2.tif: Identical
+
+Comparing loganimgfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganimgfel.tif: Identical
+
+Comparing loganlass.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganlass.tif: Identical
+
+Comparing loganord3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganord3.tif: Identical
+
+Comparing loganord5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganord5.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing loganplen.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen.tif: Identical
+
+Comparing loganplen1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+File 2 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+Band 1 - Valid pixels for comparison: 79289 (4.85% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen1.tif: Identical
+
+Comparing loganplen2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen2.tif: Identical
+
+Comparing loganpnf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 34767 (2.13% of total)
+File 2 Band 1 - Nodata pixels: 34767 (2.13% of total)
+Band 1 - Valid pixels for comparison: 1600333 (97.87% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganpnf.tif: Identical
+
+Comparing loganq.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganq.tif: Identical
+
+Comparing loganracc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganracc.tif: Identical
+
+Comparing loganrdmax.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganrdmax.tif: Identical
+
+Comparing loganrz.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1634422 (99.96% of total)
+File 2 Band 1 - Nodata pixels: 1634422 (99.96% of total)
+Band 1 - Valid pixels for comparison: 678 (0.04% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganrz.tif: Identical
+
+Comparing loganrz1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1634167 (99.94% of total)
+File 2 Band 1 - Nodata pixels: 1634167 (99.94% of total)
+Band 1 - Valid pixels for comparison: 933 (0.06% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganrz1.tif: Identical
+
+Comparing loganrz2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1633782 (99.92% of total)
+File 2 Band 1 - Nodata pixels: 1633782 (99.92% of total)
+Band 1 - Valid pixels for comparison: 1318 (0.08% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganrz2.tif: Identical
+
+Comparing logansa.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansa.tif: Identical
+
+Comparing logansar.tiff...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansar.tiff: Identical
+
+Comparing logansca.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca.tif: Identical
+
+Comparing loganscanf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 121254 (7.42% of total)
+File 2 Band 1 - Nodata pixels: 121254 (7.42% of total)
+Band 1 - Valid pixels for comparison: 1513846 (92.58% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganscanf.tif: Identical
+
+Comparing loganscao.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganscao.tif: Identical
+
+Comparing logansd8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansd8.tif: Identical
+
+Comparing logansd8nf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansd8nf.tif: Identical
+
+Comparing loganslp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganslp.tif: Identical
+
+Comparing loganslpd.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 38019 (2.33% of total)
+File 2 Band 1 - Nodata pixels: 38019 (2.33% of total)
+Band 1 - Valid pixels for comparison: 1597081 (97.67% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganslpd.tif: Identical
+
+Comparing loganslpd1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 112737 (6.89% of total)
+File 2 Band 1 - Nodata pixels: 112737 (6.89% of total)
+Band 1 - Valid pixels for comparison: 1522363 (93.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganslpd1.tif: Identical
+
+Comparing loganslpnf.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganslpnf.tif: Identical
+
+Comparing logansrc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansrc.tif: Identical
+
+Comparing logansrc1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansrc1.tif: Identical
+
+Comparing logansrc2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47296 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47296 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587804 (97.11% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansrc2.tif: Identical
+
+Comparing loganss.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganss.tif: Identical
+
+Comparing loganssa.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa.tif: Identical
+
+Comparing loganssa1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa1.tif: Identical
+
+Comparing logantc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantc.tif: Identical
+
+Comparing logantdep.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep.tif: Identical
+
+Comparing logantdep1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep1.tif: Identical
+
+Comparing logantla.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantla.tif: Identical
+
+Comparing logantla1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 974941 (59.63% of total)
+File 2 Band 1 - Nodata pixels: 974941 (59.63% of total)
+Band 1 - Valid pixels for comparison: 660159 (40.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantla1.tif: Identical
+
+Comparing logantlen.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen.tif: Identical
+
+Comparing logantlen1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+File 2 Band 1 - Nodata pixels: 1555811 (95.15% of total)
+Band 1 - Valid pixels for comparison: 79289 (4.85% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen1.tif: Identical
+
+Comparing logantlen2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen2.tif: Identical
+
+Comparing logantsup.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantsup.tif: Identical
+
+Comparing loganvrtfel.tif...
+Total pixels found in input file: 143922 (289x498)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 143922 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganvrtfel.tif: Identical
+
+Comparing loganw.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganw.tif: Identical
+
+Comparing loganw1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganw1.tif: Identical
+
+Comparing logpitmask.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logpitmask.tif: Identical
+
+Comparing MED_01_01.tif...
+Total pixels found in input file: 299136 (656x456)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 299136 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+MED_01_01.tif: Identical
+
+Comparing MED_01_01fel.tif...
+Total pixels found in input file: 299136 (656x456)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 299136 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+MED_01_01fel.tif: Identical
+
+Comparing topo3fel1ang.tif...
+Total pixels found in input file: 1608984 (2808x573)
+File 1 Band 1 - Nodata pixels: 1176188 (73.10% of total)
+File 2 Band 1 - Nodata pixels: 1176188 (73.10% of total)
+Band 1 - Valid pixels for comparison: 432796 (26.90% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+topo3fel1ang.tif: Identical
+
+Comparing topo3fel1sca.tif...
+Total pixels found in input file: 1608984 (2808x573)
+File 1 Band 1 - Nodata pixels: 1336165 (83.04% of total)
+File 2 Band 1 - Nodata pixels: 1336165 (83.04% of total)
+Band 1 - Valid pixels for comparison: 272819 (16.96% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+topo3fel1sca.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 119
+Files compared: 119
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\fts TestRunResults\Test-install-5.4.0-8-17-25\fts ) 
+Using maximum pixel difference threshold: 0
+
+Comparing fs_small.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - No nodata value defined
+File 2 Band 1 - No nodata value defined
+Band 1 - Valid pixels for comparison: 1303817 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_small.tif: Identical
+
+Comparing fs_smallad8.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 19609 (1.50% of total)
+File 2 Band 1 - Nodata pixels: 19609 (1.50% of total)
+Band 1 - Valid pixels for comparison: 1284208 (98.50% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallad8.tif: Identical
+
+Comparing fs_smallang.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 4592 (0.35% of total)
+File 2 Band 1 - Nodata pixels: 4592 (0.35% of total)
+Band 1 - Valid pixels for comparison: 1299225 (99.65% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallang.tif: Identical
+
+Comparing fs_smallddhavewg.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 1247486 (95.68% of total)
+File 2 Band 1 - Nodata pixels: 1247486 (95.68% of total)
+Band 1 - Valid pixels for comparison: 56331 (4.32% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallddhavewg.tif: Identical
+
+Comparing fs_smallfel.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1303817 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallfel.tif: Identical
+
+Comparing fs_smallp.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 4592 (0.35% of total)
+File 2 Band 1 - Nodata pixels: 4592 (0.35% of total)
+Band 1 - Valid pixels for comparison: 1299225 (99.65% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallp.tif: Identical
+
+Comparing fs_smallsd8.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 4592 (0.35% of total)
+File 2 Band 1 - Nodata pixels: 4592 (0.35% of total)
+Band 1 - Valid pixels for comparison: 1299225 (99.65% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallsd8.tif: Identical
+
+Comparing fs_smallslp.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 4592 (0.35% of total)
+File 2 Band 1 - Nodata pixels: 4592 (0.35% of total)
+Band 1 - Valid pixels for comparison: 1299225 (99.65% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallslp.tif: Identical
+
+Comparing fs_smallsrc.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - Nodata pixels: 19609 (1.50% of total)
+File 2 Band 1 - Nodata pixels: 19609 (1.50% of total)
+Band 1 - Valid pixels for comparison: 1284208 (98.50% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fs_smallsrc.tif: Identical
+
+Comparing streambuffreclass2.tif...
+Total pixels found in input file: 1303817 (1021x1277)
+File 1 Band 1 - No nodata value defined
+File 2 Band 1 - No nodata value defined
+Band 1 - Valid pixels for comparison: 1303817 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+streambuffreclass2.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 10
+Files compared: 10
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\Geographic TestRunResults\Test-install-5.4.0-8-17-25\Geographic ) 
+Using maximum pixel difference threshold: 0
+
+Comparing enogeo.tif...
+Total pixels found in input file: 603460 (715x844)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 603460 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+enogeo.tif: Identical
+
+Comparing enogeoad8.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoad8.tif: Identical
+
+Comparing enogeoad8o.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoad8o.tif: Identical
+
+Comparing enogeoang.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoang.tif: Identical
+
+Comparing enogeoddhave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddhave.tif: Identical
+
+Comparing enogeoddhmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddhmax.tif: Identical
+
+Comparing enogeoddhmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddhmin.tif: Identical
+
+Comparing enogeoddpave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddpave.tif: Identical
+
+Comparing enogeoddpmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddpmax.tif: Identical
+
+Comparing enogeoddpmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddpmin.tif: Identical
+
+Comparing enogeoddsave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddsave.tif: Identical
+
+Comparing enogeoddsmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddsmax.tif: Identical
+
+Comparing enogeoddsmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddsmin.tif: Identical
+
+Comparing enogeoddvave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddvave.tif: Identical
+
+Comparing enogeoddvmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddvmax.tif: Identical
+
+Comparing enogeoddvmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoddvmin.tif: Identical
+
+Comparing enogeodist.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodist.tif: Identical
+
+Comparing enogeodist1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodist1.tif: Identical
+
+Comparing enogeoduhave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoduhave.tif: Identical
+
+Comparing enogeoduhmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoduhmin.tif: Identical
+
+Comparing enogeodupave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodupave.tif: Identical
+
+Comparing enogeodupmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodupmax.tif: Identical
+
+Comparing enogeodupmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodupmin.tif: Identical
+
+Comparing enogeodusave.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodusave.tif: Identical
+
+Comparing enogeodusmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodusmax.tif: Identical
+
+Comparing enogeodusmin.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeodusmin.tif: Identical
+
+Comparing enogeoduvmax.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoduvmax.tif: Identical
+
+Comparing enogeofel.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeofel.tif: Identical
+
+Comparing enogeogord.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeogord.tif: Identical
+
+Comparing enogeogord1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeogord1.tif: Identical
+
+Comparing enogeogord2.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeogord2.tif: Identical
+
+Comparing enogeogw.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeogw.tif: Identical
+
+Comparing enogeolass.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeolass.tif: Identical
+
+Comparing enogeoord3.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoord3.tif: Identical
+
+Comparing enogeoord5.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoord5.tif: Identical
+
+Comparing enogeop.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeop.tif: Identical
+
+Comparing enogeoplen.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoplen.tif: Identical
+
+Comparing enogeoplen1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoplen1.tif: Identical
+
+Comparing enogeoplen2.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoplen2.tif: Identical
+
+Comparing enogeosa.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosa.tif: Identical
+
+Comparing enogeosar.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosar.tif: Identical
+
+Comparing enogeosca.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosca.tif: Identical
+
+Comparing enogeoscao.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoscao.tif: Identical
+
+Comparing enogeosd8.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosd8.tif: Identical
+
+Comparing enogeoslp.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoslp.tif: Identical
+
+Comparing enogeoslpd.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoslpd.tif: Identical
+
+Comparing enogeosrc.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosrc.tif: Identical
+
+Comparing enogeosrc1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosrc1.tif: Identical
+
+Comparing enogeosrc2.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeosrc2.tif: Identical
+
+Comparing enogeoss.tiff...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeoss.tiff: Identical
+
+Comparing enogeossa.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeossa.tif: Identical
+
+Comparing enogeossa1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeossa1.tif: Identical
+
+Comparing enogeotlen.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeotlen.tif: Identical
+
+Comparing enogeotlen1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeotlen1.tif: Identical
+
+Comparing enogeotlen2.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeotlen2.tif: Identical
+
+Comparing enogeow.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeow.tif: Identical
+
+Comparing enogeow1.tif...
+Total pixels found in input file: 603460 (715x844)
+Warning: Projections do not match
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433],AXIS["Longitude",EAST],AXIS["Latitude",NORTH]]
+GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4269"]]
+enogeow1.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 57
+Files compared: 57
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\gridtypes TestRunResults\Test-install-5.4.0-8-17-25\gridtypes ) 
+Using maximum pixel difference threshold: 0
+
+Comparing ang.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+ang.tif: Identical
+
+Comparing logan.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logan.tif: Identical
+
+Comparing loganfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel.tif: Identical
+
+Comparing loganfel2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel2.tif: Identical
+
+Comparing loganfel3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel3.tif: Identical
+
+Comparing slp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+slp.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 6
+Files compared: 6
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\sinmapsi TestRunResults\Test-install-5.4.0-8-17-25\sinmapsi ) 
+Using maximum pixel difference threshold: 0
+
+Comparing demang.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 103604 (49.63% of total)
+File 2 Band 1 - Nodata pixels: 103604 (49.63% of total)
+Band 1 - Valid pixels for comparison: 105164 (50.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demang.tif: Identical
+
+Comparing demfel.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 101817 (48.77% of total)
+File 2 Band 1 - Nodata pixels: 101817 (48.77% of total)
+Band 1 - Valid pixels for comparison: 106951 (51.23% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demfel.tif: Identical
+
+Comparing demreg12.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 101817 (48.77% of total)
+File 2 Band 1 - Nodata pixels: 101817 (48.77% of total)
+Band 1 - Valid pixels for comparison: 106951 (51.23% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demreg12.tif: Identical
+
+Comparing demregsh.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 174305 (83.49% of total)
+File 2 Band 1 - Nodata pixels: 174305 (83.49% of total)
+Band 1 - Valid pixels for comparison: 34463 (16.51% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demregsh.tif: Identical
+
+Comparing demsat1.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 112167 (53.73% of total)
+File 2 Band 1 - Nodata pixels: 112167 (53.73% of total)
+Band 1 - Valid pixels for comparison: 96601 (46.27% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demsat1.tif: Identical
+
+Comparing demsat2.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 174305 (83.49% of total)
+File 2 Band 1 - Nodata pixels: 174305 (83.49% of total)
+Band 1 - Valid pixels for comparison: 34463 (16.51% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demsat2.tif: Identical
+
+Comparing demsca.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 112167 (53.73% of total)
+File 2 Band 1 - Nodata pixels: 112167 (53.73% of total)
+Band 1 - Valid pixels for comparison: 96601 (46.27% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demsca.tif: Identical
+
+Comparing demsi1.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 112167 (53.73% of total)
+File 2 Band 1 - Nodata pixels: 112167 (53.73% of total)
+Band 1 - Valid pixels for comparison: 96601 (46.27% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demsi1.tif: Identical
+
+Comparing demsi2.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 174305 (83.49% of total)
+File 2 Band 1 - Nodata pixels: 174305 (83.49% of total)
+Band 1 - Valid pixels for comparison: 34463 (16.51% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demsi2.tif: Identical
+
+Comparing demslp.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 103604 (49.63% of total)
+File 2 Band 1 - Nodata pixels: 103604 (49.63% of total)
+Band 1 - Valid pixels for comparison: 105164 (50.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+demslp.tif: Identical
+
+Comparing dmcal.tif...
+Total pixels found in input file: 3034276 (1582x1918)
+File 1 Band 1 - Nodata pixels: 103161 (3.40% of total)
+File 2 Band 1 - Nodata pixels: 103161 (3.40% of total)
+Band 1 - Valid pixels for comparison: 2931115 (96.60% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+dmcal.tif: Identical
+
+Comparing dmsat.tif...
+Total pixels found in input file: 3034276 (1582x1918)
+File 1 Band 1 - Nodata pixels: 184147 (6.07% of total)
+File 2 Band 1 - Nodata pixels: 184147 (6.07% of total)
+Band 1 - Valid pixels for comparison: 2850129 (93.93% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+dmsat.tif: Identical
+
+Comparing dmsca.tif...
+Total pixels found in input file: 3034276 (1582x1918)
+File 1 Band 1 - Nodata pixels: 184147 (6.07% of total)
+File 2 Band 1 - Nodata pixels: 184147 (6.07% of total)
+Band 1 - Valid pixels for comparison: 2850129 (93.93% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+dmsca.tif: Identical
+
+Comparing dmsi.tif...
+Total pixels found in input file: 3034276 (1582x1918)
+File 1 Band 1 - Nodata pixels: 184147 (6.07% of total)
+File 2 Band 1 - Nodata pixels: 184147 (6.07% of total)
+Band 1 - Valid pixels for comparison: 2850129 (93.93% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+dmsi.tif: Identical
+
+Comparing dmslp.tif...
+Total pixels found in input file: 3034276 (1582x1918)
+File 1 Band 1 - Nodata pixels: 110157 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 110157 (3.63% of total)
+Band 1 - Valid pixels for comparison: 2924119 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+dmslp.tif: Identical
+
+Comparing zone12.tif...
+Total pixels found in input file: 208768 (466x448)
+File 1 Band 1 - Nodata pixels: 101817 (48.77% of total)
+File 2 Band 1 - Nodata pixels: 101817 (48.77% of total)
+Band 1 - Valid pixels for comparison: 106951 (51.23% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+zone12.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 16
+Files compared: 16
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\AreaD8_data TestRunResults\Test-install-5.4.0-8-17-25\AreaD8_data ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganad8_1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_1.tif: Identical
+
+Comparing loganad8_3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_3.tif: Identical
+
+Comparing loganad8_4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_4.tif: Identical
+
+Comparing loganad8_5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_5.tif: Identical
+
+Comparing loganad8_6.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_6.tif: Identical
+
+Comparing loganad8_7.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_7.tif: Identical
+
+Comparing loganad8_8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8_8.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 8
+Files compared: 8
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\AreaDinf TestRunResults\Test-install-5.4.0-8-17-25\AreaDinf ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganang.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganang.tif: Identical
+
+Comparing logansca_1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_1.tif: Identical
+
+Comparing logansca_2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_2.tif: Identical
+
+Comparing logansca_3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_3.tif: Identical
+
+Comparing logansca_4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_4.tif: Identical
+
+Comparing logansca_5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_5.tif: Identical
+
+Comparing logansca_6.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_6.tif: Identical
+
+Comparing logansca_7.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_7.tif: Identical
+
+Comparing logansca_8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_8.tif: Identical
+
+Comparing logansca_9.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca_9.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 10
+Files compared: 10
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\Gridnet TestRunResults\Test-install-5.4.0-8-17-25\Gridnet ) 
+Using maximum pixel difference threshold: 0
+
+Comparing logangord1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord1.tif: Identical
+
+Comparing logangord3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord3.tif: Identical
+
+Comparing logangord4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord4.tif: Identical
+
+Comparing logangord5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord5.tif: Identical
+
+Comparing logangord6.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord6.tif: Identical
+
+Comparing logangord7.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord7.tif: Identical
+
+Comparing logangord8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord8.tif: Identical
+
+Comparing logangord9.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangord9.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing loganplen1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen1.tif: Identical
+
+Comparing loganplen3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen3.tif: Identical
+
+Comparing loganplen4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen4.tif: Identical
+
+Comparing loganplen5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen5.tif: Identical
+
+Comparing loganplen6.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen6.tif: Identical
+
+Comparing loganplen7.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen7.tif: Identical
+
+Comparing loganplen8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen8.tif: Identical
+
+Comparing loganplen9.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganplen9.tif: Identical
+
+Comparing logantlen1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen1.tif: Identical
+
+Comparing logantlen3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen3.tif: Identical
+
+Comparing logantlen4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen4.tif: Identical
+
+Comparing logantlen5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen5.tif: Identical
+
+Comparing logantlen6.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen6.tif: Identical
+
+Comparing logantlen7.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen7.tif: Identical
+
+Comparing logantlen8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen8.tif: Identical
+
+Comparing logantlen9.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantlen9.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 25
+Files compared: 25
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\peukerDouglas TestRunResults\Test-install-5.4.0-8-17-25\peukerDouglas ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganad8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47296 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47296 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587804 (97.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8.tif: Identical
+
+Comparing loganfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing loganssa.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 4
+Files compared: 4
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\streamnet_data TestRunResults\Test-install-5.4.0-8-17-25\streamnet_data ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganad8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47296 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47296 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587804 (97.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8.tif: Identical
+
+Comparing loganfel.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganfel.tif: Identical
+
+Comparing loganord3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganord3.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing logansrc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansrc.tif: Identical
+
+Comparing loganw.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganw.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 6
+Files compared: 6
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\D8flowextreme TestRunResults\Test-install-5.4.0-8-17-25\D8flowextreme ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing logansa.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansa.tif: Identical
+
+Comparing loganssa1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa1.tif: Identical
+
+Comparing loganssa2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa2.tif: Identical
+
+Comparing loganssa3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa3.tif: Identical
+
+Comparing loganssa4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa4.tif: Identical
+
+Comparing loganssa5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganssa5.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 7
+Files compared: 7
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\DinfConcLimAccum TestRunResults\Test-install-5.4.0-8-17-25\DinfConcLimAccum ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganang.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganang.tif: Identical
+
+Comparing loganctpto2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpto2.tif: Identical
+
+Comparing loganctpto4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpto4.tif: Identical
+
+Comparing loganctpto5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpto5.tif: Identical
+
+Comparing logandg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandg.tif: Identical
+
+Comparing logandm08.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandm08.tif: Identical
+
+Comparing logansca.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansca.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 7
+Files compared: 7
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\DinfTransLimAcc TestRunResults\Test-install-5.4.0-8-17-25\DinfTransLimAcc ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganang.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganang.tif: Identical
+
+Comparing loganctpt1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt1.tif: Identical
+
+Comparing loganctpt2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt2.tif: Identical
+
+Comparing loganctpt4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt4.tif: Identical
+
+Comparing loganctpt5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganctpt5.tif: Identical
+
+Comparing logandg.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 1635100 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logandg.tif: Identical
+
+Comparing logantc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 59388 (3.63% of total)
+File 2 Band 1 - Nodata pixels: 59388 (3.63% of total)
+Band 1 - Valid pixels for comparison: 1575712 (96.37% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantc.tif: Identical
+
+Comparing logantdep1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep1.tif: Identical
+
+Comparing logantdep2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep2.tif: Identical
+
+Comparing logantdep4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep4.tif: Identical
+
+Comparing logantdep5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantdep5.tif: Identical
+
+Comparing logantla2.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantla2.tif: Identical
+
+Comparing logantla4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantla4.tif: Identical
+
+Comparing logantla5.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+File 2 Band 1 - Nodata pixels: 1012360 (61.91% of total)
+Band 1 - Valid pixels for comparison: 622740 (38.09% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantla5.tif: Identical
+
+Comparing logantsup.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 27364 (1.67% of total)
+File 2 Band 1 - Nodata pixels: 27364 (1.67% of total)
+Band 1 - Valid pixels for comparison: 1607736 (98.33% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logantsup.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 15
+Files compared: 15
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\MovedOutletstoStream_data TestRunResults\Test-install-5.4.0-8-17-25\MovedOutletstoStream_data ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Comparing logansrc.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 977970 (59.81% of total)
+File 2 Band 1 - Nodata pixels: 977970 (59.81% of total)
+Band 1 - Valid pixels for comparison: 657130 (40.19% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logansrc.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 2
+Files compared: 2
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\GageWatershed TestRunResults\Test-install-5.4.0-8-17-25\GageWatershed ) 
+Using maximum pixel difference threshold: 0
+
+Comparing logangw1.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw1.tif: Identical
+
+Comparing logangw3.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw3.tif: Identical
+
+Comparing logangw4.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+File 2 Band 1 - Nodata pixels: 1014550 (62.05% of total)
+Band 1 - Valid pixels for comparison: 620550 (37.95% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw4.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 4
+Files compared: 4
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\ConnectDown TestRunResults\Test-install-5.4.0-8-17-25\ConnectDown ) 
+Using maximum pixel difference threshold: 0
+
+Comparing loganad8.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 47296 (2.89% of total)
+File 2 Band 1 - Nodata pixels: 47296 (2.89% of total)
+Band 1 - Valid pixels for comparison: 1587804 (97.11% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganad8.tif: Identical
+
+Comparing logangw.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 978347 (59.83% of total)
+File 2 Band 1 - Nodata pixels: 978347 (59.83% of total)
+Band 1 - Valid pixels for comparison: 656753 (40.17% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+logangw.tif: Identical
+
+Comparing loganp.tif...
+Total pixels found in input file: 1635100 (985x1660)
+File 1 Band 1 - Nodata pixels: 32650 (2.00% of total)
+File 2 Band 1 - Nodata pixels: 32650 (2.00% of total)
+Band 1 - Valid pixels for comparison: 1602450 (98.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+loganp.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 3
+Files compared: 3
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\NoEPSG TestRunResults\Test-install-5.4.0-8-17-25\NoEPSG ) 
+Using maximum pixel difference threshold: 0
+
+Comparing ma2_ead8.tif...
+Total pixels found in input file: 125200 (313x400)
+File 1 Band 1 - Nodata pixels: 60140 (48.04% of total)
+File 2 Band 1 - Nodata pixels: 60140 (48.04% of total)
+Band 1 - Valid pixels for comparison: 65060 (51.96% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+ma2_ead8.tif: Identical
+
+Comparing ma2_ep.tif...
+Total pixels found in input file: 125200 (313x400)
+File 1 Band 1 - Nodata pixels: 56711 (45.30% of total)
+File 2 Band 1 - Nodata pixels: 56711 (45.30% of total)
+Band 1 - Valid pixels for comparison: 68489 (54.70% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+ma2_ep.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 2
+Files compared: 2
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\MoveOutlets2 TestRunResults\Test-install-5.4.0-8-17-25\MoveOutlets2 ) 
+Using maximum pixel difference threshold: 0
+
+Comparing subwatershed_74p.tif...
+Total pixels found in input file: 513600 (535x960)
+File 1 Band 1 - Nodata pixels: 269220 (52.42% of total)
+File 2 Band 1 - Nodata pixels: 269220 (52.42% of total)
+Band 1 - Valid pixels for comparison: 244380 (47.58% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+subwatershed_74p.tif: Identical
+
+Comparing subwatershed_74src1.tif...
+Total pixels found in input file: 513600 (535x960)
+File 1 Band 1 - Nodata pixels: 269220 (52.42% of total)
+File 2 Band 1 - Nodata pixels: 269220 (52.42% of total)
+Band 1 - Valid pixels for comparison: 244380 (47.58% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+subwatershed_74src1.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 2
+Files compared: 2
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\gwunittest TestRunResults\Test-install-5.4.0-8-17-25\gwunittest ) 
+Using maximum pixel difference threshold: 0
+
+Comparing fdr.tif...
+Total pixels found in input file: 2229332 (1442x1546)
+File 1 Band 1 - Nodata pixels: 1146328 (51.42% of total)
+File 2 Band 1 - Nodata pixels: 1146328 (51.42% of total)
+Band 1 - Valid pixels for comparison: 1083004 (48.58% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fdr.tif: Identical
+
+Comparing gw.tif...
+Total pixels found in input file: 2229332 (1442x1546)
+File 1 Band 1 - Nodata pixels: 1173924 (52.66% of total)
+File 2 Band 1 - Nodata pixels: 1173924 (52.66% of total)
+Band 1 - Valid pixels for comparison: 1055408 (47.34% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+gw.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 2
+Files compared: 2
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\editraster TestRunResults\Test-install-5.4.0-8-17-25\editraster ) 
+Using maximum pixel difference threshold: 0
+
+Comparing fdrmod.tif...
+Total pixels found in input file: 9595 (95x101)
+File 1 Band 1 - Nodata pixels: 5636 (58.74% of total)
+File 2 Band 1 - Nodata pixels: 5636 (58.74% of total)
+Band 1 - Valid pixels for comparison: 3959 (41.26% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fdrmod.tif: Identical
+
+Comparing fdro.tif...
+Total pixels found in input file: 9595 (95x101)
+File 1 Band 1 - Nodata pixels: 5636 (58.74% of total)
+File 2 Band 1 - Nodata pixels: 5636 (58.74% of total)
+Band 1 - Valid pixels for comparison: 3959 (41.26% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fdro.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 2
+Files compared: 2
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\catchoutlets TestRunResults\Test-install-5.4.0-8-17-25\catchoutlets ) 
+Using maximum pixel difference threshold: 0
+
+Comparing fdr.tif...
+Total pixels found in input file: 11097216 (2704x4104)
+File 1 Band 1 - Nodata pixels: 4375604 (39.43% of total)
+File 2 Band 1 - Nodata pixels: 4375604 (39.43% of total)
+Band 1 - Valid pixels for comparison: 6721612 (60.57% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+fdr.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 1
+Files compared: 1
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\FlowdirCond TestRunResults\Test-install-5.4.0-8-17-25\FlowdirCond ) 
+Using maximum pixel difference threshold: 0
+
+Comparing pm.tif...
+Total pixels found in input file: 1666340 (1690x986)
+File 1 Band 1 - Nodata pixels: 1662962 (99.80% of total)
+File 2 Band 1 - Nodata pixels: 1662962 (99.80% of total)
+Band 1 - Valid pixels for comparison: 3378 (0.20% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+pm.tif: Identical
+
+Comparing wcdem.tif...
+Total pixels found in input file: 1666340 (1690x986)
+File 1 Band 1 - Nodata pixels: 1241537 (74.51% of total)
+File 2 Band 1 - Nodata pixels: 1241537 (74.51% of total)
+Band 1 - Valid pixels for comparison: 424803 (25.49% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+wcdem.tif: Identical
+
+Comparing wcdemzfdc.tif...
+Total pixels found in input file: 1666340 (1690x986)
+File 1 Band 1 - Nodata pixels: 1241537 (74.51% of total)
+File 2 Band 1 - Nodata pixels: 1241537 (74.51% of total)
+Band 1 - Valid pixels for comparison: 424803 (25.49% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+wcdemzfdc.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 3
+Files compared: 3
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\RetLimFlow TestRunResults\Test-install-5.4.0-8-17-25\RetLimFlow ) 
+Using maximum pixel difference threshold: 0
+
+Comparing spawnang.tif...
+Total pixels found in input file: 35280 (240x147)
+File 1 Band 1 - Nodata pixels: 770 (2.18% of total)
+File 2 Band 1 - Nodata pixels: 770 (2.18% of total)
+Band 1 - Valid pixels for comparison: 34510 (97.82% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+spawnang.tif: Identical
+
+Comparing spawnfel.tif...
+Total pixels found in input file: 35280 (240x147)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 35280 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+spawnfel.tif: Identical
+
+Comparing spawnqrl.tif...
+Total pixels found in input file: 35280 (240x147)
+File 1 Band 1 - Nodata pixels: 770 (2.18% of total)
+File 2 Band 1 - Nodata pixels: 770 (2.18% of total)
+Band 1 - Valid pixels for comparison: 34510 (97.82% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+spawnqrl.tif: Identical
+
+Comparing spawnrc.tif...
+Total pixels found in input file: 35280 (240x147)
+File 1 Band 1 - Nodata pixels: 770 (2.18% of total)
+File 2 Band 1 - Nodata pixels: 770 (2.18% of total)
+Band 1 - Valid pixels for comparison: 34510 (97.82% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+spawnrc.tif: Identical
+
+Comparing spawnwg.tif...
+Total pixels found in input file: 35280 (240x147)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 35280 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+spawnwg.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 5
+Files compared: 5
+Result: All files are identical
+
+C:\Users\a00017616\Documents\TauDEM-Test-Data>(python compare_results.py ReferenceResult\CatchHydroGeoTest TestRunResults\Test-install-5.4.0-8-17-25\CatchHydroGeoTest ) 
+Using maximum pixel difference threshold: 0
+
+Comparing Onion3.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 21712504 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3.tif: Identical
+
+Comparing Onion3ad8.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 120342 (0.55% of total)
+File 2 Band 1 - Nodata pixels: 120342 (0.55% of total)
+Band 1 - Valid pixels for comparison: 21592162 (99.45% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3ad8.tif: Identical
+
+Comparing Onion3ad8o.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 120342 (0.55% of total)
+File 2 Band 1 - Nodata pixels: 120342 (0.55% of total)
+Band 1 - Valid pixels for comparison: 21592162 (99.45% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3ad8o.tif: Identical
+
+Comparing Onion3ang.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 21246 (0.10% of total)
+File 2 Band 1 - Nodata pixels: 21246 (0.10% of total)
+Band 1 - Valid pixels for comparison: 21691258 (99.90% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3ang.tif: Identical
+
+Comparing Onion3dd.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 11973316 (55.14% of total)
+File 2 Band 1 - Nodata pixels: 11973316 (55.14% of total)
+Band 1 - Valid pixels for comparison: 9739188 (44.86% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3dd.tif: Identical
+
+Comparing Onion3fel.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 21712504 (100.00% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3fel.tif: Identical
+
+Comparing Onion3ord.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 21712504 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3ord.tif: Identical
+
+Comparing Onion3p.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 21246 (0.10% of total)
+File 2 Band 1 - Nodata pixels: 21246 (0.10% of total)
+Band 1 - Valid pixels for comparison: 21691258 (99.90% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3p.tif: Identical
+
+Comparing Onion3slp.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 21246 (0.10% of total)
+File 2 Band 1 - Nodata pixels: 21246 (0.10% of total)
+Band 1 - Valid pixels for comparison: 21691258 (99.90% of total)
+Band 1 - Max difference: 0.0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3slp.tif: Identical
+
+Comparing Onion3src.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 120342 (0.55% of total)
+File 2 Band 1 - Nodata pixels: 120342 (0.55% of total)
+Band 1 - Valid pixels for comparison: 21592162 (99.45% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3src.tif: Identical
+
+Comparing Onion3w.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 11948885 (55.03% of total)
+File 2 Band 1 - Nodata pixels: 11948885 (55.03% of total)
+Band 1 - Valid pixels for comparison: 9763619 (44.97% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Onion3w.tif: Identical
+
+Comparing Start.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 14755797 (67.96% of total)
+File 2 Band 1 - Nodata pixels: 14755797 (67.96% of total)
+Band 1 - Valid pixels for comparison: 6956707 (32.04% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Start.tif: Identical
+
+Comparing Startrc.tif...
+Total pixels found in input file: 21712504 (7864x2761)
+File 1 Band 1 - Nodata pixels: 0 (0.00% of total)
+File 2 Band 1 - Nodata pixels: 0 (0.00% of total)
+Band 1 - Valid pixels for comparison: 21712504 (100.00% of total)
+Band 1 - Max difference: 0, Mean difference: 0.0
+Band 1 - Pixels with any difference: 0 (0.00% of valid)
+Band 1 - Pixels exceeding threshold: 0 (0.00% of valid)
+Startrc.tif: Identical
+
+Summary:
+Total TIF files found in first directory: 13
+Files compared: 13
+Result: All files are identical

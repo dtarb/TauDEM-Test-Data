@@ -7,45 +7,45 @@
 	<SimpleField name="ad8" type="float"></SimpleField>
 </Schema>
 <Folder><name>loganOutlets_Moved3</name>
-  <Placemark>
+  <Placemark id="loganOutlets_Moved3.1">
 	<ExtendedData><SchemaData schemaUrl="#loganOutlets_Moved3">
 		<SimpleData name="id">10</SimpleData>
 		<SimpleData name="id_down">-2147483647</SimpleData>
 		<SimpleData name="ad8">620230</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-111.781359043125,41.7422797663982</coordinates></Point>
+      <Point><coordinates>-111.781359043126,41.7422797664023</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="loganOutlets_Moved3.2">
 	<ExtendedData><SchemaData schemaUrl="#loganOutlets_Moved3">
 		<SimpleData name="id">20</SimpleData>
 		<SimpleData name="id_down">-2147483647</SimpleData>
 		<SimpleData name="ad8">36523</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-111.784193440445,41.7676600730714</coordinates></Point>
+      <Point><coordinates>-111.784193440445,41.7676600730756</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="loganOutlets_Moved3.3">
 	<ExtendedData><SchemaData schemaUrl="#loganOutlets_Moved3">
 		<SimpleData name="id">30</SimpleData>
 		<SimpleData name="id_down">10</SimpleData>
 		<SimpleData name="ad8">8925</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-111.722991779514,41.7494171019804</coordinates></Point>
+      <Point><coordinates>-111.722991779514,41.7494171019845</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="loganOutlets_Moved3.4">
 	<ExtendedData><SchemaData schemaUrl="#loganOutlets_Moved3">
 		<SimpleData name="id">40</SimpleData>
 		<SimpleData name="id_down">20</SimpleData>
 		<SimpleData name="ad8">1</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-111.715718161631,41.7767537300183</coordinates></Point>
+      <Point><coordinates>-111.715718161631,41.7767537300224</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="loganOutlets_Moved3.5">
 	<ExtendedData><SchemaData schemaUrl="#loganOutlets_Moved3">
 		<SimpleData name="id">50</SimpleData>
 		<SimpleData name="id_down">20</SimpleData>
 		<SimpleData name="ad8">21830</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-111.72381107616,41.7902134166167</coordinates></Point>
+      <Point><coordinates>-111.72381107616,41.7902134166209</coordinates></Point>
   </Placemark>
 </Folder>
 </Document></kml>
