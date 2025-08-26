@@ -404,3 +404,8 @@ cd CatchHydroGeoTest
 Rem Run CatchHydroGeo
 mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt
 cd ..
+
+cd GDAL_unset_nodata
+Rem Run AreaD8 for a weight file that does not have nodata value set to test GDAL setting of nodata
+mpiexec -n 4 aread8 -p p.tif -ad8 ssa.tif -wg weights.tif -nc
+cd ..
