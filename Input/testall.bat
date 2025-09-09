@@ -1,7 +1,7 @@
 Rem cd C:\Users\dt\Desktop\Input
 Rem testall > testall.out 2>&1
 Rem The 'TDIR' needs to be reset to the directory where the TauDEM executables exist on your machine
-set TDIR=C:\Program Files\TauDEM\TauDEM5Exe
+set TDIR=C:\Users\a00017616\Documents\TauDEMDev\Taudem_Installation_Source\TauDEM_Exe\win_64
 
 Rem Set path for MPI
 set MDIR=C:\Program Files\Microsoft MPI\Bin
@@ -375,6 +375,10 @@ cd MoveOutlets2
 mpiexec  -np  8  moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0
 mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet1.shp  -md  10000
 mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100
+cd ..
+
+cd MoveOutlets3
+mpiexec -n 8 moveoutletstostreams -p p.tif -src src.tif -o outlets2_geo.shp -om outlets_align.shp -md 3000
 cd ..
 
 cd gwunittest
