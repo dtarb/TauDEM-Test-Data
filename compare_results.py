@@ -168,17 +168,67 @@ def compare_directories(dir1_path, dir2_path, max_diff_threshold=MAX_DIFF_THRESH
     return all_identical
 
 def main():
-    parser = argparse.ArgumentParser(description='Compare TIF files between two directories')
-    parser.add_argument('dir1', help='Path to first directory')
-    parser.add_argument('dir2', help='Path to second directory')
+    """
+    Main function to handle command line arguments and initiate comparisons.
+    """
+    test_run_folders = [
+        'Base', 'fts', 'Geographic', 'gridtypes', 'sinmapsi', 'AreaD8_data', 'AreaDinf',
+        'Gridnet', 'peukerDouglas', 'streamnet_data', 'D8flowextreme', 'DinfConcLimAccum',
+        'DinfTransLimAcc', 'MovedOutletstoStream_data', 'GageWatershed', 'ConnectDown',
+        'NoEPSG', 'MoveOutlets2', 'MoveOutlets3', 'gwunittest', 'editraster', 'catchoutlets',
+        'FlowdirCond', 'RetLimFlow', 'CatchHydroGeo', 'Inundepth', 'GDAL_unset_nodata'
+    ]
+    test_run_base_folder = 'TestRunResult'
+    reference_result_base_folder = 'ReferenceResult'
+    parser = argparse.ArgumentParser(description='Compare TIF files between two directories or for a test run.')
+    parser.add_argument('--dir1', help='Path to first directory (for single directory comparison).')
+    parser.add_argument('--dir2', help='Path to second directory (for single directory comparison).')
+    parser.add_argument('--test_run_folder', help='Path to the folder relative to TestRunResult of a test run. This will trigger comparison for a predefined set of subfolders against the reference results.')
     parser.add_argument('--max_diff_threshold', type=float, default=MAX_DIFF_THRESHOLD,
                       help=f'Maximum absolute difference threshold for pixel values (default: {MAX_DIFF_THRESHOLD})')
 
     args = parser.parse_args()
 
     print(f"Using maximum pixel difference threshold: {args.max_diff_threshold}")
-    result = compare_directories(args.dir1, args.dir2, args.max_diff_threshold)
-    sys.exit(0 if result else 1)
+
+    if args.test_run_folder:
+        base_result_folder = os.path.join(test_run_base_folder, args.test_run_folder)
+        # check if base_result_folder exists
+        if not os.path.isdir(base_result_folder):
+            print(f"Error: Test run folder not found: {base_result_folder}")
+            sys.exit(1)
+        print(f"Performing test run comparison for base folder: {base_result_folder}")
+        print(f"Reference result base folder: {reference_result_base_folder}")
+        overall_success = True
+        for folder in test_run_folders:
+            dir1 = os.path.join(base_result_folder, folder)
+            dir2 = os.path.join(reference_result_base_folder, folder)
+            print(f"\n----- Comparing sub-directory: {folder} -----")
+            if not os.path.isdir(dir1):
+                print(f"Warning: Test directory not found, skipping: {dir1}")
+                overall_success = False
+                continue
+            if not os.path.isdir(dir2):
+                print(f"Warning: Reference directory not found, skipping: {dir2}")
+                overall_success = False
+                continue
+
+            result = compare_directories(dir1, dir2, args.max_diff_threshold)
+            if not result:
+                overall_success = False
+
+        print("\n----- Test Run Summary -----")
+        if overall_success:
+            print("All compared test run directories are identical.")
+            sys.exit(0)
+        else:
+            print("Some differences were found in the test run comparison.")
+            sys.exit(1)
+    elif args.dir1 and args.dir2:
+        result = compare_directories(args.dir1, args.dir2, args.max_diff_threshold)
+        sys.exit(0 if result else 1)
+    else:
+        parser.error('Either --test_run_folder or both --dir1 and --dir2 must be specified.')
 
 if __name__ == '__main__':
     main()
