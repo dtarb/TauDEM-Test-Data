@@ -404,9 +404,14 @@ Rem Run Retention Limited Flow Accumulation
 mpiexec -n 6 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif
 cd ..
 
-cd CatchHydroGeoTest
+cd CatchHydroGeo
 Rem Run CatchHydroGeo
-mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt
+mpiexec -n 4 CatchHydroGeo -hand hand.tif -catch w.tif -catchlist catchlist.csv -slp slp.tif -h stage.txt -table hydropropotable.txt
+cd ..
+
+cd Inundepth
+Rem Run Inundation Depth
+mpiexec -n 4 Inundepth -hand hand.tif -catch w.tif -fc forecast.csv -hp hydropropotable.txt -inun inundepth.tif -depth depths.csv
 cd ..
 
 cd GDAL_unset_nodata

@@ -1317,8 +1317,22 @@ assert_success
 }
 
 #Run CatchHydroGeo
-@test "run mpiexec -n 4  $TAUDEM_PATH/catchhydrogeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt" {
-cd CatchHydroGeoTest
-run mpiexec -n 4  $TAUDEM_PATH/catchhydrogeo -hand Onion3dd.tif -catch Onion3w.tif -catchlist catchlist.txt -slp Onion3slp.tif -h stage.txt -table hydropropotable.txt
+@test "run mpiexec -n 4  $TAUDEM_PATH/catchhydrogeo -hand hand.tif -catch w.tif -catchlist catchlist.csv -slp slp.tif -h stage.txt -table hydropropotable.txt" {
+cd CatchHydroGeo
+run mpiexec -n 4  $TAUDEM_PATH/catchhydrogeo -hand hand.tif -catch w.tif -catchlist catchlist.csv -slp slp.tif -h stage.txt -table hydropropotable.txt
+assert_success
+}
+
+#Run Inundepth
+@test "run mpiexec -n 4  $TAUDEM_PATH/inundepth -hand hand.tif -catch w.tif -fc forecast.csv -hp hydropropotable.txt -inun inundepth.tif -depth depths.csv" {
+cd Inundepth
+run mpiexec -n 4  $TAUDEM_PATH/inundepth -hand hand.tif -catch w.tif -fc forecast.csv -hp hydropropotable.txt -inun inundepth.tif -depth depths.csv
+assert_success
+}
+
+#Run AreaD8 for a weight file that does not have nodata value set to test GDAL setting of nodata
+@test "run mpiexec -n 4  $TAUDEM_PATH/aread8 aread8 -p p.tif -ad8 ssa.tif -wg weights.tif -nc" {
+cd GDAL_unset_nodata
+run mpiexec -n 4  $TAUDEM_PATH/aread8 aread8 -p p.tif -ad8 ssa.tif -wg weights.tif -nc
 assert_success
 }
