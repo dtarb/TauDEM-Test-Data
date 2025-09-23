@@ -5,7 +5,8 @@
 # Ignore vscode AI rules
 .github/copilot-instructions.md
 
-# Ignore TestRunResults - this folder is used for storing the test run output files 
+# Ignore TestRunResult - this folder is used for storing the test run output files 
 # for the purpose of comparing the results to the ReferenceResult
-# When tests are run in this folder their output should be in TestRunResults/
-TestRunResults/
+# When tests are run in this folder their output should be in TestRunResult/
+TestRunResult/
+
