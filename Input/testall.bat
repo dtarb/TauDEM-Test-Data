@@ -1,15 +1,13 @@
 Rem cd C:\Users\dt\Desktop\Input
 Rem testall > testall.out 2>&1
 Rem The 'TDIR' needs to be reset to the directory where the TauDEM executables exist on your machine
-set TDIR=C:\Program Files\TauDEM\TauDEM5Exe
+set TDIR=C:\Users\a00017616\Documents\TauDEMDev\Taudem_Installation_Source\TauDEM_Exe\win_64
 
-Rem Set paths for MPI, TauDEM, and GDAL
+Rem Set path for MPI
 set MDIR=C:\Program Files\Microsoft MPI\Bin
-Rem TauDEM Windows Installer installs GDAL in the bin directory of TauDEM for TauDEM use only.
-set GDAL_DIR=C:\Program Files\TauDEM\bin
 
 Rem Include all required directories in the PATH
-set PATH=%MDIR%;%TDIR%;%GDAL_DIR%;%PATH%
+set PATH=%MDIR%;%TDIR%;%PATH%
 
 
 Rem  Basic grid analysis
@@ -127,7 +125,7 @@ mpiexec -n 4 areadinf -ang demDoubleang.tif -sca demDoublesca.tif -wg demDoublew
 Rem gagewatershed test
 mpiexec -n 7 gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw.tif -id gwid.txt
 mpiexec -n 4 gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw1.tif 
-mpiexec -n 5 gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw1.tif -id gwid1.txt -upid gwup.txt
+mpiexec -n 5 gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw2.tif -id gwid2.txt -upid gwup2.txt
 
 Rem Connect down
 mpiexec -n 8 ConnectDown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1
@@ -379,6 +377,10 @@ mpiexec -np 1 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed
 mpiexec -np 8 moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100
 cd ..
 
+cd MoveOutlets3
+mpiexec -n 8 moveoutletstostreams -p p.tif -src src.tif -o outlets2_geo.shp -om outlets_align.shp -md 3000
+cd ..
+
 cd gwunittest
 mpiexec -n 4 gagewatershed -p fdr.tif -gw gw.tif -id id.txt -o CatchOutlets3.shp
 cd ..
@@ -402,7 +404,17 @@ Rem Run Retention Limited Flow Accumulation
 mpiexec -n 6 RetLimFlow -ang spawnang.tif -wg spawnwg.tif -rc spawnrc.tif -qrl spawnqrl.tif
 cd ..
 
-cd CatchHydroGeoTest
+cd CatchHydroGeo
 Rem Run CatchHydroGeo
-mpiexec -n 4 CatchHydroGeo -hand onion3dd.tif -catch onion3w.tif -catchlist catchlist.txt -slp onion3slp.tif -h stage.txt -table hydropropotable.txt
+mpiexec -n 4 CatchHydroGeo -hand hand.tif -catch w.tif -catchlist catchlist.csv -slp slp.tif -h stage.txt -table hydropropotable.txt
+cd ..
+
+cd Inundepth
+Rem Run Inundation Depth
+mpiexec -n 4 Inundepth -hand hand.tif -catch w.tif -fc forecast.csv -hp hydropropotable.txt -inun inundepth.tif -depth depths.csv
+cd ..
+
+cd GDAL_unset_nodata
+Rem Run AreaD8 for a weight file that does not have nodata value set to test GDAL setting of nodata
+mpiexec -n 4 aread8 -p p.tif -ad8 ssa.tif -wg weights.tif -nc
 cd ..

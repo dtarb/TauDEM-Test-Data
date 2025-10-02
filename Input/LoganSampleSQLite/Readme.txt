@@ -1,0 +1,1 @@
+At present this folder is not used in any command line tests.  It is here as data for working with sqlite formatted data using OGR.
