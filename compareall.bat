@@ -6,5 +6,5 @@ set items=Base fts Geographic gridtypes sinmapsi AreaD8_data AreaDinf Gridnet pe
 
 :: Loop over the list
 for %%i in (%items%) do (
-    python compare_results.py ReferenceResult\%%i TestRunResult\%~1\%%i
+    python compare_results.py --dir1 ReferenceResult\%%i --dir2 TestRunResult\%~1\%%i
 )
