@@ -49,7 +49,7 @@ def compare_tif_files(file1_path, file2_path, max_diff_threshold=MAX_DIFF_THRESH
         print("Warning: Projections do not match")
         print(ds1.GetProjection())
         print(ds2.GetProjection())
-        return True
+    #    return True   # DGT 10/27/25 rather than returning, continue to test for other differences
 
     # Compare pixel values for each band using max difference
     for band in range(1, ds1.RasterCount + 1):
