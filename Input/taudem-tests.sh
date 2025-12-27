@@ -463,18 +463,18 @@ cd Base
 run mpiexec -n 4  $TAUDEM_PATH/gagewatershed -p loganp.tif -o Outletsmoved.shp -gw logangw1.tif 
 assert_success
 }
-@test "run mpiexec -n 5  $TAUDEM_PATH/gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw1.tif -id gwid1.txt -upid gwup.txt" {
+@test "run mpiexec -n 5  $TAUDEM_PATH/gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw2.tif -id gwid2.txt -upid gwup2.txt" {
 cd Base
-run mpiexec -n 5  $TAUDEM_PATH/gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw1.tif -id gwid1.txt -upid gwup.txt
+run mpiexec -n 5  $TAUDEM_PATH/gagewatershed -p logantp.img -o Outletsmoved2.shp -gw logangw2.tif -id gwid2.txt -upid gwup2.txt
 assert_success
 }
 
 #Connect down
-#@test "run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1" {
-#cd Base
-#run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1
-#assert_success
-#}
+@test "run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1" {
+cd Base
+run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets.shp -od loganOutlets_Moved.shp -d 1
+assert_success
+}
 
 ####################################################################
 ####################################################################
@@ -1173,11 +1173,11 @@ cd DinfTransLimAcc
 run mpiexec -n 5  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla4.tif -tdep logantdep4.tif -o Logan.gdb  -cs logandg.tif -ctpt loganctpt4.tif 
 assert_success
 }
-##@test "run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o LoganOutlet.json -cs logandg.tif -ctpt loganctpt5.tif" {
-##cd DinfTransLimAcc
-##run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o Loganoutlet.json -cs logandg.tif -ctpt loganctpt5.tif 
-##assert_success
-#}
+@test "run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o LoganOutlet.json -cs logandg.tif -ctpt loganctpt5.tif" {
+cd DinfTransLimAcc
+run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o Loganoutlet.json -cs logandg.tif -ctpt loganctpt5.tif 
+assert_success
+}
 
 #MOVEOUTLETS
 @test "run mpiexec -np 1  $TAUDEM_PATH/moveoutletstostreams -p loganp.tif -src logansrc.tif -o OutletstoMove.shp -om Outletsmoved.shp -md 20" {
@@ -1224,41 +1224,41 @@ assert_success
 }
 
 ##Connect down
-#@test "run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets1.shp -od loganOutlets_Moved1.shp -d 1" {
-#cd ConnectDown
-#run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets1.shp -od loganOutlets_Moved1.shp -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1" {
-#cd ConnectDown
-#run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 5  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganSample.sqlite -olyr myoutlet1  -od loganSample.sqlite -odlyr myoutlet2 -d 1" {
-#cd ConnectDown
-#run mpiexec -n 5  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganSample.sqlite -olyr myoutlet1  -od loganSample.sqlite -odlyr myoutlet2 -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 7  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.kml -od loganOutlets_Moved2.kml -d 1" {
-#cd ConnectDown
-#run mpiexec -n 7  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.kml -od loganOutlets_Moved2.kml -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1" {
-#cd ConnectDown
-#run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1" {
-#cd ConnectDown
-#run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1
-#assert_success
-#}
-#@test "run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1" {
-#cd ConnectDown
-#run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1
-#assert_success
-#}
+@test "run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets1.shp -od loganOutlets_Moved1.shp -d 1" {
+cd ConnectDown
+run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets1.shp -od loganOutlets_Moved1.shp -d 1
+assert_success
+}
+@test "run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1" {
+cd ConnectDown
+run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.shp -olyr loganOutlets2  -od loganOutlets_Moved2.shp -odlyr loganOutlets2 -d 1
+assert_success
+}
+@test "run mpiexec -n 5  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganSample.sqlite -olyr myoutlet1  -od loganSample.sqlite -odlyr myoutlet2 -d 1" {
+cd ConnectDown
+run mpiexec -n 5  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganSample.sqlite -olyr myoutlet1  -od loganSample.sqlite -odlyr myoutlet2 -d 1
+assert_success
+}
+@test "run mpiexec -n 7  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.kml -od loganOutlets_Moved2.kml -d 1" {
+cd ConnectDown
+run mpiexec -n 7  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets2.kml -od loganOutlets_Moved2.kml -d 1
+assert_success
+}
+@test "run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1" {
+cd ConnectDown
+run mpiexec -n 1  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1
+assert_success
+}
+@test "run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1" {
+cd ConnectDown
+run mpiexec -n 3  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets4.json -od loganOutlets_Moved2.json -d 1
+assert_success
+}
+@test "run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1" {
+cd ConnectDown
+run mpiexec -n 8  $TAUDEM_PATH/connectdown -p loganp.tif -ad8 loganad8.tif -w logangw.tif -o loganOutlets3.kml -olyr loganOutlets3 -od loganOutlets_Moved3.kml -odlyr loganOutlets_Moved3 -d 1
+assert_success
+}
 
 #Test EPSG functionality
 @test "run mpiexec -n 2  $TAUDEM_PATH/aread8 -p ma2_ep.tif -ad8 ma2_ead8.tif -o outlet.shp -nc" {
@@ -1266,6 +1266,8 @@ cd NoEPSG
 run mpiexec -n 2  $TAUDEM_PATH/aread8 -p ma2_ep.tif -ad8 ma2_ead8.tif -o outlet.shp -nc
 assert_success
 }
+
+# Test Moveoutletstostreams
 @test "run mpiexec  -np  8  moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0" {
 cd MoveOutlets2
 run mpiexec  -np  8  $TAUDEM_PATH/moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  mypoint.shp  -om  New_Outlet.shp  -md  10000.0 
@@ -1282,6 +1284,14 @@ cd MoveOutlets2
 run mpiexec -np 8  $TAUDEM_PATH/moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100 
 assert_success
 }
+
+@test "run mpiexec -np 8  $TAUDEM_PATH/moveoutletstostreams  -p  subwatershed_74p.tif  -src  subwatershed_74src1.tif  -o  testpoints.shp  -om  New_Outlet2.shp  -md  100" {
+cd MoveOutlets3
+run mpiexec -np 8  $TAUDEM_PATH/moveoutletstostreams  -p p.tif -src src.tif -o outlets2_geo.shp -om outlets_align.shp -md 3000
+assert_success
+}
+
+
 @test "run mpiexec -n 4  $TAUDEM_PATH/gagewatershed -p fdr.tif -gw gw.tif -id id.txt -o CatchOutlets3.shp" {
 cd gwunittest
 run mpiexec -n 4  $TAUDEM_PATH/gagewatershed -p fdr.tif -gw gw.tif -id id.txt -o CatchOutlets3.shp
