@@ -10,6 +10,7 @@ from osgeo import gdal
 gdal.UseExceptions()
 
 MAX_DIFF_THRESHOLD = 0  # DGT tightened this down. Was 1e-2
+MAX_REL_DIFF = 1e-6  # DGT introduced 12/26/25
 
 def compare_tif_files(file1_path, file2_path, max_diff_threshold=MAX_DIFF_THRESHOLD):
     """
@@ -103,13 +104,16 @@ def compare_tif_files(file1_path, file2_path, max_diff_threshold=MAX_DIFF_THRESH
             print(f"Band {band} - Pixels with any difference: {diff_gt_0} ({diff_gt_0/valid_pixel_count:.2%} of valid)")
             print(f"Band {band} - Pixels exceeding threshold: {diff_gt_threshold} ({diff_gt_threshold/valid_pixel_count:.2%} of valid)")
 
-            # Check if max difference exceeds threshold
+            # Check if max difference exceeds absolute and relative thresholds (DGT modified 12/26/25)
             if max_diff > max_diff_threshold:
-                print(f"Error: Band {band} max difference ({max_diff}) exceeds threshold ({max_diff_threshold})")
+                print(f"Absolute: Band {band} max difference ({max_diff}) exceeds threshold ({max_diff_threshold})")
                 # Find location of max difference for debugging
                 max_loc = np.unravel_index(np.argmax(np.abs(data1 - data2)), data1.shape)
                 print(f"Max difference at {max_loc}: {data1[max_loc]} vs {data2[max_loc]}")
-                return False
+                relative_diff = 2* max_diff / (data1[max_loc]+data2[max_loc]) 
+                if(relative_diff > MAX_REL_DIFF):
+                    print(f"Relative: Band {band} difference ({relative_diff}) exceeds threshold ({MAX_REL_DIFF})")
+                    return False
         else:
             print(f"Warning: Band {band} has no valid data for comparison")
 
