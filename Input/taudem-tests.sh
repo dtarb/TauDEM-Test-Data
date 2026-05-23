@@ -1174,7 +1174,7 @@ assert_success
 }
 @test "run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o LoganOutlet.json -cs logandg.tif -ctpt loganctpt5.tif" {
 cd DinfTransLimAcc
-run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o Loganoutlet.json -cs logandg.tif -ctpt loganctpt5.tif 
+run mpiexec -n 7  $TAUDEM_PATH/dinftranslimaccum -ang loganang.tif -tsup logantsup.tif -tc logantc.tif -tla logantla5.tif -tdep logantdep5.tif -o LoganOutlet.json -cs logandg.tif -ctpt loganctpt5.tif 
 assert_success
 }
 
