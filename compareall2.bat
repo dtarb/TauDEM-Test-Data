@@ -6,5 +6,5 @@ set items=Base fts Geographic gridtypes sinmapsi setregion AreaD8_data AreaDinf 
 
 :: Loop over the list
 for %%i in (%items%) do (
-    python compare_results.py --dir1 TestRunResult\%~1\%%i --dir2 TestRunResult\%~2\%%i
+    python compare_results.py --dir1 %~1\%%i --dir2 %~2\%%i
 )
