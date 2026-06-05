@@ -242,6 +242,11 @@ mpiexec -np 3 PitRemove -z logan.tif -fel loganfel3
 cd ..
 
 cd sinmapsi
+Rem Testing  SI region for Sinmap
+siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp regions.shp -shp-att-name Id
+siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif
+siregion -dem dem -parreg demreg12.tif -att dempar12.csv
+
 Rem Testing SinmapSI
 mpiexec -n 1 SinmapSI -slp dmslp.tif -sca dmsca.tif -calpar dmcalp.txt -cal dmcal.tif -si dmsi.tif -sat dmsat.tif -par 0.0009 0.00135 9.81 1000
 
