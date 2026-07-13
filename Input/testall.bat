@@ -244,6 +244,7 @@ cd ..
 cd sinmapsi
 Rem Testing  SI region for Sinmap
 siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp regions.shp -shp-att-name Id
+siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID
 siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif
 siregion -dem dem -parreg demreg12.tif -att dempar12.csv
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set +e  # Don't exit on error, continue with all tests
+set -e  # Exit on error, stop tests on first failure
 
 # Set TAUDEM_PATH from environment or default
 TAUDEM_PATH="${TAUDEM_PATH:-/usr/local/bin}"
@@ -34,7 +34,7 @@ run_test() {
     
     # Change to test directory if specified
     if [ -n "$test_dir" ]; then
-        cd "$ORIGINAL_DIR/$test_dir" || { echo "✗ FAILED - Could not change to directory $test_dir"; FAILED_TESTS=$((FAILED_TESTS + 1)); return 1; }
+        cd "$ORIGINAL_DIR/$test_dir" || { echo "✗ FAILED - Could not change to directory $test_dir"; exit 1; }
     fi
     
     # Run the command and show output
@@ -48,7 +48,7 @@ run_test() {
         echo "✗ FAILED (exit code: $?)"
         FAILED_TESTS=$((FAILED_TESTS + 1))
         cd "$ORIGINAL_DIR"
-        return 1
+        exit 1
     fi
 }
 
@@ -377,6 +377,18 @@ run_test "gridtypes aread8 mixed" "gridtypes" "mpiexec -n 5 $TAUDEM_PATH/aread8 
 run_test "gridtypes dinfflowdir mixed" "gridtypes" "mpiexec -n 2 $TAUDEM_PATH/dinfflowdir -fel loganfel.bil -ang ang.ang -slp slp.slp"
 run_test "gridtypes lg extension" "gridtypes" "mpiexec -np 3 $TAUDEM_PATH/pitremove -z logan.tif -fel loganfel2.lg"
 run_test "gridtypes no extension" "gridtypes" "mpiexec -np 3 $TAUDEM_PATH/pitremove -z logan.tif -fel loganfel3"
+
+# =======================================
+# Sinmap Parameter Region Tests
+# ========================================
+echo ""
+echo "========================================"
+echo "SINMAP PARAMETER REGION TESTS"
+echo "========================================"
+run_test "siregion based on feature Id" "sinmapsi" "mpiexec -n 3 $TAUDEM_PATH/siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp regions.shp -shp-att-name Id"
+run_test "siregion based on feature FID" "sinmapsi" "mpiexec -n 3 $TAUDEM_PATH/siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID"
+run_test "siregion based on raster" "sinmapsi" "mpiexec -n 3 $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif"
+run_test "siregion based on uniform" "sinmapsi" "mpiexec -n 3 $TAUDEM_PATH/siregion -dem dem -parreg demreg12.tif -att dempar12.csv"
 
 # ========================================
 # SinmapSI Tests

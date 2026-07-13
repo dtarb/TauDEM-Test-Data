@@ -877,6 +877,12 @@ run $TAUDEM_PATH/siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp r
 assert_success
 }
 
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID" {
+cd sinmapsi
+run $TAUDEM_PATH/siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID
+assert_success
+}
+
 @test "run $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif" {
 cd sinmapsi
 run $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif
