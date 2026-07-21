@@ -889,9 +889,9 @@ run $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -p
 assert_success
 }
 
-@test "run $TAUDEM_PATH/siregion -dem dem -parreg demreg12.tif -att dempar12.csv" {
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demreg.tif -att dempar.csv" {
 cd sinmapsi
-run $TAUDEM_PATH/siregion -dem dem -parreg demreg12.tif -att dempar12.csv
+run $TAUDEM_PATH/siregion -dem dem -parreg demreg.tif -att dempar.csv
 assert_success
 }
 
