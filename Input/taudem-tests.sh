@@ -870,6 +870,31 @@ run mpiexec -np 3  $TAUDEM_PATH/pitremove -z logan.tif -fel loganfel3
 assert_success
 }
 
+#Testing SI region setup for SINMAP
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp regions.shp -shp-att-name Id" {
+cd sinmapsi
+run $TAUDEM_PATH/siregion -dem dem -parreg demregsh.tif -att demparsh.csv -shp regions.shp -shp-att-name Id
+assert_success
+}
+
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID" {
+cd sinmapsi
+run $TAUDEM_PATH/siregion -dem dem -parreg demregsh-fid.tif -att demparsh-fid.csv -shp regions.shp -shp-att-name FID
+assert_success
+}
+
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif" {
+cd sinmapsi
+run $TAUDEM_PATH/siregion -dem dem -parreg demregkilp.tif -att demparkilp.csv -parreg-in kilpreg3.tif
+assert_success
+}
+
+@test "run $TAUDEM_PATH/siregion -dem dem -parreg demreg.tif -att dempar.csv" {
+cd sinmapsi
+run $TAUDEM_PATH/siregion -dem dem -parreg demreg.tif -att dempar.csv
+assert_success
+}
+
 #Testing SinmapSI
 @test "run mpiexec -n 1  $TAUDEM_PATH/sinmapsi -slp dmslp.tif -sca dmsca.tif -calpar dmcalp.txt -cal dmcal.tif -si dmsi.tif -sat dmsat.tif -par 0.0009 0.00135 9.81 1000" {
 cd sinmapsi
